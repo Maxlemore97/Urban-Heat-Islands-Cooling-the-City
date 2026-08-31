@@ -148,32 +148,80 @@ canyon, who receive radiation from the façade at eye level; the building owner,
 who decides on and pays for the retrofit; and the trades who install and later
 maintain the system.
 
-\paragraph{When.} The design must perform in two operating windows, which the
-systems view made explicit:
+\paragraph{When --- the design case.} The design case is not a single hot
+afternoon but a \textbf{multi-day heat wave}: five consecutive hot days
+($T_\mathrm{max} \geq \qty{30}{\celsius}$) without rain. This matters because
+the concept relies on a stored resource. A system that performs well on day one
+and is exhausted on day three has not solved the problem, and only a multi-day
+case puts the water reserve (F7) and the reset behaviour of the heat store (F4)
+under real stress. The autonomy requirement in KPI~6 follows from this case.
+\todo{Confirm the duration and the frequency of such spells for Zurich from
+MeteoSwiss records, and state the station and reference period.}
 
-\begin{itemize}
-  \item \textbf{Day window, 11:00--18:00 (clear sky).} Clear-sky global
-        irradiance on a horizontal surface of the order of
-        \qtyrange{900}{950}{\watt\per\square\metre} around solar noon in
-        midsummer, air temperatures reaching roughly
-        \qtyrange{33}{36}{\celsius} during a heat wave. A sealed, sun-exposed
-        surface can exceed \qty{60}{\celsius} and drive up the air temperature
-        in its immediate surroundings \parencite{stadtzuerich_merkblatt}.
-        Dominant problem: absorbed short-wave radiation.
-        \todo{replace the irradiance and air-temperature figures with measured
-        MeteoSwiss values --- the irradiance is a clear-sky estimate, not a
-        measurement}
-  \item \textbf{Evening and night window, 20:00--24:00.} The stored heat is
-        released again. This is the window in which residents are outdoors and
-        then try to sleep, and it is the larger half of the problem: Zurich
-        reports an urban heat island of \qtyrange{1}{2}{\kelvin} by day but up
-        to \qty{7}{\kelvin} at night in the centre relative to the surrounding
-        area \parencite{stadtzuerich_merkblatt}.
-        \todo{Decide whether to extend this window past midnight. Heat release
-        continues until sunrise, and tropical nights are defined over the whole
-        night. A window ending at 24:00 captures evening amenity but only part
-        of the \qty{7}{\kelvin} night-time effect.}
-\end{itemize}
+\paragraph{When --- the critical windows.} Within each day of that heat wave the
+design must perform in three windows, which follow one another without a gap
+because the surface never stops exchanging heat. Sunset in Zurich in high summer
+is around 21:00, sunrise around 06:00.
+
+\begin{table}[htbp]
+\centering
+\caption{Critical operating windows within one day of the design heat wave.}
+\label{tab:windows}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{2.4cm} L{3.9cm} X L{1.5cm}}
+\toprule
+\textbf{Window} & \textbf{What dominates} & \textbf{Why it is critical} & \textbf{KPIs} \\
+\midrule
+\textbf{Load}\newline 11:00--18:00
+& Absorbed short-wave radiation. Clear-sky global irradiance of the order of
+  \qtyrange{900}{950}{\watt\per\square\metre} on a horizontal surface around
+  solar noon (about 13:30 local time), air temperature up to roughly
+  \qtyrange{33}{36}{\celsius}.
+& The energy that has to be dealt with all night enters here. A sealed,
+  sun-exposed surface can exceed \qty{60}{\celsius}
+  \parencite{stadtzuerich_merkblatt}. The city evaluates PET at 14:00, which
+  lies inside this window, so our results stay comparable to
+  Table~\ref{tab:incumbent}.
+& 2, 3, 4 \\[2mm]
+\textbf{Evening}\newline 18:00--24:00
+& Until sunset, low-angle sun on west-facing surfaces; after sunset, the start
+  of the discharge of stored heat into the street canyon.
+& This is when residents are outdoors and then go to bed, so it is the window
+  in which the effect is actually experienced. West façades receive their
+  highest incidence angle here, which is why the window starts at 18:00 rather
+  than at 20:00 --- the two hours in between are among the hottest of the day
+  at the surface, not a gap.
+& 4, 5 \\[2mm]
+\textbf{Night}\newline 00:00--06:00
+& Long-wave emission to the sky and continued release of stored heat. Clearest
+  sky conditions of the cycle.
+& Zurich's urban heat island reaches \qty{7}{\kelvin} at night against
+  \qtyrange{1}{2}{\kelvin} by day \parencite{stadtzuerich_merkblatt}, so this
+  is the larger half of the problem and the half the incumbent measure does not
+  address. It also sets a hard deadline: the heat store must be discharged and
+  the surface reset by sunrise, or it saturates over the following days of the
+  heat wave.
+& 1, 5, 6 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent The remaining hours, 06:00--11:00, are not critical: the load is
+rising but still moderate. They are the margin the night window has to leave
+behind, and the state of the system at 06:00 is therefore reported as the reset
+condition for the next day.
+
+\paragraph{Why the night window was extended.} The team's initial scoping put
+the second window at 20:00--24:00. Two things argued for changing it. First, the
+night-time reference instant of KPI~5 is 02:00, which the original window did
+not contain --- a window must include the moments at which its own KPIs are
+evaluated. Second, tropical nights are defined over the whole night and the
+minimum temperature occurs shortly before sunrise, so a window ending at
+midnight would exclude the part of the night that defines the problem. Splitting
+the evening from the night also separates two genuinely different concerns:
+outdoor amenity while people are awake, and sleep quality plus the reset of the
+store afterwards. They need different KPIs, so they are treated as two windows.
 
 \paragraph{Where on the envelope? A consequence of Zurich's latitude.} Fixing
 the reference city fixes the solar geometry, and that already narrows the design
@@ -624,7 +672,8 @@ solar reflectance of about $0.3$, the value the city uses for un-greened façade
     \qty{-1.2}{\kelvin} (roof) median \parencite[Tab.~11]{stadtzuerich2020}.
     This is the metric the client uses. \\
 5 & F2, F4 (evening / night)
-  & Net cooling power at 22:00 and heat discharged over the night window
+  & Net cooling power at 02:00, clear sky; and heat discharged over the evening
+    and night windows, 18:00--06:00
   & \unit{\watt\per\square\metre}; \unit{\watt\hour\per\square\metre}
   & $\geq \qty{40}{\watt\per\square\metre}$ instantaneous
     \parencite{raman2014,zhai2017}, and a night-time air temperature effect
@@ -634,8 +683,9 @@ solar reflectance of about $0.3$, the value the city uses for un-greened façade
   & Potable water consumption; and days of autonomy on harvested rainwater
   & \unit{\litre\per\square\metre\per\day}; d
   & Potable water $= 0$ (hard constraint). Autonomy $\geq$ \qty{5}{days}, so the
-    reserve survives a typical dry spell. \todo{derive the required storage from
-    the latent heat of vaporisation, \qty{2.45}{\mega\joule\per\kilo\gram}} \\
+    reserve survives the five-day design heat wave of
+    Table~\ref{tab:windows}. \todo{derive the required storage from the latent
+    heat of vaporisation, \qty{2.45}{\mega\joule\per\kilo\gram}} \\
 7 & F10/F11 Durability
   & Retention of the cooling function after soiling and weathering
   & \unit{\percent} of initial
@@ -652,6 +702,13 @@ solar reflectance of about $0.3$, the value the city uses for un-greened façade
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\paragraph{The reset condition.} KPI~1 and KPI~5 are evaluated per day, but
+over the five-day design case a further condition applies: the surface
+temperature and the state of charge of the heat store at 06:00 must not drift
+upwards from one day to the next. A concept that cools well on the first day but
+saturates by the third fails the design case even if every single-day KPI is
+met. \todo{report the five-day trend in Section~3.2, not only day one}
 
 \paragraph{Two changes to the team's original KPI list.} Two of the KPIs
 originally proposed were reformulated, in both cases because of the rule that
