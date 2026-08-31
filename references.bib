@@ -148,12 +148,87 @@
   doi     = {10.1007/s10584-008-9515-9}
 }
 
-@misc{stadtzuerich2020,
+% --------------------------------------------- City of Zurich reference case
+% Local copies of these documents are in the course folder "Referenz Material".
+% The Fachplanung states its own preferred citation as:
+%   "Fachplanung Hitzeminderung. Stadt Zurich (Hrsg.). Zurich, 2020."
+
+@report{stadtzuerich2020,
+  author      = {{Stadt Z{\"u}rich}},
+  title       = {Fachplanung Hitzeminderung},
+  type        = {Programm Klimaanpassung},
+  institution = {Gr{\"u}n Stadt Z{\"u}rich},
+  address     = {Z{\"u}rich},
+  date        = {2020-01-20},
+  year        = {2020},
+  url         = {https://www.stadt-zuerich.ch/fachplanung_hitzeminderung},
+  note        = {Modelling by GEO-NET Umweltconsulting GmbH.
+                 File: \texttt{fp-hitzeminderung-bericht.pdf}}
+}
+
+@report{stadtzuerich_agenda,
+  author      = {{Stadt Z{\"u}rich}},
+  title       = {Umsetzungsagenda 2020--2023 zur Fachplanung Hitzeminderung},
+  type        = {Programm Klimaanpassung},
+  institution = {Umwelt- und Gesundheitsschutz Z{\"u}rich},
+  address     = {Z{\"u}rich},
+  date        = {2020-01-20},
+  year        = {2020},
+  note        = {File: \texttt{fp-hitzeminderung-umsetzungsagenda.pdf}}
+}
+
+@misc{stadtzuerich_merkblatt,
   author       = {{Stadt Z{\"u}rich}},
-  title        = {Fachplanung Hitzeminderung},
+  title        = {Merkblatt Hitzeminderung in der Stadt Z{\"u}rich},
+  year         = {2021},
+  howpublished = {Umwelt- und Gesundheitsschutz Z{\"u}rich,
+                  Fachbereich Umweltpolitik},
+  note         = {Planning aid for building and land owners.
+                  File: \texttt{merkblatt-fp-hitzeminderung.pdf}}
+}
+
+@misc{stadtzuerich_teilplaene,
+  author       = {{Stadt Z{\"u}rich}},
+  title        = {Teilpl{\"a}ne zur Fachplanung Hitzeminderung:
+                  Hitzeminderung, Kaltluftsystem, Entlastungssystem},
   year         = {2020},
-  howpublished = {Tiefbau- und Entsorgungsdepartement, Stadt Z{\"u}rich},
-  note         = {\todo{verify title, year and exact publisher before hand-in}}
+  howpublished = {Stadt Z{\"u}rich},
+  note         = {Files: \texttt{teilplan-hitzeminderung.pdf},
+                  \texttt{teilplan-kaltluftsystem.pdf},
+                  \texttt{teilplan-entlastungssystem.pdf}}
+}
+
+@misc{stadtzuerich_opendata,
+  author       = {{Stadt Z{\"u}rich}},
+  title        = {Open Data Katalog der Stadt Z{\"u}rich},
+  howpublished = {\url{https://data.stadt-zuerich.ch/}},
+  note         = {Building footprints, tree cadastre, climate layers.
+                  Accessed \todo{date}}
+}
+
+@misc{meteoswiss,
+  author       = {{MeteoSwiss}},
+  title        = {Climate data of the automatic monitoring network},
+  howpublished = {Federal Office of Meteorology and Climatology MeteoSwiss},
+  note         = {Zurich stations; access via IDAWEB / opendata.
+                  \todo{name the exact stations and reference period you use}}
+}
+
+@misc{sonnendach,
+  author       = {{Swiss Federal Office of Energy}},
+  title        = {sonnendach.ch --- solar irradiance per roof surface},
+  howpublished = {\url{https://www.sonnendach.ch/}},
+  note         = {Irradiation, orientation, tilt and usable area per roof.
+                  Accessed \todo{date}}
+}
+
+@misc{usgs_landsat,
+  author       = {{U.S. Geological Survey}},
+  title        = {{Landsat} 8--9 {Collection} 2 {Level-2} surface temperature
+                  products},
+  howpublished = {\url{https://earthexplorer.usgs.gov/}},
+  note         = {Used for the independent surface-temperature check of the
+                  reference site. Accessed \todo{date}}
 }
 
 % -------------------------------------------------------- method sources

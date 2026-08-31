@@ -56,29 +56,158 @@ we design a reflective roof paint?} (too narrow --- presupposes the solution).
 \subsection{Context and constraints}
 \label{sec:context}
 
-\paragraph{Where and for whom.} A Swiss midland city, taken as a reference case
-(Zurich). Dense perimeter-block development with narrow street canyons and a
-high share of sealed surfaces. The system users are the residents of the upper
-floors, who are exposed to the strongest heat load and usually have no
-mechanical cooling; the pedestrians in the street canyon, who are exposed to
-radiation from the façade; and the building owner, who decides on and pays for
-the retrofit.
+\paragraph{Reference city: Zurich.} All context values, benchmarks and
+engineering checks in this report refer to the City of Zurich
+(\ang{47.38}\,N, \ang{8.54}\,E, approximately \qty{400}{\metre} above sea
+level on the valley floor of the Limmat). Fixing one reference city rather than
+designing for \enquote{a city} is what makes the constraints in
+Table~\ref{tab:constraints} and the KPI targets in Table~\ref{tab:kpi}
+checkable instead of generic. Zurich was chosen for four reasons:
+
+\begin{enumerate}
+  \item The city has an adopted municipal heat-mitigation strategy, the
+        \emph{Fachplanung Hitzeminderung} \parencite{stadtzuerich2020}, with an
+        implementation agenda \parencite{stadtzuerich_agenda}, a guidance
+        leaflet for building owners \parencite{stadtzuerich_merkblatt} and three
+        thematic maps \parencite{stadtzuerich_teilplaene}. The project therefore
+        has a real client, a documented baseline and published target values
+        instead of invented ones. Section~\ref{sec:stateofart} shows what this
+        means for our design space.
+  \item The city publishes an open climate analysis and open geodata
+        \parencite{stadtzuerich_opendata}, so the reference site can be
+        selected from measured heat-load data instead of intuition.
+  \item MeteoSwiss operates long-term stations in and around the city
+        \parencite{meteoswiss}, which supplies the boundary conditions
+        ($G$, $T_a$, wind speed, cloud cover) for the energy balance in
+        Section~3.2.
+  \item Its building stock and morphology are representative of the Swiss
+        Mittelland: dense perimeter-block development, narrow street canyons, a
+        high sealed fraction and a large share of buildings predating modern
+        thermal standards. Results can therefore be transferred to comparable
+        Swiss cities.
+\end{enumerate}
+
+\paragraph{Reference site and users.} We adopt the city's own model area
+\emph{Modellierungsgebiet 03 --- Geschlossene Randbebauung} (closed perimeter
+block) as the reference site \parencite[148--151]{stadtzuerich2020}. It consists
+of two outward-closed blocks of five storeys plus a roof structure enclosing
+private courtyards, in a dense district close to the centre; the street space is
+sealed from façade to façade, parking runs along the street and only isolated
+trees provide shade. The city's own climatic assessment of this structural type
+is that the reduced air exchange and the lack of cold-air supply make it
+overheat comparatively quickly.
+
+Choosing this site rather than an arbitrary building has a concrete methodical
+advantage: the Fachplanung already publishes modelled baseline and
+climate-optimised results for exactly this area, so our concept can be compared
+against a documented reference instead of against our own assumptions.
+\todo{Record the address, façade orientations, roof area and year of
+construction of the specific building you pick inside this area.}
+
+The system users are the residents of the upper floors, who carry the strongest
+heat load and usually have no mechanical cooling; the pedestrians in the street
+canyon, who receive radiation from the façade at eye level; and the building
+owner, who decides on and pays for the retrofit.
 
 \paragraph{When.} The design must perform in two distinct operating windows,
 which the systems view made explicit:
 
 \begin{itemize}
-  \item \textbf{Day window (approx.\ 11:00--18:00, clear sky):} peak solar
-        irradiance on the order of \qty{950}{\watt\per\square\metre} on a
-        horizontal surface and air temperatures up to about
-        \qty{36}{\celsius}. Dominant problem: absorbed short-wave radiation.
-        \todo{replace with measured values from MeteoSwiss for your reference site}
+  \item \textbf{Day window (approx.\ 11:00--18:00, clear sky):} clear-sky
+        global irradiance on a horizontal surface of the order of
+        \qty{900}{\watt\per\square\metre} to
+        \qty{950}{\watt\per\square\metre} around solar noon in midsummer, with
+        air temperatures reaching roughly \qtyrange{33}{36}{\celsius} during a
+        heat wave. Dominant problem: absorbed short-wave radiation.
+        A sealed, sun-exposed surface in the city can exceed
+        \qty{60}{\celsius} in summer and drive up the air temperature in its
+        immediate surroundings \parencite{stadtzuerich_merkblatt}.
+        \todo{replace the irradiance and air-temperature figures with measured
+        values from MeteoSwiss for the Zurich stations --- the irradiance above
+        is a clear-sky estimate, not a measurement}
   \item \textbf{Night window (approx.\ 22:00--06:00):} the stored heat is
-        released again, producing tropical nights. Dominant problem:
-        \emph{delayed} release of stored heat and a reduced sky view factor
-        that limits radiative loss. A concept that only performs during the
-        day does not solve the urban heat island.
+        released again, producing tropical nights ($T_\mathrm{min} \geq
+        \qty{20}{\celsius}$). Dominant problem: the \emph{delayed} release of
+        stored heat, and a reduced sky view factor in the street canyon that
+        limits radiative loss. \textbf{For Zurich the night is the larger half
+        of the problem:} the city states an urban heat island effect of
+        \qtyrange{1}{2}{\kelvin} by day but up to \qty{7}{\kelvin} at night in
+        the centre compared with the surrounding area
+        \parencite{stadtzuerich_merkblatt}. A concept that only performs during
+        the day therefore addresses the smaller half.
+        \todo{report the number of hot days ($T_\mathrm{max} \geq
+        \qty{30}{\celsius}$) and tropical nights per year for Zurich, and state
+        which station and which reference period the figures come from ---
+        the difference between the hill station and an inner-city station is
+        itself a result worth reporting}
 \end{itemize}
+
+\paragraph{Where on the envelope? A consequence of Zurich's latitude.}
+Fixing the reference city also fixes the solar geometry, and that geometry
+already narrows the design space before any biology is considered. At
+\ang{47.38}\,N the solar altitude at noon on 21 June is
+
+\begin{equation}
+h = 90^{\circ} - 47.38^{\circ} + 23.44^{\circ} \approx 66^{\circ} .
+\label{eq:solaraltitude}
+\end{equation}
+
+\noindent The direct beam therefore strikes a horizontal roof at an incidence
+factor of $\sin h \approx 0.91$, but a vertical south-facing façade at only
+$\cos h \approx 0.41$. In midsummer --- exactly when the concept has to work
+--- the flat roof receives well over twice the direct irradiance of a south
+façade at noon, and the roof also has a much larger sky view factor for
+night-time long-wave emission (F2). \todo{Confirm with daily irradiation totals
+per surface orientation from the national roof-irradiance dataset
+\parencite{sonnendach}; then decide and justify whether the concept targets the
+roof, the façade or both. Note that east and west façades peak in the morning
+and late afternoon rather than at noon, so a façade concept has a different
+load profile, not simply a smaller one.}
+
+\paragraph{Data sources for the reference case.} Table~\ref{tab:datasources}
+lists the open datasets used to characterise the reference city and, later, to
+validate the concept. Using measured local data rather than generic literature
+values is what turns \enquote{be locally attuned and responsive}
+(Section~\ref{sec:lifesprinciples}) from a slogan into a design input.
+
+\begin{table}[htbp]
+\centering
+\caption{Open data sources for the Zurich reference case. All are freely
+accessible; access dates belong in the reference list.}
+\label{tab:datasources}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{4.0cm} X L{3.2cm}}
+\toprule
+\textbf{Source} & \textbf{What it provides} & \textbf{Used for} \\
+\midrule
+Fachplanung Hitzeminderung and its thematic maps
+\parencite{stadtzuerich2020,stadtzuerich_teilplaene}
+& Baseline albedo values, modelled effectiveness per measure, city structure
+  types, areas needing action, cold-air corridors
+& Reference case, incumbent benchmark (Table~\ref{tab:incumbent}), site
+  selection \\
+MeteoSwiss station data \parencite{meteoswiss}
+& Air temperature, global radiation, wind speed, humidity; long homogeneous
+  series for Zurich stations
+& Boundary conditions for Eq.~\eqref{eq:energybalance}; definition of the
+  design heat wave \\
+City of Zurich heat-mitigation plan \parencite{stadtzuerich2020}
+& Municipal strategy, heat-load maps, target areas
+& Justification of the challenge and of the site selection \\
+City of Zurich open geodata \parencite{stadtzuerich_opendata}
+& Building footprints, roof areas, tree cadastre, climate-analysis layers
+& Selecting the reference site; estimating the addressable roof area \\
+National roof irradiance dataset \parencite{sonnendach}
+& Irradiation per roof surface, orientation, tilt and usable area
+& Irradiance per orientation; roof-versus-façade decision \\
+Landsat~8/9 thermal data \parencite{usgs_landsat}
+& Land surface temperature at approximately \qty{100}{\metre} resolution
+& Independent check that the chosen site really is a heat hotspot; before /
+  after comparison of surface temperature at district scale \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \paragraph{Constraints.} Table~\ref{tab:constraints} lists the constraints the
 concept has to satisfy. They are separated into hard constraints (a violation
@@ -100,13 +229,97 @@ Water       & hard & No potable water. Only rainwater harvested on site or atmos
 Existing building & hard & Retrofit onto an existing envelope. The load-bearing structure, floor plan and window openings are not redesigned. \\
 Climate     & hard & Must survive the Swiss annual cycle: frost down to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV exposure. A summer-only solution is not acceptable. \\
 Winter      & hard & Must not increase the heating demand appreciably (a high solar reflectance also reduces useful winter solar gains --- this trade-off must be quantified, not ignored). \\
-Regulatory  & soft & Fire regulations for façade build-ups; heritage protection may restrict visible changes on street-facing façades. \\
+Glare       & hard & No specular glare towards streets, neighbouring flats or traffic. The city names glare and the resulting safety concerns as the main objection to bright envelopes \parencite[128]{stadtzuerich2020}. This favours diffuse, structural whiteness over a mirror finish. \\
+Regulatory  & soft & Fire regulations for façade build-ups; heritage protection may restrict visible changes on street-facing façades \parencite[128]{stadtzuerich2020}. \\
+Solar energy & soft & Must not unnecessarily compromise façade- or roof-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State explicitly which envelope areas the concept claims. \\
 Structural  & soft & Limited additional dead load and build-up thickness on an existing façade. \\
-Maintenance & soft & Soiling, algae growth and weathering degrade the optical function; the concept should keep working with little maintenance over $\geq$ \qty{20}{years}. \\
-Economic    & soft & Cost per square metre in the range of a normal façade or roof refurbishment. \todo{find a benchmark figure and cite it} \\
+Maintenance & soft & Soiling, algae growth and weathering degrade the optical function. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}; the concept should keep working with little maintenance over $\geq$ \qty{20}{years}. \\
+Economic    & soft & The city expects higher construction and refurbishment cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal façade or roof refurbishment. \todo{find a benchmark figure and cite it} \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\subsection{State of the art: what the City of Zurich already does}
+\label{sec:stateofart}
+
+Scoping is incomplete without knowing what the client already does. The
+Fachplanung Hitzeminderung defines thirteen courses of action
+(\emph{Handlungsansätze}, HA~01--HA~13). Four of them act on the building
+envelope and therefore fall inside our project boundary: HA~09 green roofs,
+HA~10 green façades, HA~11 high-albedo façade and roof materials, and HA~12
+shading of the outdoor space close to the building
+\parencite[120--131]{stadtzuerich2020}. HA~11 is the direct incumbent of our
+design question, and the city already recommends it to building owners
+\parencite{stadtzuerich_merkblatt}.
+
+\begin{table}[htbp]
+\centering
+\caption{Modelled effectiveness of the incumbent measures, from the
+Fachplanung Hitzeminderung. Day values are the physiologically equivalent
+temperature (PET) at 14:00, \qty{2}{\metre} above ground; night values are air
+temperature. \enquote{Range} is the distance over which the effect is
+measurable.}
+\label{tab:incumbent}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{4.4cm} c c c X}
+\toprule
+\textbf{Measure} & \textbf{Median} & \textbf{Max.} & \textbf{Range} & \textbf{Source} \\
+\midrule
+HA~11 bright façade --- day (PET)  & \qty{-1.0}{\kelvin} & \qty{-1.8}{\kelvin} & \qtyrange{2}{3}{\metre} & \multirow{4}{*}{\parencite[Tab.~11, 128]{stadtzuerich2020}} \\
+HA~11 bright façade --- night      & \qty{-0.1}{\kelvin} & \qty{-0.2}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
+HA~11 bright roof --- day (PET)    & \qty{-1.2}{\kelvin} & \qty{-2.1}{\kelvin} & \qtyrange{2}{4}{\metre} & \\
+HA~11 bright roof --- night        & \qty{-0.1}{\kelvin} & \qty{-0.3}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
+\midrule
+HA~06 high-albedo ground surface instead of asphalt --- day (PET) & \qty{-1.5}{\kelvin} & \qty{-2.8}{\kelvin} & \qtyrange{2}{4}{\metre} & \multirow{2}{*}{\parencite[Tab.~5, 114]{stadtzuerich2020}} \\
+HA~06 --- night & \qty{-0.2}{\kelvin} & \qty{-0.5}{\kelvin} & \qtyrange{2}{3}{\metre} & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Baseline values this fixes for us.} The city's model uses a solar
+reflectance of $0.2$ for asphalt and $0.3$ for un-greened façades, and
+classifies $\leq 0.30$ as low and $\geq 0.80$ as high albedo. Reported material
+values are slate $0.1$, roof tiles $0.1$--$0.35$, natural stone $0.2$--$0.35$
+and a white façade $0.5$--$0.9$ \parencite[114, 128--129]{stadtzuerich2020}.
+Our reference case and the target of KPI~1 in Table~\ref{tab:kpi} are taken
+directly from these figures, so the comparison is made on the client's own
+terms rather than on ours.
+
+\paragraph{Constraints the city already identified for HA 11.} Glare and the
+resulting safety concerns; reduced yield of façade-integrated photovoltaics;
+higher construction and refurbishment cost; susceptibility to soiling and the
+cleaning cost that follows; and heritage protection requirements
+\parencite[128]{stadtzuerich2020}. These are carried into
+Table~\ref{tab:constraints} as sourced constraints.
+
+\paragraph{The gap --- and the design opportunity.} Table~\ref{tab:incumbent}
+contains the central finding for this project. The incumbent measure works
+during the day but is close to ineffective at night: \qty{-0.1}{\kelvin}
+median air temperature, against an urban heat island that reaches
+\qty{7}{\kelvin} at night. A bright surface reduces what is absorbed, but it
+provides no additional path for releasing heat that has already been stored in
+the construction, and it does nothing that would help once the sun is down.
+
+This defines the space in which a bio-inspired concept can be more than a
+repetition of existing practice. It must do at least one of the following:
+
+\begin{enumerate}
+  \item beat HA~11 on its own daytime metric (PET at pedestrian level), or
+  \item deliver a night-time effect that HA~11 does not --- which is what the
+        biologized questions on emitting to the night sky (F2) and on storing,
+        buffering and metering water (F4, F6--F8) are aimed at, or
+  \item resolve one of the constraints the city itself names for HA~11 ---
+        above all glare and soiling, which are exactly the points where the
+        biological models are strong: structural rather than specular
+        whiteness, and self-cleaning surfaces.
+\end{enumerate}
+
+\todo{Note for the discussion in Section~5: the running text on p.~128 of the
+Fachplanung quotes a maximum PET reduction of \qty{2.3}{\kelvin} for a
+south-west facing façade, while Tab.~11 on the same page gives
+\qty{1.8}{\kelvin}. Check the source, decide which value you use, and say so.
+Spotting this is worth more than quietly copying one of the two.}
 
 \subsection{System view and project boundary}
 \label{sec:systemview}
@@ -335,54 +548,69 @@ Section~3.3.
 \begin{table}[htbp]
 \centering
 \caption{Performance criteria. Function $\rightarrow$ KPI $\rightarrow$ unit
-$\rightarrow$ target. Reference case: an existing flat roof / plastered
-façade with a solar reflectance of about 0.15--0.25.}
+$\rightarrow$ target. Reference case: an existing Zurich façade or roof with a
+solar reflectance of about $0.3$, the value the city uses for un-greened
+façades \parencite[114]{stadtzuerich2020}.}
 \label{tab:kpi}
 \renewcommand{\arraystretch}{1.25}
 \footnotesize
-\begin{tabularx}{\textwidth}{L{0.7cm} L{2.6cm} L{3.3cm} L{1.9cm} X}
+\begin{tabularx}{\textwidth}{L{0.6cm} L{2.4cm} L{3.1cm} L{1.7cm} X}
 \toprule
 \textbf{\#} & \textbf{Function} & \textbf{KPI} & \textbf{Unit} & \textbf{Target / benchmark} \\
 \midrule
 1 & F1 Reflect short-wave radiation
   & Solar reflectance $\alpha_\mathrm{sol}$ (300--2500\,nm)
   & --
-  & $\geq 0.80$. Cool-roof products typically 0.65--0.85; ultra-white
-    laboratory paints reach $\approx 0.98$ \parencite{li2021}. \\
+  & $\geq 0.80$, the threshold the city defines for \enquote{high albedo}
+    \parencite[128]{stadtzuerich2020}. Baseline $0.3$. Ultra-white laboratory
+    paints reach $\approx 0.98$ \parencite{li2021}. \\
 2 & F2 Emit long-wave radiation
   & Thermal emittance $\varepsilon$ in the atmospheric window (8--13\,\textmu m)
   & --
   & $\geq 0.90$. Required for sub-ambient radiative cooling
-    \parencite{raman2014}. \\
+    \parencite{raman2014}. Not addressed by the incumbent measure. \\
 3 & F0 Regulate heat gain
-  & Peak surface temperature reduction $\Delta T_s$ vs.\ reference,
-    clear sky, 14:00
+  & Peak surface temperature reduction $\Delta T_s$ vs.\ reference, clear sky,
+    14:00
   & K
-  & $\geq \qty{15}{\kelvin}$. \todo{confirm against your own measurement
-    or simulation --- do not claim this before you have checked it} \\
-4 & F0 / F4
-  & Heat conducted into the building per hot day
-  & \unit{\watt\hour\per\square\metre\per\day}
-  & $\geq \qty{40}{\percent}$ below the reference case. \\
-5 & F2 (night)
-  & Net radiative cooling power at 02:00, clear sky
-  & \unit{\watt\per\square\metre}
-  & $\geq \qty{40}{\watt\per\square\metre}$; reported values for radiative
-    coolers are of this order \parencite{raman2014,zhai2017}. \\
+  & $\geq \qty{15}{\kelvin}$. \todo{confirm by calculation or measurement
+    before claiming it} \\
+4 & F0 (day, people)
+  & PET reduction at \qty{2}{\metre} above ground, 14:00
+  & K
+  & Beat the incumbent: HA~11 achieves \qty{-1.0}{\kelvin} (façade) and
+    \qty{-1.2}{\kelvin} (roof) median
+    \parencite[Tab.~11]{stadtzuerich2020}. This is the metric the client
+    actually uses. \\
+5 & F2, F4 (night)
+  & Net radiative cooling power at 02:00, clear sky; and night air temperature
+    effect
+  & \unit{\watt\per\square\metre}; K
+  & $\geq \qty{40}{\watt\per\square\metre}$
+    \parencite{raman2014,zhai2017}, and a night effect better than the
+    \qty{-0.1}{\kelvin} of HA~11 \parencite[Tab.~11]{stadtzuerich2020}.
+    \textbf{The decisive criterion of this project.} \\
 6 & F6--F8 Water path
   & Potable water consumption
   & \unit{\litre\per\square\metre\per\day}
-  & $= 0$ (hard constraint). Harvested rainwater use to be reported
-    separately. \\
+  & $= 0$ (hard constraint). Harvested rainwater reported separately. \\
 7 & F9/F10 Durability
   & Retention of $\alpha_\mathrm{sol}$ after soiling / weathering
   & \unit{\percent} of initial
-  & $\geq \qty{90}{\percent}$ after three years. Aged cool roofs commonly lose
-    a significant fraction of their initial reflectance
-    \parencite{santamouris2014}. \\
+  & $\geq \qty{90}{\percent}$ after three years. Soiling is the weakness the
+    city names for high-albedo envelopes \parencite[128]{stadtzuerich2020};
+    aged cool roofs commonly lose a significant fraction of their initial
+    reflectance \parencite{santamouris2014}. \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\paragraph{One quantity deliberately not a KPI.} The heat conducted through the
+envelope into the building is reported in Section~3.2 as a secondary result,
+because it follows from the same energy balance at no extra cost and matters to
+the building owner. It is not a selection KPI: indoor comfort and building
+services lie outside the project boundary (Table~\ref{tab:inout}), and mixing
+an out-of-boundary benefit into the concept comparison would distort it.
 
 \paragraph{Note on the targets.} The target values above are the team's
 \emph{aspirational} benchmarks set during scoping. They are hypotheses, not
