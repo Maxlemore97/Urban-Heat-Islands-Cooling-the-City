@@ -69,8 +69,13 @@ the document really changed. To reproduce a CI build locally:
 SOURCE_DATE_EPOCH=1735689600 FORCE_SOURCE_DATE=1 latexmk -pdf main.tex
 ```
 
-If you do not want the bot commits, delete the *Commit rebuilt PDF back to the
-repository* step from the workflow and add `main.pdf` to `.gitignore`.
+Please do **not** commit a locally built `main.pdf`. CI runs a slightly
+different TeX Live version, so its output differs by a few bytes and the next
+bot commit would overwrite yours anyway. Commit the sources, let CI produce
+the PDF.
+
+If you do not want the bot commits at all, delete the *Commit rebuilt PDF back
+to the repository* step from the workflow and add `main.pdf` to `.gitignore`.
 
 A red cross on a commit means the LaTeX did not compile — open the run log,
 the `-file-line-error` flag points at the exact file and line.
