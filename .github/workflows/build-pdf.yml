@@ -1,0 +1,58 @@
+name: Build report PDF
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "**.tex"
+      - "**.bib"
+      - "figures/**"
+      - ".github/workflows/build-pdf.yml"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Compile main.tex
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_lualatex: false
+          latexmk_use_xelatex: false
+          # latexmk runs pdflatex + biber + pdflatex as often as needed
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Rename PDF
+        run: mv main.pdf biomimicry-report-urban-heat-islands.pdf
+
+      - name: Upload PDF as build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: biomimicry-report
+          path: biomimicry-report-urban-heat-islands.pdf
+          if-no-files-found: error
+          retention-days: 30
+
+      # Rolling "latest" release so the team always has a stable download link
+      # for the current PDF. Only runs on the default branch.
+      - name: Publish rolling release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-pdf
+          name: Latest report PDF
+          body: |
+            Automatically built from `${{ github.sha }}`.
+            This release is overwritten on every push to `main`.
+          files: biomimicry-report-urban-heat-islands.pdf
+          prerelease: true

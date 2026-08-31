@@ -1,0 +1,107 @@
+%=======================================================================
+%  Biomimicry Challenge Report  --  ZHAW Blockweek Bionics 2026
+%  LaTeX template built from "Report_template_26_V3_final.docx"
+%
+%  HOW TO USE ON OVERLEAF
+%    1. Upload the ZIP  ->  New Project  ->  Upload Project
+%    2. Compiler: pdfLaTeX (Menu -> Settings). Biber runs automatically.
+%    3. Edit the files in sections/. Do not rename the section headings:
+%       the assignment says "Use the headings from this template."
+%
+%  STATUS
+%    Section 2 (Challenge & Scoping) is pre-filled with the Day-1
+%    afternoon task for Challenge 1 "Urban Heat Islands".
+%    All other sections are scaffolds containing the template's own
+%    instructions as LaTeX comments (they do not appear in the PDF).
+%=======================================================================
+\documentclass[11pt,a4paper]{article}
+
+%---------------------------------------------------------------- basics
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.5cm,headheight=14pt]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric}
+
+%------------------------------------------------------------ references
+\usepackage{csquotes}
+\usepackage[style=authoryear,backend=biber,maxcitenames=2,uniquelist=false]{biblatex}
+\addbibresource{references.bib}
+
+%--------------------------------------------------------------- styling
+\definecolor{zhawblue}{RGB}{0,90,140}
+\definecolor{lightgray}{RGB}{240,240,240}
+\definecolor{boxgray}{RGB}{248,248,248}
+
+\usepackage[colorlinks=true,linkcolor=zhawblue,citecolor=zhawblue,%
+            urlcolor=zhawblue,breaklinks=true]{hyperref}
+
+\titleformat{\section}{\normalfont\Large\bfseries\color{zhawblue}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Biomimicry Challenge Report}
+\fancyhead[R]{\small ZHAW -- Blockweek Bionics 2026}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlist{itemsep=2pt,parsep=0pt,topsep=4pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\sisetup{per-mode=symbol,detect-weight=true}
+
+% TikZ styles shared by the system view and the functional diagram
+\tikzset{
+  sysbox/.style   = {draw=zhawblue,fill=zhawblue!8,rounded corners=2pt,
+                     align=center,inner sep=5pt,minimum height=9mm,font=\small},
+  soibox/.style   = {draw=zhawblue,line width=1pt,fill=zhawblue!20,rounded corners=2pt,
+                     align=center,inner sep=5pt,minimum height=10mm,font=\small\bfseries},
+  subbox/.style   = {draw=gray,fill=boxgray,rounded corners=2pt,align=center,
+                     inner sep=4pt,minimum height=8mm,font=\scriptsize},
+  funcbox/.style  = {draw=black!70,fill=white,rounded corners=2pt,align=center,
+                     inner sep=4pt,minimum height=8mm,font=\scriptsize},
+  flowarr/.style  = {-{Latex[length=2mm]},thick,draw=black!65},
+  wateharr/.style = {-{Latex[length=2mm]},thick,draw=zhawblue,dashed},
+}
+
+%--------------------------------------------------- placeholder command
+% Use \todo{...} for anything still open. Remove all of them before hand-in.
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+
+\begin{document}
+
+\input{sections/00_titlepage}
+
+\tableofcontents
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_scoping}
+\input{sections/03_bioinspired_design}
+\input{sections/04_sustainability}
+\input{sections/05_discussion}
+
+\section{References}
+\printbibliography[heading=none]
+
+\appendix
+\input{sections/06_appendix}
+
+\end{document}

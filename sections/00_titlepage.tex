@@ -1,0 +1,67 @@
+%=======================================================================
+%  TITLE PAGE  --  mirrors the cover table of the .docx template
+%  Fill in: topic, picture, students, contributions, comments
+%=======================================================================
+\begin{titlepage}
+\centering
+
+{\Large\bfseries Report Biomimicry Challenge\par}
+\vspace{4mm}
+{\small ZHAW Institute for Sustainable Development \textbar{} Blockweek Bionics 2026\par}
+
+\vspace{10mm}
+
+% ------------------------------------------------- Topic
+{\color{zhawblue}\hrule height 1pt}
+\vspace{5mm}
+{\LARGE\bfseries Challenge 1 --- Urban Heat Islands\par}
+\vspace{2mm}
+{\Large Cooling the City\par}
+\vspace{5mm}
+{\color{zhawblue}\hrule height 1pt}
+
+\vspace{12mm}
+
+% ------------------------------------------------- Picture
+\begin{minipage}{0.85\textwidth}
+\centering
+% Replace with your own concept image / photo:
+% \includegraphics[width=\linewidth]{figures/cover.jpg}
+\fbox{\parbox[c][55mm][c]{0.95\linewidth}{\centering\itshape\color{gray}
+  ``Picture''\\[2mm]
+  \footnotesize Insert a concept image here:\\
+  \texttt{\textbackslash includegraphics[width=\textbackslash linewidth]\{figures/cover.jpg\}}}}
+\end{minipage}
+
+\vfill
+
+% ------------------------------------------------- Students & contributions
+\begin{minipage}{\textwidth}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{L{4.2cm} X}
+\toprule
+\textbf{Students} & \textbf{Contribution to the report / (sections)} \\
+\midrule
+\todo{Name 1} & \todo{e.g. Sections 2, 3.2, engineering calculations} \\
+\todo{Name 2} & \todo{e.g. Sections 3.1, 4, biological research} \\
+\todo{Name 3} & \todo{e.g. Sections 1, 5, figures and editing} \\
+\todo{Name 4} & \todo{e.g. Section 3.3, measurements, appendix} \\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\vspace{6mm}
+
+\begin{minipage}{\textwidth}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{L{4.2cm} X}
+\toprule
+\textbf{Comments} & \todo{optional remarks for the instructors} \\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\vspace{8mm}
+{\small Supervisors: Jörg Musiolik, Corinna Baumgartner \quad\textbar\quad Submission date: \todo{date}\par}
+
+\end{titlepage}

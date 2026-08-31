@@ -1,0 +1,30 @@
+# ---- LaTeX build output -------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+main.pdf
+biomimicry-report-*.pdf
+
+# ---- editors / OS -------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---- ProtonDrive sync artefacts ----------------------------------------
+*# Edit conflict *#*

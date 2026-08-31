@@ -1,0 +1,248 @@
+%=======================================================================
+%  3  BIO-INSPIRED DESIGN PROCESS   (scaffold -- to be filled in day 2+)
+%  Template: "Document the research and design path explicitly. The report
+%  should make the reasoning chain from challenge to biological mechanism,
+%  technical concept, validation and iteration visible."
+%=======================================================================
+\section{Bio-Inspired Design Process}
+
+\todo{One short paragraph: how the team organised the search and the design
+path, so the reasoning chain from Section 2 to Section 3.3 is visible.}
+
+%-----------------------------------------------------------------------
+\subsection{Discovering \& Abstracting}
+%  Template bullets:
+%   - Use AskNature / AskNature Chat, literature and other credible sources.
+%   - Make the research path explicit: how were models found, which were
+%     selected, and why were others DE-selected?  <- the de-selection is
+%     where most teams lose points; the table below is prepared for it.
+%   - Describe mechanisms IN DEPTH. Explain HOW they work, not just which
+%     organism has them. Use figures.
+%   - Abstract into a transferable principle. Separate observation /
+%     abstraction / technical interpretation.
+%   - Identify relevant Life's Principles.
+%-----------------------------------------------------------------------
+
+\subsubsection{Research path}
+
+\todo{Describe how you searched: AskNature functions used, search terms,
+databases, which biologized question from Section~\ref{sec:biologized} led to
+which model.}
+
+\begin{table}[htbp]
+\centering
+\caption{Biological models found, and the selection / de-selection decision.}
+\label{tab:models}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{3.0cm} L{1.5cm} X L{2.2cm}}
+\toprule
+\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism (short)} & \textbf{Selected?} \\
+\midrule
+Saharan silver ant \emph{Cataglyphis bombycina} & F1, F2 &
+Triangular hairs scatter visible and near-infrared light and simultaneously
+enhance emissivity in the mid-infrared \parencite{shi2015} & \todo{yes/no + why} \\
+White beetle \emph{Cyphochilus} & F1 &
+Brilliant whiteness from a disordered chitin network only a few micrometres
+thick, without pigment \parencite{vukusic2007} & \todo{yes/no + why} \\
+African elephant skin & F6--F8 &
+Network of micrometre-scale cracks retains water and extends evaporative
+cooling \parencite{martins2018} & \todo{yes/no + why} \\
+Desert shrub \emph{Encelia farinosa} & F1, F5 &
+Dense leaf pubescence raises reflectance and is adjusted seasonally
+\parencite{ehleringer1978} & \todo{yes/no + why} \\
+Termite mound & F3 &
+Classic biomimicry reference, but the \enquote{chimney air-conditioning}
+account is contested; measurements support wind-driven transient gas exchange
+rather than a thermosiphon \parencite{turner2008} &
+\todo{recommended: DE-SELECT with this justification} \\
+\todo{further models} & & & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Mechanisms in depth}
+
+\todo{For the 2--3 selected models: explain the mechanism properly ---
+geometry, length scales, physics, and the evidence. Add a sketch. This is
+worth 20\,\% of the grade and descriptive text alone is not enough.}
+
+\subsubsection{Abstraction into design principles}
+
+\todo{Fill in. Keep the three columns strictly separate.}
+
+\begin{table}[htbp]
+\centering
+\caption{From biological observation to transferable design principle.}
+\label{tab:abstraction}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{X X X}
+\toprule
+\textbf{Biological observation} & \textbf{Abstracted principle} & \textbf{Possible technical interpretation} \\
+\midrule
+\todo{what was observed} & \todo{the principle, free of the organism} & \todo{how it could be built --- not yet a decision} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+%-----------------------------------------------------------------------
+\subsection{Creating: Engineering Concept Development}
+%  Template bullets:
+%   - Structured ideation (Crazy 8s and/or Morphological Matrix).
+%     At least THREE initial concept combinations before selecting two.
+%   - At least TWO technically distinct concept variants, with annotated
+%     drawings: components, functions, flows, materials, key parameters.
+%   - Engineering Canvas + 2-3 critical engineering questions.
+%   - At least 1-2 engineering checks, INCLUDING a quantitative estimate.
+%   - For calculations: formula, assumptions, units, result, meaning.
+%-----------------------------------------------------------------------
+
+\subsubsection{Ideation}
+
+\todo{Document the method (Crazy 8s / morphological matrix). Include a photo
+or scan of the sheets. Show at least three initial combinations.}
+
+\subsubsection{Concept A --- \todo{name}}
+\todo{Annotated drawing + description: components, functional chain, flows,
+candidate materials, key technical parameters.}
+
+\subsubsection{Concept B --- \todo{name}}
+\todo{Must be technically DISTINCT from A --- a different physical principle,
+not a variant. E.g. a radiative (dry) concept vs.\ an evaporative or
+geometric (self-shading) concept.}
+
+\subsubsection{Engineering Canvas and critical questions}
+
+\todo{Insert the Engineering Canvas. Then derive 2--3 critical engineering
+questions of the form: \enquote{What must be true for the concept to work?}}
+
+\begin{enumerate}
+  \item \todo{Critical question 1}
+  \item \todo{Critical question 2}
+  \item \todo{Critical question 3}
+\end{enumerate}
+
+\subsubsection{Engineering check 1: steady-state surface energy balance}
+
+\todo{This check is prepared because it is the most direct way to test KPI~1
+and KPI~3. Fill in your own numbers, state every assumption, and keep the
+units.}
+
+For an opaque surface in steady state, the energy balance per unit area is
+
+\begin{equation}
+(1-\alpha_\mathrm{sol})\,G \;+\; \varepsilon L_\downarrow
+\;-\; \varepsilon \sigma T_s^{4} \;-\; h_c\,(T_s - T_a) \;-\; q_\mathrm{cond}
+\;=\; 0 ,
+\label{eq:energybalance}
+\end{equation}
+
+\noindent where $\alpha_\mathrm{sol}$ is the solar reflectance,
+$G$ the global irradiance on the surface, $\varepsilon$ the thermal emittance,
+$L_\downarrow$ the incoming long-wave radiation from the sky,
+$\sigma = \qty{5.67e-8}{\watt\per\square\metre\per\kelvin\tothe{4}}$ the
+Stefan--Boltzmann constant, $T_s$ the surface temperature, $T_a$ the air
+temperature, $h_c$ the convective heat transfer coefficient and
+$q_\mathrm{cond}$ the heat conducted into the construction.
+
+\begin{table}[htbp]
+\centering
+\caption{Assumptions for the energy balance. Every value needs a source.}
+\label{tab:assumptions}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabularx}{\textwidth}{L{3.6cm} L{3.0cm} X}
+\toprule
+\textbf{Quantity} & \textbf{Value used} & \textbf{Justification / source} \\
+\midrule
+$G$              & \todo{} \unit{\watt\per\square\metre} & \todo{MeteoSwiss, clear-sky summer day} \\
+$T_a$            & \todo{} \unit{\celsius} & \todo{} \\
+$h_c$            & \todo{} \unit{\watt\per\square\metre\per\kelvin} & \todo{low wind speed in a street canyon} \\
+$L_\downarrow$   & \todo{} \unit{\watt\per\square\metre} & \todo{clear-sky estimate; state the correlation used} \\
+$\alpha_\mathrm{sol}$ reference & \todo{} & \todo{aged bitumen / plaster} \\
+$\alpha_\mathrm{sol}$ concept   & \todo{} & \todo{} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Result and meaning.} \todo{Solve Eq.~\eqref{eq:energybalance} for
+$T_s$ for the reference and for the concept, report both, and state explicitly
+what the difference does and does \emph{not} prove (see the note on KPI~3 in
+Section~\ref{sec:kpi}).}
+
+\subsubsection{Engineering check 2: \todo{title}}
+
+\todo{Options that are realistic within the week: (a) a simple outdoor
+measurement --- identical plates with different surfaces, logged with a
+thermometer or a temperature sensor over a few hours; (b) a transient 1-D
+model of the build-up over a diurnal cycle; (c) a water balance --- litres of
+rainwater per square metre per hot day against the latent heat of vaporisation
+of \qty{2.45}{\mega\joule\per\kilo\gram}; (d) a material and cost comparison.
+Report method, raw data, result and uncertainty.}
+
+%-----------------------------------------------------------------------
+\subsection{Concept Evaluation \& Iteration}
+%  Template bullets:
+%   - Compare the two variants against the KPIs from Section 2.
+%   - Transparent decision matrix, justify important ratings.
+%   - Use the engineering checks as evidence.
+%   - Peer review (world café), instructor feedback, AI as critical reviewer.
+%   - Select A, B or a justified hybrid.
+%   - Develop Final Concept V2 and show WHAT CHANGED and WHY.
+%-----------------------------------------------------------------------
+
+\begin{table}[htbp]
+\centering
+\caption{Decision matrix. Ratings 1--5, weights from
+Section~\ref{sec:kpi}. Every rating must be justified in the text.}
+\label{tab:decision}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{5.2cm} c c c X}
+\toprule
+\textbf{KPI} & \textbf{Weight} & \textbf{Concept A} & \textbf{Concept B} & \textbf{Evidence used} \\
+\midrule
+1 -- Solar reflectance            & \todo{} & \todo{} & \todo{} & \todo{} \\
+2 -- Thermal emittance            & \todo{} & \todo{} & \todo{} & \todo{} \\
+3 -- Peak surface temperature      & \todo{} & \todo{} & \todo{} & \todo{} \\
+4 -- Heat into the building        & \todo{} & \todo{} & \todo{} & \todo{} \\
+5 -- Night radiative cooling       & \todo{} & \todo{} & \todo{} & \todo{} \\
+6 -- Potable water use             & \todo{} & \todo{} & \todo{} & \todo{} \\
+7 -- Durability of the optics      & \todo{} & \todo{} & \todo{} & \todo{} \\
+\midrule
+\textbf{Weighted total}            &         & \todo{} & \todo{} & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Review and feedback}
+\todo{World café peer feedback, instructor feedback, and AI used as a critical
+reviewer --- including where the team disagreed with the AI and why. This
+belongs in Appendix~A as well.}
+
+\subsubsection{Selection and Final Concept V2}
+
+\todo{State which concept (or justified hybrid) was selected and describe V2 in
+detail.}
+
+\begin{table}[htbp]
+\centering
+\caption{Final output of the creating and evaluating phase:
+Concept V1a/b $\rightarrow$ engineering review $\rightarrow$ evidence
+$\rightarrow$ Concept V2.}
+\label{tab:v1v2}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{4.0cm} X X}
+\toprule
+\textbf{What changed} & \textbf{Why it changed} & \textbf{Evidence that informed the change} \\
+\midrule
+\todo{} & \todo{} & \todo{} \\
+\todo{} & \todo{} & \todo{} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Remaining uncertainties}
+\todo{What is still unproven, and what should be tested or developed next.}
