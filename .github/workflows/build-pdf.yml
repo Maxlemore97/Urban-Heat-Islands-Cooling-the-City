@@ -4,6 +4,8 @@ on:
   push:
     branches: ["**"]
     paths:
+      # main.pdf is deliberately NOT listed: the commit that this workflow
+      # pushes back only touches the PDF and therefore cannot retrigger it.
       - "**.tex"
       - "**.bib"
       - "figures/**"
@@ -19,6 +21,13 @@ jobs:
     name: Compile main.tex
     runs-on: ubuntu-latest
 
+    env:
+      # Fixed epoch (2025-01-01) makes the PDF byte-reproducible: identical
+      # sources produce an identical file, so the commit-back step below only
+      # fires when the document actually changed.
+      SOURCE_DATE_EPOCH: "1735689600"
+      FORCE_SOURCE_DATE: "1"
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -32,8 +41,8 @@ jobs:
           # latexmk runs pdflatex + biber + pdflatex as often as needed
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
-      - name: Rename PDF
-        run: mv main.pdf biomimicry-report-urban-heat-islands.pdf
+      - name: Copy PDF under a distribution name
+        run: cp main.pdf biomimicry-report-urban-heat-islands.pdf
 
       - name: Upload PDF as build artifact
         uses: actions/upload-artifact@v5
@@ -42,6 +51,22 @@ jobs:
           path: biomimicry-report-urban-heat-islands.pdf
           if-no-files-found: error
           retention-days: 30
+
+      # Keep the tracked main.pdf in the repository up to date, so the current
+      # PDF is always readable directly on GitHub without downloading an
+      # artifact. Only runs on the default branch.
+      - name: Commit rebuilt PDF back to the repository
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          if git diff --quiet -- main.pdf; then
+            echo "main.pdf is unchanged - nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add main.pdf
+          git commit -m "Rebuild main.pdf from ${GITHUB_SHA::7} [skip ci]"
+          git push
 
       # Rolling "latest" release so the team always has a stable download link
       # for the current PDF. Only runs on the default branch.

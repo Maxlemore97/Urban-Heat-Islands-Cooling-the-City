@@ -12,6 +12,7 @@ template's own instructions as LaTeX comments.
 
 ```
 main.tex                    document class, packages, TikZ styles, includes
+main.pdf                    the built report — tracked, refreshed by CI
 references.bib              starting set of sources — verify before hand-in
 sections/
   00_titlepage.tex          cover table: topic, picture, students, contributions
@@ -53,8 +54,23 @@ touches a `.tex`, `.bib` or figure file.
 
 - **Every branch:** the PDF is attached to the workflow run as an artifact
   (Actions → pick the run → *biomimicry-report*).
+- **`main` only:** the rebuilt `main.pdf` is committed back to the repository,
+  so the current PDF is always readable directly on GitHub — no download
+  needed. These commits are authored by `github-actions[bot]`.
 - **`main` only:** the PDF is also published to a rolling pre-release tagged
-  `latest-pdf`, so there is always one stable download link for the team.
+  `latest-pdf`, so there is always one stable download link for the team:
+  [latest-pdf](../../releases/tag/latest-pdf).
+
+The build is byte-reproducible (`SOURCE_DATE_EPOCH` is pinned), so identical
+sources produce an identical PDF and the commit-back step stays quiet unless
+the document really changed. To reproduce a CI build locally:
+
+```bash
+SOURCE_DATE_EPOCH=1735689600 FORCE_SOURCE_DATE=1 latexmk -pdf main.tex
+```
+
+If you do not want the bot commits, delete the *Commit rebuilt PDF back to the
+repository* step from the workflow and add `main.pdf` to `.gitignore`.
 
 A red cross on a commit means the LaTeX did not compile — open the run log,
 the `-file-line-error` flag points at the exact file and line.

@@ -17,8 +17,6 @@
 *.vrb
 *.xdv
 *.dvi
-main.pdf
-biomimicry-report-*.pdf
 
 # ---- editors / OS -------------------------------------------------------
 .DS_Store
@@ -28,3 +26,6 @@ biomimicry-report-*.pdf
 
 # ---- ProtonDrive sync artefacts ----------------------------------------
 *# Edit conflict *#*
+
+# The built PDF (main.pdf) is intentionally TRACKED so the repository always
+# carries a readable copy. CI rebuilds and re-commits it on every push to main.
