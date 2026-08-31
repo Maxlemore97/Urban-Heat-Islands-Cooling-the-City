@@ -1,15 +1,12 @@
 %=======================================================================
 %  2  CHALLENGE & SCOPING
-%  This section is the OUTPUT OF THE DAY-1 AFTERNOON TASK
-%  (Scoping V6, slides 28 + 29). Required output:
-%     1. Context & constraints
-%     2. System view figure (super / SOI / parallel / sub + IN-OUT)
-%     3. Function list / functional diagram
-%     4. KPI table  (Function -> KPI -> Unit -> Target)
-%     5. Final "How might we ...?" question
-%  Everything below is a WORKING DRAFT for Challenge 1 (Urban Heat
-%  Islands). Discuss it in the team, change what you disagree with, and
-%  replace every \todo{} before hand-in.
+%  Output of the Day-1 afternoon task (Scoping V6, slides 28 + 29).
+%  Required output:  1. context & constraints  2. system view figure with
+%  IN/OUT boundary  3. function list / functional diagram  4. KPI table
+%  5. final "How might we ...?" question.
+%
+%  Content is based on the team's scoping notes (auftrag_1.md) and on the
+%  City of Zurich reference material. Replace every \todo{} before hand-in.
 %=======================================================================
 \section{Challenge \& Scoping}
 
@@ -20,71 +17,114 @@
 stress due to climate change. Develop bioinspired strategies to reduce urban
 heat through building materials, façade design, or urban planning.}
 
-The challenge as given spans three different scales --- material, building
-component and city planning. Treating all three would make the project broader
-rather than more focused, which the systems view in
-Section~\ref{sec:systemview} is explicitly meant to prevent. We therefore
-narrow the challenge to the scale at which our team can actually design,
-calculate and test something within the available time: the \emph{outer
-surface of an existing building envelope}.
+The challenge as given spans three scales --- material, building component and
+urban planning. Working on all three would make the project larger rather than
+more focused, which the systems view is explicitly meant to prevent. The design
+question is the instrument that makes this cut.
 
-A second reason for this cut is physical. The urban heat island is driven by
-the surface energy balance: solar radiation absorbed by opaque urban surfaces
-during the day is stored and re-emitted as sensible heat, while long-wave loss
-to the sky is reduced by the limited sky view factor of the street canyon
-\parencite{oke1982}. The building envelope is one of the largest of these
-surfaces and, unlike streets or trees, it is directly accessible to a design
-intervention by a single building owner.
+\subsubsection{Candidate questions considered}
+
+Five candidates were formulated in the team and assessed against the criterion
+that a design question must be neither too broad nor too narrow: specific
+enough to define an intervention point, open enough to admit different
+solutions.
+
+\begin{table}[htbp]
+\centering
+\caption{Design questions considered, and why four were rejected.}
+\label{tab:questions}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{0.5cm} X L{4.6cm}}
+\toprule
+\textbf{\#} & \textbf{Candidate} & \textbf{Assessment} \\
+\midrule
+1 & How do we prevent heat build-up in urban areas?
+  & \emph{Too broad.} No place, no time, no intervention point --- the
+    equivalent of \enquote{How might we end hunger?} \\
+2 & How could we use the energy or heat build-up positively while lowering
+    temperature?
+  & Right idea, but unanchored: no location, and \enquote{positively} does not
+    say for what. Refined into candidate~5. \\
+3 & How might we get the heat that Zurich's existing buildings store during the
+    day back out of the city before the next morning, without using energy?
+  & Well formed and highly testable. Rejected only because it discards the
+    team's central idea of \emph{using} the heat. Its night-time focus is
+    retained in the selected question. \\
+4 & How can we prevent heat waves causing heat islands?
+  & \emph{Factually wrong.} Heat waves do not cause heat islands. The urban
+    heat island is a permanent consequence of urban surface properties and
+    geometry and exists on ordinary summer days; a heat wave makes it
+    dangerous, it does not create it \parencite{oke1982}. \\
+5 & How might we turn the heat that accumulates in a city into a useful
+    resource, instead of reflecting or discarding it?
+  & Good direction, but the reading \enquote{store summer heat for winter} is
+    not verifiable within the project, and it has no biological support:
+    organisms store chemical energy across seasons, not sensible heat.
+    Narrowed into the selected question. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Selected design question}
 
 \medskip
 \noindent\fbox{\parbox{0.97\textwidth}{%
 \textbf{Design question (solution-neutral):}\\[2mm]
-\emph{How might we keep the outer envelope of existing urban buildings --- and
-the air and surfaces next to it --- cool during summer heat waves, using only
-passive means and locally available water?}}}
+\emph{How might we let the heat that Zurich's existing buildings absorb during
+a summer day drive its own removal, so that the hotter it gets, the more the
+building cools itself?}}}
 
 \medskip
-The question was deliberately formulated \emph{after} the context, systems and
-function analysis, not before. It names no solution (no coating, no greening,
-no ventilation principle), states the operating context (existing buildings,
-summer heat waves), and fixes the two hard constraints that follow from
-Section~\ref{sec:context} (no auxiliary energy, no potable water). Following
-the guidance on scoping questions, it sits between \enquote{How might we cool
-the city?} (too broad --- no defined intervention point) and \enquote{How might
-we design a reflective roof paint?} (too narrow --- presupposes the solution).
+The question names no solution --- no coating, no greening, no geometry, no
+water. It states the location (Zurich), the object (existing buildings, so
+retrofit rather than new build) and the operating season. What it adds to
+candidates~3 and~5 is the subordinate clause, and that clause is the actual
+content of the project: it demands a \textbf{self-regulating} response, in
+which the cooling power rises with the heat load instead of being fixed.
+
+This matters because it distinguishes the project from the incumbent measure.
+A bright surface (Section~\ref{sec:stateofart}) has a fixed optical response:
+it reflects the same fraction of radiation at \qty{20}{\celsius} as at
+\qty{40}{\celsius}, and it does nothing at all once the sun has set. A
+self-regulating surface behaves like a biological one --- transpiration in a
+leaf is driven by the same solar energy that heats the leaf, so the cooling
+effort scales with the load, without a controller, a sensor or a pump.
+
+It also resolves the team's initial difficulty of having two systems of
+interest (\enquote{reduce heat} and \enquote{prevent heat}). These are not two
+systems. They are two functions of one system, coupled by the selected
+question: prevention acts during the day window, removal during the night
+window, and the self-regulating link connects them.
 
 \subsection{Context and constraints}
 \label{sec:context}
 
 \paragraph{Reference city: Zurich.} All context values, benchmarks and
 engineering checks in this report refer to the City of Zurich
-(\ang{47.38}\,N, \ang{8.54}\,E, approximately \qty{400}{\metre} above sea
-level on the valley floor of the Limmat). Fixing one reference city rather than
-designing for \enquote{a city} is what makes the constraints in
-Table~\ref{tab:constraints} and the KPI targets in Table~\ref{tab:kpi}
-checkable instead of generic. Zurich was chosen for four reasons:
+(\ang{47.38}\,N, \ang{8.54}\,E, approximately \qty{400}{\metre} above sea level
+on the valley floor of the Limmat). Fixing one reference city is what makes the
+constraints below and the KPI targets in Table~\ref{tab:kpi} checkable instead
+of generic. Zurich was chosen for four reasons:
 
 \begin{enumerate}
   \item The city has an adopted municipal heat-mitigation strategy, the
         \emph{Fachplanung Hitzeminderung} \parencite{stadtzuerich2020}, with an
         implementation agenda \parencite{stadtzuerich_agenda}, a guidance
-        leaflet for building owners \parencite{stadtzuerich_merkblatt} and three
-        thematic maps \parencite{stadtzuerich_teilplaene}. The project therefore
-        has a real client, a documented baseline and published target values
-        instead of invented ones. Section~\ref{sec:stateofart} shows what this
-        means for our design space.
+        leaflet for building owners \parencite{stadtzuerich_merkblatt} and
+        three thematic maps \parencite{stadtzuerich_teilplaene}. The project
+        therefore has a real client, a documented baseline and published target
+        values instead of invented ones. Section~\ref{sec:stateofart} shows
+        what this means for our design space.
   \item The city publishes an open climate analysis and open geodata
-        \parencite{stadtzuerich_opendata}, so the reference site can be
-        selected from measured heat-load data instead of intuition.
+        \parencite{stadtzuerich_opendata}, so the reference site can be selected
+        from measured heat-load data instead of intuition.
   \item MeteoSwiss operates long-term stations in and around the city
         \parencite{meteoswiss}, which supplies the boundary conditions
-        ($G$, $T_a$, wind speed, cloud cover) for the energy balance in
+        ($G$, $T_a$, wind speed, humidity) for the energy balance in
         Section~3.2.
   \item Its building stock and morphology are representative of the Swiss
-        Mittelland: dense perimeter-block development, narrow street canyons, a
-        high sealed fraction and a large share of buildings predating modern
-        thermal standards. Results can therefore be transferred to comparable
-        Swiss cities.
+        Mittelland, so results transfer to comparable Swiss cities.
 \end{enumerate}
 
 \paragraph{Reference site and users.} We adopt the city's own model area
@@ -92,60 +132,52 @@ checkable instead of generic. Zurich was chosen for four reasons:
 block) as the reference site \parencite[148--151]{stadtzuerich2020}. It consists
 of two outward-closed blocks of five storeys plus a roof structure enclosing
 private courtyards, in a dense district close to the centre; the street space is
-sealed from façade to façade, parking runs along the street and only isolated
-trees provide shade. The city's own climatic assessment of this structural type
-is that the reduced air exchange and the lack of cold-air supply make it
-overheat comparatively quickly.
+sealed from façade to façade and only isolated trees provide shade. The city's
+own assessment is that the reduced air exchange and the lack of cold-air supply
+make this structural type overheat comparatively quickly.
 
-Choosing this site rather than an arbitrary building has a concrete methodical
-advantage: the Fachplanung already publishes modelled baseline and
-climate-optimised results for exactly this area, so our concept can be compared
-against a documented reference instead of against our own assumptions.
-\todo{Record the address, façade orientations, roof area and year of
-construction of the specific building you pick inside this area.}
+Choosing this site has a methodical advantage: the Fachplanung already publishes
+modelled baseline and climate-optimised results for exactly this area, so our
+concept can be compared against a documented reference rather than against our
+own assumptions. \todo{Record address, façade orientations, roof area and year
+of construction of the specific building you pick inside this area.}
 
-The system users are the residents of the upper floors, who carry the strongest
-heat load and usually have no mechanical cooling; the pedestrians in the street
-canyon, who receive radiation from the façade at eye level; and the building
-owner, who decides on and pays for the retrofit.
+The users are the residents of the upper floors, who carry the strongest heat
+load and usually have no mechanical cooling; the pedestrians in the street
+canyon, who receive radiation from the façade at eye level; the building owner,
+who decides on and pays for the retrofit; and the trades who install and later
+maintain the system.
 
-\paragraph{When.} The design must perform in two distinct operating windows,
-which the systems view made explicit:
+\paragraph{When.} The design must perform in two operating windows, which the
+systems view made explicit:
 
 \begin{itemize}
-  \item \textbf{Day window (approx.\ 11:00--18:00, clear sky):} clear-sky
-        global irradiance on a horizontal surface of the order of
-        \qty{900}{\watt\per\square\metre} to
-        \qty{950}{\watt\per\square\metre} around solar noon in midsummer, with
-        air temperatures reaching roughly \qtyrange{33}{36}{\celsius} during a
-        heat wave. Dominant problem: absorbed short-wave radiation.
-        A sealed, sun-exposed surface in the city can exceed
-        \qty{60}{\celsius} in summer and drive up the air temperature in its
-        immediate surroundings \parencite{stadtzuerich_merkblatt}.
+  \item \textbf{Day window, 11:00--18:00 (clear sky).} Clear-sky global
+        irradiance on a horizontal surface of the order of
+        \qtyrange{900}{950}{\watt\per\square\metre} around solar noon in
+        midsummer, air temperatures reaching roughly
+        \qtyrange{33}{36}{\celsius} during a heat wave. A sealed, sun-exposed
+        surface can exceed \qty{60}{\celsius} and drive up the air temperature
+        in its immediate surroundings \parencite{stadtzuerich_merkblatt}.
+        Dominant problem: absorbed short-wave radiation.
         \todo{replace the irradiance and air-temperature figures with measured
-        values from MeteoSwiss for the Zurich stations --- the irradiance above
-        is a clear-sky estimate, not a measurement}
-  \item \textbf{Night window (approx.\ 22:00--06:00):} the stored heat is
-        released again, producing tropical nights ($T_\mathrm{min} \geq
-        \qty{20}{\celsius}$). Dominant problem: the \emph{delayed} release of
-        stored heat, and a reduced sky view factor in the street canyon that
-        limits radiative loss. \textbf{For Zurich the night is the larger half
-        of the problem:} the city states an urban heat island effect of
-        \qtyrange{1}{2}{\kelvin} by day but up to \qty{7}{\kelvin} at night in
-        the centre compared with the surrounding area
-        \parencite{stadtzuerich_merkblatt}. A concept that only performs during
-        the day therefore addresses the smaller half.
-        \todo{report the number of hot days ($T_\mathrm{max} \geq
-        \qty{30}{\celsius}$) and tropical nights per year for Zurich, and state
-        which station and which reference period the figures come from ---
-        the difference between the hill station and an inner-city station is
-        itself a result worth reporting}
+        MeteoSwiss values --- the irradiance is a clear-sky estimate, not a
+        measurement}
+  \item \textbf{Evening and night window, 20:00--24:00.} The stored heat is
+        released again. This is the window in which residents are outdoors and
+        then try to sleep, and it is the larger half of the problem: Zurich
+        reports an urban heat island of \qtyrange{1}{2}{\kelvin} by day but up
+        to \qty{7}{\kelvin} at night in the centre relative to the surrounding
+        area \parencite{stadtzuerich_merkblatt}.
+        \todo{Decide whether to extend this window past midnight. Heat release
+        continues until sunrise, and tropical nights are defined over the whole
+        night. A window ending at 24:00 captures evening amenity but only part
+        of the \qty{7}{\kelvin} night-time effect.}
 \end{itemize}
 
-\paragraph{Where on the envelope? A consequence of Zurich's latitude.}
-Fixing the reference city also fixes the solar geometry, and that geometry
-already narrows the design space before any biology is considered. At
-\ang{47.38}\,N the solar altitude at noon on 21 June is
+\paragraph{Where on the envelope? A consequence of Zurich's latitude.} Fixing
+the reference city fixes the solar geometry, and that already narrows the design
+space. At \ang{47.38}\,N the solar altitude at noon on 21 June is
 
 \begin{equation}
 h = 90^{\circ} - 47.38^{\circ} + 23.44^{\circ} \approx 66^{\circ} .
@@ -154,65 +186,21 @@ h = 90^{\circ} - 47.38^{\circ} + 23.44^{\circ} \approx 66^{\circ} .
 
 \noindent The direct beam therefore strikes a horizontal roof at an incidence
 factor of $\sin h \approx 0.91$, but a vertical south-facing façade at only
-$\cos h \approx 0.41$. In midsummer --- exactly when the concept has to work
---- the flat roof receives well over twice the direct irradiance of a south
-façade at noon, and the roof also has a much larger sky view factor for
-night-time long-wave emission (F2). \todo{Confirm with daily irradiation totals
-per surface orientation from the national roof-irradiance dataset
-\parencite{sonnendach}; then decide and justify whether the concept targets the
-roof, the façade or both. Note that east and west façades peak in the morning
-and late afternoon rather than at noon, so a façade concept has a different
-load profile, not simply a smaller one.}
+$\cos h \approx 0.41$. In midsummer the flat roof receives more than twice the
+direct irradiance of a south façade at noon, and it also has a far larger sky
+view factor for night-time long-wave emission. The system of interest is
+therefore deliberately \emph{not} restricted to the façade.
+\todo{Confirm with daily irradiation totals per orientation
+\parencite{sonnendach}, then justify whether the concept targets roof, façade or
+both. East and west façades peak in the morning and late afternoon, so a façade
+concept has a different load profile, not simply a smaller one.}
 
-\paragraph{Data sources for the reference case.} Table~\ref{tab:datasources}
-lists the open datasets used to characterise the reference city and, later, to
-validate the concept. Using measured local data rather than generic literature
-values is what turns \enquote{be locally attuned and responsive}
-(Section~\ref{sec:lifesprinciples}) from a slogan into a design input.
-
-\begin{table}[htbp]
-\centering
-\caption{Open data sources for the Zurich reference case. All are freely
-accessible; access dates belong in the reference list.}
-\label{tab:datasources}
-\renewcommand{\arraystretch}{1.25}
-\small
-\begin{tabularx}{\textwidth}{L{4.0cm} X L{3.2cm}}
-\toprule
-\textbf{Source} & \textbf{What it provides} & \textbf{Used for} \\
-\midrule
-Fachplanung Hitzeminderung and its thematic maps
-\parencite{stadtzuerich2020,stadtzuerich_teilplaene}
-& Baseline albedo values, modelled effectiveness per measure, city structure
-  types, areas needing action, cold-air corridors
-& Reference case, incumbent benchmark (Table~\ref{tab:incumbent}), site
-  selection \\
-MeteoSwiss station data \parencite{meteoswiss}
-& Air temperature, global radiation, wind speed, humidity; long homogeneous
-  series for Zurich stations
-& Boundary conditions for Eq.~\eqref{eq:energybalance}; definition of the
-  design heat wave \\
-City of Zurich heat-mitigation plan \parencite{stadtzuerich2020}
-& Municipal strategy, heat-load maps, target areas
-& Justification of the challenge and of the site selection \\
-City of Zurich open geodata \parencite{stadtzuerich_opendata}
-& Building footprints, roof areas, tree cadastre, climate-analysis layers
-& Selecting the reference site; estimating the addressable roof area \\
-National roof irradiance dataset \parencite{sonnendach}
-& Irradiation per roof surface, orientation, tilt and usable area
-& Irradiance per orientation; roof-versus-façade decision \\
-Landsat~8/9 thermal data \parencite{usgs_landsat}
-& Land surface temperature at approximately \qty{100}{\metre} resolution
-& Independent check that the chosen site really is a heat hotspot; before /
-  after comparison of surface temperature at district scale \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\paragraph{Constraints.} Table~\ref{tab:constraints} lists the constraints the
-concept has to satisfy. They are separated into hard constraints (a violation
-disqualifies a concept) and soft constraints (they influence the evaluation in
-Section~3.3).
+\paragraph{Constraints.} Table~\ref{tab:constraints} separates hard constraints
+(a violation disqualifies a concept) from soft ones (they weight the evaluation
+in Section~3.3). The constraints on installation and maintenance come from the
+team's observation that the people who mount and service the system are part of
+the context; they are recorded here rather than as subsystems, because the
+system of interest contains components, not people.
 
 \begin{table}[htbp]
 \centering
@@ -220,21 +208,22 @@ Section~3.3).
 \label{tab:constraints}
 \renewcommand{\arraystretch}{1.25}
 \small
-\begin{tabularx}{\textwidth}{L{2.4cm} L{2.0cm} X}
+\begin{tabularx}{\textwidth}{L{2.3cm} L{1.4cm} X}
 \toprule
 \textbf{Type} & \textbf{Class} & \textbf{Constraint} \\
 \midrule
-Energy      & hard & No auxiliary electrical energy for the cooling function itself (pumps, fans, chillers). Sensors for validation are excluded from this constraint. \\
-Water       & hard & No potable water. Only rainwater harvested on site or atmospheric moisture may be used. \\
-Existing building & hard & Retrofit onto an existing envelope. The load-bearing structure, floor plan and window openings are not redesigned. \\
-Climate     & hard & Must survive the Swiss annual cycle: frost down to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV exposure. A summer-only solution is not acceptable. \\
-Winter      & hard & Must not increase the heating demand appreciably (a high solar reflectance also reduces useful winter solar gains --- this trade-off must be quantified, not ignored). \\
-Glare       & hard & No specular glare towards streets, neighbouring flats or traffic. The city names glare and the resulting safety concerns as the main objection to bright envelopes \parencite[128]{stadtzuerich2020}. This favours diffuse, structural whiteness over a mirror finish. \\
-Regulatory  & soft & Fire regulations for façade build-ups; heritage protection may restrict visible changes on street-facing façades \parencite[128]{stadtzuerich2020}. \\
-Solar energy & soft & Must not unnecessarily compromise façade- or roof-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State explicitly which envelope areas the concept claims. \\
-Structural  & soft & Limited additional dead load and build-up thickness on an existing façade. \\
-Maintenance & soft & Soiling, algae growth and weathering degrade the optical function. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}; the concept should keep working with little maintenance over $\geq$ \qty{20}{years}. \\
-Economic    & soft & The city expects higher construction and refurbishment cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal façade or roof refurbishment. \todo{find a benchmark figure and cite it} \\
+Energy & hard & No auxiliary electrical energy for the cooling function itself. This follows directly from the design question: the heat load must drive the response. Sensors used for validation are excluded. \\
+Water & hard & No potable water. Only rainwater harvested on site or atmospheric moisture. \\
+Existing building & hard & Retrofit onto an existing envelope. Load-bearing structure, floor plan and window openings are not redesigned. \\
+Townscape & hard & The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbour rights can restrict visible changes \parencite[128]{stadtzuerich2020}. \\
+Glare & hard & No specular glare towards streets, neighbouring flats or traffic. The city names glare as the main objection to bright envelopes \parencite[128]{stadtzuerich2020}, which favours diffuse over mirror-like surfaces. \\
+Climate & hard & Must survive the Swiss annual cycle: frost to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV, and periods of several dry weeks in summer. \\
+Winter & hard & Must not appreciably increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off must be quantified, not ignored. \\
+Installation & soft & Must be installable by ordinary trades on an occupied building, ideally without full scaffolding. \todo{state an installation-time target per \unit{\square\metre}} \\
+Maintenance & soft & Must remain functional with little maintenance. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}. Service life target $\geq$ \qty{20}{years}. \\
+Solar energy & soft & Should not unnecessarily compromise roof- or façade-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State which envelope areas the concept claims. \\
+Structural & soft & Limited additional dead load and build-up thickness on an existing envelope. \\
+Economic & soft & The city expects higher cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal refurbishment. \todo{find a benchmark figure and cite it} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -244,21 +233,19 @@ Economic    & soft & The city expects higher construction and refurbishment cost
 
 Scoping is incomplete without knowing what the client already does. The
 Fachplanung Hitzeminderung defines thirteen courses of action
-(\emph{Handlungsansätze}, HA~01--HA~13). Four of them act on the building
-envelope and therefore fall inside our project boundary: HA~09 green roofs,
-HA~10 green façades, HA~11 high-albedo façade and roof materials, and HA~12
-shading of the outdoor space close to the building
-\parencite[120--131]{stadtzuerich2020}. HA~11 is the direct incumbent of our
-design question, and the city already recommends it to building owners
-\parencite{stadtzuerich_merkblatt}.
+(\emph{Handlungsansätze}, HA~01--HA~13). Four act on the building envelope and
+therefore touch our project: HA~09 green roofs, HA~10 green façades, HA~11
+high-albedo façade and roof materials, and HA~12 shading of the outdoor space
+close to the building \parencite[120--131]{stadtzuerich2020}. HA~11 is the
+direct incumbent of our design question, and the city already recommends it to
+building owners \parencite{stadtzuerich_merkblatt}.
 
 \begin{table}[htbp]
 \centering
-\caption{Modelled effectiveness of the incumbent measures, from the
-Fachplanung Hitzeminderung. Day values are the physiologically equivalent
-temperature (PET) at 14:00, \qty{2}{\metre} above ground; night values are air
-temperature. \enquote{Range} is the distance over which the effect is
-measurable.}
+\caption{Modelled effectiveness of the incumbent measures, from the Fachplanung
+Hitzeminderung. Day values are the physiologically equivalent temperature (PET)
+at 14:00, \qty{2}{\metre} above ground; night values are air temperature.
+\enquote{Range} is the distance over which the effect is measurable.}
 \label{tab:incumbent}
 \renewcommand{\arraystretch}{1.25}
 \small
@@ -266,10 +253,10 @@ measurable.}
 \toprule
 \textbf{Measure} & \textbf{Median} & \textbf{Max.} & \textbf{Range} & \textbf{Source} \\
 \midrule
-HA~11 bright façade --- day (PET)  & \qty{-1.0}{\kelvin} & \qty{-1.8}{\kelvin} & \qtyrange{2}{3}{\metre} & \multirow{4}{*}{\parencite[Tab.~11, 128]{stadtzuerich2020}} \\
-HA~11 bright façade --- night      & \qty{-0.1}{\kelvin} & \qty{-0.2}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
-HA~11 bright roof --- day (PET)    & \qty{-1.2}{\kelvin} & \qty{-2.1}{\kelvin} & \qtyrange{2}{4}{\metre} & \\
-HA~11 bright roof --- night        & \qty{-0.1}{\kelvin} & \qty{-0.3}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
+HA~11 bright façade --- day (PET) & \qty{-1.0}{\kelvin} & \qty{-1.8}{\kelvin} & \qtyrange{2}{3}{\metre} & \multirow{4}{*}{\parencite[Tab.~11, 128]{stadtzuerich2020}} \\
+HA~11 bright façade --- night     & \qty{-0.1}{\kelvin} & \qty{-0.2}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
+HA~11 bright roof --- day (PET)   & \qty{-1.2}{\kelvin} & \qty{-2.1}{\kelvin} & \qtyrange{2}{4}{\metre} & \\
+HA~11 bright roof --- night       & \qty{-0.1}{\kelvin} & \qty{-0.3}{\kelvin} & \qtyrange{1}{2}{\metre} & \\
 \midrule
 HA~06 high-albedo ground surface instead of asphalt --- day (PET) & \qty{-1.5}{\kelvin} & \qty{-2.8}{\kelvin} & \qtyrange{2}{4}{\metre} & \multirow{2}{*}{\parencite[Tab.~5, 114]{stadtzuerich2020}} \\
 HA~06 --- night & \qty{-0.2}{\kelvin} & \qty{-0.5}{\kelvin} & \qtyrange{2}{3}{\metre} & \\
@@ -281,96 +268,129 @@ HA~06 --- night & \qty{-0.2}{\kelvin} & \qty{-0.5}{\kelvin} & \qtyrange{2}{3}{\m
 reflectance of $0.2$ for asphalt and $0.3$ for un-greened façades, and
 classifies $\leq 0.30$ as low and $\geq 0.80$ as high albedo. Reported material
 values are slate $0.1$, roof tiles $0.1$--$0.35$, natural stone $0.2$--$0.35$
-and a white façade $0.5$--$0.9$ \parencite[114, 128--129]{stadtzuerich2020}.
-Our reference case and the target of KPI~1 in Table~\ref{tab:kpi} are taken
-directly from these figures, so the comparison is made on the client's own
-terms rather than on ours.
-
-\paragraph{Constraints the city already identified for HA 11.} Glare and the
-resulting safety concerns; reduced yield of façade-integrated photovoltaics;
-higher construction and refurbishment cost; susceptibility to soiling and the
-cleaning cost that follows; and heritage protection requirements
-\parencite[128]{stadtzuerich2020}. These are carried into
-Table~\ref{tab:constraints} as sourced constraints.
+and a white façade $0.5$--$0.9$ \parencite[114, 128--129]{stadtzuerich2020}. Our
+reference case and the target of KPI~2 in Table~\ref{tab:kpi} are taken directly
+from these figures, so the comparison is made on the client's terms rather than
+on ours.
 
 \paragraph{The gap --- and the design opportunity.} Table~\ref{tab:incumbent}
 contains the central finding for this project. The incumbent measure works
-during the day but is close to ineffective at night: \qty{-0.1}{\kelvin}
-median air temperature, against an urban heat island that reaches
-\qty{7}{\kelvin} at night. A bright surface reduces what is absorbed, but it
-provides no additional path for releasing heat that has already been stored in
-the construction, and it does nothing that would help once the sun is down.
+during the day but is close to ineffective at night: \qty{-0.1}{\kelvin} median
+air temperature, against an urban heat island that reaches \qty{7}{\kelvin} at
+night. The reason is structural, not a question of tuning. A bright surface
+reduces what is \emph{absorbed}; it provides no path for releasing heat that is
+already stored in the construction, and its optical response is fixed --- it
+does not do more when the load is higher, and it does nothing after sunset.
 
-This defines the space in which a bio-inspired concept can be more than a
-repetition of existing practice. It must do at least one of the following:
+This is exactly what the selected design question targets. A bio-inspired
+concept earns its place here if it does at least one of the following:
 
 \begin{enumerate}
-  \item beat HA~11 on its own daytime metric (PET at pedestrian level), or
-  \item deliver a night-time effect that HA~11 does not --- which is what the
-        biologized questions on emitting to the night sky (F2) and on storing,
-        buffering and metering water (F4, F6--F8) are aimed at, or
+  \item deliver a night-time effect that HA~11 does not, by opening a removal
+        path rather than only a prevention path;
+  \item scale its response with the load, so that the worst hours receive the
+        strongest cooling;
   \item resolve one of the constraints the city itself names for HA~11 ---
-        above all glare and soiling, which are exactly the points where the
-        biological models are strong: structural rather than specular
-        whiteness, and self-cleaning surfaces.
+        above all glare and soiling, which are precisely the points where
+        biological surfaces are strong.
 \end{enumerate}
 
-\todo{Note for the discussion in Section~5: the running text on p.~128 of the
-Fachplanung quotes a maximum PET reduction of \qty{2.3}{\kelvin} for a
-south-west facing façade, while Tab.~11 on the same page gives
-\qty{1.8}{\kelvin}. Check the source, decide which value you use, and say so.
-Spotting this is worth more than quietly copying one of the two.}
+\todo{Note for Section~5: the running text on p.~128 of the Fachplanung quotes a
+maximum PET reduction of \qty{2.3}{\kelvin} for a south-west facing façade,
+while Tab.~11 on the same page gives \qty{1.8}{\kelvin}. Check the source,
+decide which value you use, and say so. Spotting this is worth more than quietly
+copying one of the two.}
 
 \subsection{System view and project boundary}
 \label{sec:systemview}
 
 Figure~\ref{fig:systemview} places the challenge in its system hierarchy. The
-purpose of the hierarchy is to prevent tunnel vision; the purpose of the
-boundary drawn afterwards is to prevent scope explosion.
+hierarchy prevents tunnel vision; the boundary drawn afterwards prevents scope
+explosion.
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
-% --- super system
-\node[sysbox,minimum width=14.4cm] (super) at (0,4.3)
-  {\textbf{SUPER-SYSTEM} --- Urban microclimate of the district\\
-   street canyon, radiation balance, air flow, urban water cycle};
-% --- system of interest
-\node[soibox,minimum width=6.4cm,text width=6.0cm] (soi) at (0,2.2)
+\node[sysbox,minimum width=14.6cm] (super) at (0,4.6)
+  {\textbf{SUPER-SYSTEM} --- City / district of Zurich\\
+   urban microclimate, street canyon, radiation balance, air flow, urban water cycle};
+\node[soibox,minimum width=6.2cm,text width=5.8cm] (soi) at (0,2.4)
   {SYSTEM OF INTEREST\\[1mm]
-   \normalfont Outer envelope surface of an\\ existing building (roof + façade)\\
-   \normalfont\itshape as the thermal interface between\\ building and city};
-% --- parallel systems
-\node[sysbox,minimum width=3.6cm,text width=3.2cm] (p1) at (-5.4,2.2)
-  {\textbf{PARALLEL SYSTEM 1}\\ Street and pavement surfaces};
-\node[sysbox,minimum width=3.6cm,text width=3.2cm] (p2) at (5.4,2.2)
-  {\textbf{PARALLEL SYSTEM 2}\\ Urban vegetation and building HVAC};
-% --- subsystems
-\node[subbox,text width=2.3cm] (s1) at (-6.0,-0.3) {Optical surface layer};
-\node[subbox,text width=2.3cm] (s2) at (-3.0,-0.3) {Heat and water storage layer};
-\node[subbox,text width=2.3cm] (s3) at (0.0,-0.3)  {Insulation / structural substrate};
-\node[subbox,text width=2.3cm] (s4) at (3.0,-0.3)  {Water capture and drainage interface};
-\node[subbox,text width=2.3cm] (s5) at (6.0,-0.3)  {Mounting and fixing to substrate};
-\node[font=\scriptsize\bfseries] at (0,0.75) {SUBSYSTEMS};
-% --- connections
+   \normalfont Heat-regulating outer layer of an\\ existing building (roof and façade)\\
+   \normalfont\itshape the thermal interface between\\ building and city};
+\node[sysbox,minimum width=3.7cm,text width=3.3cm] (p1) at (-5.5,3.1)
+  {\textbf{PARALLEL 1}\\ Stormwater and sewer system};
+\node[sysbox,minimum width=3.7cm,text width=3.3cm] (p2) at (5.5,3.1)
+  {\textbf{PARALLEL 2}\\ Street and pavement network};
+\node[sysbox,minimum width=3.7cm,text width=3.3cm] (p3) at (-5.5,1.4)
+  {\textbf{PARALLEL 3}\\ Power grid and building energy system};
+\node[sysbox,minimum width=3.7cm,text width=3.3cm] (p4) at (5.5,1.4)
+  {\textbf{PARALLEL 4}\\ Residents, transport and public transit};
+\node[subbox,text width=2.4cm] (s1) at (-6.1,-0.4) {Optical surface layer};
+\node[subbox,text width=2.4cm] (s2) at (-3.05,-0.4) {Heat storage and buffer layer};
+\node[subbox,text width=2.4cm] (s3) at (0,-0.4)  {Water capture, store and release};
+\node[subbox,text width=2.4cm] (s4) at (3.05,-0.4) {Insulation and substrate};
+\node[subbox,text width=2.4cm] (s5) at (6.1,-0.4) {Mounting and fixing};
+\node[font=\scriptsize\bfseries] at (0,0.7) {SUBSYSTEMS};
 \draw[flowarr] (super) -- (soi);
-\draw[{Latex[length=2mm]}-{Latex[length=2mm]},thick,draw=black!45] (p1) -- (soi)
-  node[midway,above,font=\scriptsize] {radiation};
-\draw[{Latex[length=2mm]}-{Latex[length=2mm]},thick,draw=black!45] (soi) -- (p2)
-  node[midway,above,font=\scriptsize] {heat, water};
+\foreach \p/\l in {p1/water,p2/radiation,p3/energy,p4/exposure}
+  { \draw[{Latex[length=2mm]}-{Latex[length=2mm]},thick,draw=black!45] (\p) -- (soi)
+      node[midway,font=\scriptsize,fill=white,inner sep=1pt] {\l}; }
 \foreach \s in {s1,s2,s3,s4,s5} { \draw[draw=black!45] (soi) -- (\s); }
-% --- project boundary
 \begin{scope}[on background layer]
   \node[draw=zhawblue,dashed,line width=1pt,rounded corners=4pt,
         fit=(soi)(s1)(s5),inner sep=7pt] (bnd) {};
 \end{scope}
 \node[font=\scriptsize\bfseries,color=zhawblue,anchor=west]
-  at ($(bnd.north west)+(0.15,0.28)$) {PROJECT BOUNDARY};
+  at ($(bnd.north west)+(0.15,0.30)$) {PROJECT BOUNDARY};
 \end{tikzpicture}
-\caption{System view for Challenge~1. The dashed line is the project
-boundary: everything inside it is designed and analysed by the team.}
+\caption{System view. The dashed line is the project boundary: everything
+inside it is designed and analysed by the team. Note that the subsystems are
+components and functions, not people --- the trades who install and maintain the
+system appear as constraints in Table~\ref{tab:constraints}.}
 \label{fig:systemview}
 \end{figure}
+
+\paragraph{What each parallel system adds to the scoping.} Listing parallel
+systems is not the point; what the comparison reveals is.
+
+\begin{table}[htbp]
+\centering
+\caption{What the comparison with each parallel system contributes.}
+\label{tab:parallel}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{3.6cm} X}
+\toprule
+\textbf{Parallel system} & \textbf{What the comparison adds} \\
+\midrule
+Stormwater and sewer system
+& Rainwater is currently drained away as fast as possible. Seen from our system
+  it is a cooling reserve that is being discarded --- and during a heat wave it
+  is the only water available under the \enquote{no potable water} constraint.
+  This adds the functions \emph{capture}, \emph{retain} and \emph{meter} water
+  (F6--F8) and makes storage capacity a design variable rather than an
+  afterthought. \\
+Street and pavement network
+& The street is treated by the same client with the same logic (HA~06,
+  Table~\ref{tab:incumbent}), and it achieves a slightly larger daytime effect
+  than the envelope. The comparison sets a benchmark we must beat, and it shows
+  that the envelope's advantage has to come from the night window, where the
+  street performs no better. \\
+Power grid and building energy system
+& The obvious way to \enquote{use} heat is to convert it. The comparison shows
+  why that is a different project: conversion competes with photovoltaics for
+  the same surface, and any seasonal store lies outside the envelope. It is
+  therefore placed out of the boundary, while the milder reading of
+  \enquote{use} --- letting the heat drive its own removal --- stays in. \\
+Residents, transport and public transit
+& Defines where the effect has to be delivered: at pedestrian level in the
+  street canyon and in the flats on the upper floors, not on the roof membrane.
+  This is why PET at \qty{2}{\metre} above ground becomes a KPI, and it fixes
+  the evening window 20:00--24:00, when people are outdoors and then sleeping. \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \begin{table}[htbp]
 \centering
@@ -386,45 +406,44 @@ Passive control of the short-wave and long-wave radiation balance of the
 envelope surface
 & Redesign of the building itself: structure, floor plan, windows, insulation
 thickness \\[1mm]
-Heat and water storage behaviour of the outermost build-up, including the
-night-time release
-& Active building services: chillers, mechanical ventilation, heat pumps,
-indoor comfort control \\[1mm]
-Capture and controlled release of rainwater within the envelope build-up
-& Street trees, parks, urban greening at district level, urban planning \\[1mm]
-Interface with the street canyon (radiation towards pedestrians) and with the
-night sky
-& Municipal water supply and treatment, sewage system \\[1mm]
-Mounting concept on an existing substrate and durability of the optical
+The self-regulating link between heat load and cooling power --- the core of
+the design question
+& Any actively controlled system: sensors, valves, pumps, chillers, mechanical
+ventilation \\[1mm]
+Heat storage and delayed release within the outermost build-up, including the
+night window
+& Seasonal heat storage, boreholes, heat pumps, thermal networks and electricity
+generation \\[1mm]
+Capture, retention and metered release of rainwater within the build-up
+& Municipal water supply, treatment and sewage; street trees and district-scale
+greening \\[1mm]
+Mounting on an existing substrate, installability and durability of the
 function
 & Permitting, heritage approval, business model, full life cycle assessment \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\paragraph{What the systems view added.}
-\emph{The systems view changed our project scope because} it showed that the
-envelope does not only exchange heat with the building interior, but also with
-two systems we had not considered: the pedestrian level of the street canyon
-(the façade radiates onto people) and the night sky (the only heat sink that
-is available without energy input). This added one function
-(\emph{emit long-wave radiation to the sky}), one constraint (the concept must
-also perform at night, not just at the daytime peak) and one KPI
-(net radiative cooling power at night, KPI~5 in Table~\ref{tab:kpi}). The
-comparison with the parallel system \enquote{urban vegetation} also sharpened a
-constraint: vegetation achieves its cooling through evapotranspiration and
-therefore needs a continuous water supply, which in a heat wave is exactly the
-resource that is scarce. This is the origin of the hard constraint
-\enquote{no potable water}.
+\paragraph{What the systems view changed.} \emph{The systems view changed our
+project scope because} it forced two corrections. First, we initially carried
+two systems of interest --- reducing heat and preventing heat. The hierarchy
+showed that these are two \emph{functions} of one system, and the selected
+design question couples them, so a single boundary can be drawn. Second, the
+comparison with the parallel systems revealed the night sky and the discarded
+rainwater as the two heat sinks available without energy input, and the
+pedestrian in the street canyon as the place where the effect must actually
+appear. This added the functions F2, F6--F8, the evening operating window, and
+KPI~5 and~6 in Table~\ref{tab:kpi}.
 
 \subsection{Functions and functional diagram}
 \label{sec:functions}
 
-Following the scoping method, the functions are formulated as
-solution-neutral verbs and answer the question \enquote{what must the design
-\emph{do}?}, not \enquote{what do we want to build?}. The verbs are aligned
-with the Biomimicry Taxonomy so that they can be used directly as search terms
-in AskNature \parencite{asknature}.
+Functions are formulated as solution-neutral verbs answering \enquote{what must
+the design \emph{do}?}. They are stated at the scale of the designed object, not
+at the scale of the city: the design regulates heat at the surface it occupies,
+and the city-scale effect is the \emph{goal}, not the function --- in the same
+way that the function of polar bear fur is to insulate, not to make the Arctic
+habitable.
 
 \begin{table}[htbp]
 \centering
@@ -432,90 +451,110 @@ in AskNature \parencite{asknature}.
 \label{tab:functions}
 \renewcommand{\arraystretch}{1.2}
 \small
-\begin{tabularx}{\textwidth}{L{1.1cm} L{4.6cm} X}
+\begin{tabularx}{\textwidth}{L{1.0cm} L{4.6cm} X}
 \toprule
 \textbf{ID} & \textbf{Function (verb)} & \textbf{Explanation / taxonomy link} \\
 \midrule
 \multicolumn{3}{l}{\textit{Main function}}\\
-F0 & Regulate heat gain of a surface & Modify / regulate physical state: manage temperature \\
+F0 & Regulate heat gain and release at an urban surface & Modify / regulate physical state: manage temperature \\
 \midrule
-\multicolumn{3}{l}{\textit{Sub-functions --- energy path}}\\
+\multicolumn{3}{l}{\textit{Sub-functions --- prevention (day window)}}\\
 F1 & Reflect short-wave radiation & Prevent absorption of solar energy in the first place \\
+F5 & Shade a surface & Reduce the irradiated area, e.g.\ through surface geometry \\
+\midrule
+\multicolumn{3}{l}{\textit{Sub-functions --- removal (both windows)}}\\
 F2 & Emit long-wave radiation & Release heat to the sky, in particular in the atmospheric window \\
 F3 & Transfer heat to ambient air & Convective dissipation at the surface \\
 F4 & Store thermal energy temporarily & Buffer and shift the daily peak \\
-F5 & Shade a surface & Reduce the irradiated area, e.g.\ through surface geometry \\
 \midrule
 \multicolumn{3}{l}{\textit{Sub-functions --- water path}}\\
 F6 & Capture water & Collect rain or atmospheric moisture \\
 F7 & Retain water & Store it until it is needed during the heat peak \\
-F8 & Release water in a controlled way & Meter evaporation instead of losing the reserve at once \\
+F8 & Release water in a controlled way & Meter evaporation so the reserve lasts the whole heat wave \\
+\midrule
+\multicolumn{3}{l}{\textit{Sub-function --- the core of the design question}}\\
+F9 & Couple response strength to load & Increase removal (F2, F3, F8) as surface temperature rises, without external control \\
 \midrule
 \multicolumn{3}{l}{\textit{Supporting functions}}\\
-F9  & Keep a surface clean & Maintain the optical function against soiling and algae \\
-F10 & Resist degradation / self-repair & Withstand UV, frost and weathering over the service life \\
-F11 & Attach to a substrate & Fix the build-up to an existing wall or roof \\
+F10 & Keep a surface clean & Maintain the optical function against soiling and algae \\
+F11 & Resist degradation & Withstand UV, frost, driving rain over the service life \\
+F12 & Attach to a substrate & Fix the build-up to an existing wall or roof, installable by ordinary trades \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Figure~\ref{fig:funcdiagram} shows the functional diagram. It is kept
-solution-neutral: it contains only functions and the energy and material
-flows between them, no components and no material choices.
+\paragraph{Why F9 is physically plausible.} Every removal path already depends
+on surface temperature, but not equally strongly. Differentiating the three
+mechanisms with respect to surface temperature $T_s$ gives their
+self-regulation gradients, in \unit{\watt\per\square\metre\per\kelvin}:
+
+\begin{align}
+\text{radiative:}  &\quad \frac{\partial P}{\partial T_s} = 4\varepsilon\sigma T_s^{3} \approx 6 \\
+\text{convective:} &\quad \frac{\partial P}{\partial T_s} = h_c \approx 10 \\
+\text{latent:}     &\quad \frac{\partial P}{\partial T_s} \propto \frac{\mathrm{d}e_s}{\mathrm{d}T_s} \quad\text{(steep --- $e_s$ roughly doubles per \qty{10}{\kelvin})}
+\end{align}
+
+\noindent The evaporative path is by far the steepest, which is why
+transpiration, not radiation, is the mechanism that biology uses when a load
+must be tracked. \todo{Section~3.2: evaluate these three derivatives properly
+with your own assumptions and state the resulting ranking. This is the check
+that decides which mechanism carries F9.}
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
-% ---- inputs
-\node[funcbox,fill=yellow!25,text width=2.1cm] (sun) at (-6.7,2.0)
-  {Solar irradiance\\ $G \approx \qty{950}{\watt\per\square\metre}$};
-\node[funcbox,fill=zhawblue!12,text width=2.1cm] (rain) at (-6.7,-1.9)
+\node[funcbox,fill=yellow!25,text width=2.1cm] (sun) at (-6.8,2.4)
+  {Solar irradiance $G$};
+\node[funcbox,fill=zhawblue!12,text width=2.1cm] (rain) at (-6.8,-2.2)
   {Rain / atmospheric moisture};
-% ---- functions inside the boundary
-\node[funcbox,text width=2.5cm] (f1) at (-3.0,3.0)  {\textbf{F1} Reflect short-wave radiation};
-\node[funcbox,text width=2.5cm] (f4) at (-3.0,1.3)  {\textbf{F4} Store thermal energy temporarily};
-\node[funcbox,text width=2.5cm] (f2) at (0.6,2.6)   {\textbf{F2} Emit long-wave radiation};
-\node[funcbox,text width=2.5cm] (f3) at (0.6,1.0)   {\textbf{F3} Transfer heat to ambient air};
-\node[funcbox,text width=2.5cm] (f8) at (0.6,-0.6)  {\textbf{F8} Release water in a controlled way};
-\node[funcbox,text width=2.5cm] (f67) at (-3.0,-1.9){\textbf{F6/F7} Capture and retain water};
-\node[funcbox,text width=2.5cm,draw=red!60] (fc) at (0.6,-2.3)
-  {\textit{Residual}: heat conducted into the building};
-% ---- outputs
-\node[funcbox,fill=gray!12,text width=2.0cm] (sky) at (4.6,2.6) {Sky (long-wave sink)};
-\node[funcbox,fill=gray!12,text width=2.0cm] (air) at (4.6,0.6) {Street-canyon air};
-\node[funcbox,fill=gray!12,text width=2.0cm] (bld) at (4.6,-2.3) {Building interior};
-% ---- energy flows
+\node[funcbox,text width=2.4cm] (f1) at (-3.4,3.3) {\textbf{F1/F5} Reflect and shade};
+\node[funcbox,fill=red!8,text width=2.4cm] (ts) at (-3.4,1.0)
+  {\textbf{F4} Store heat\\[1mm] \itshape state: surface temperature $T_s$};
+\node[funcbox,text width=2.4cm] (f2) at (0.5,2.7) {\textbf{F2} Emit long-wave radiation};
+\node[funcbox,text width=2.4cm] (f3) at (0.5,1.0) {\textbf{F3} Transfer heat to air};
+\node[funcbox,text width=2.4cm] (f8) at (0.5,-0.8) {\textbf{F8} Release water, metered};
+\node[funcbox,text width=2.4cm] (f67) at (-3.4,-2.2) {\textbf{F6/F7} Capture and retain water};
+\node[funcbox,text width=2.4cm,draw=red!60] (fc) at (0.5,-2.6)
+  {\itshape Residual: heat into the building};
+\node[funcbox,fill=gray!12,text width=2.0cm] (sky) at (4.5,2.7) {Sky (long-wave sink)};
+\node[funcbox,fill=gray!12,text width=2.0cm] (air) at (4.5,0.2) {Street-canyon air};
+\node[funcbox,fill=gray!12,text width=2.0cm] (bld) at (4.5,-2.6) {Building interior};
 \draw[flowarr] (sun) -- (f1);
-\draw[flowarr] (sun) -- (f4) node[midway,below,font=\scriptsize] {absorbed};
-\draw[flowarr] (f1.north) .. controls +(1.5,1.2) and +(-1.5,1.2) .. (sky.north west)
+\draw[flowarr] (sun) -- (ts) node[midway,below,font=\scriptsize] {absorbed};
+\draw[flowarr] (f1.north) .. controls +(1.6,1.2) and +(-1.6,1.2) .. (sky.north west)
   node[midway,above,font=\scriptsize] {reflected};
-\draw[flowarr] (f4) -- (f2);
-\draw[flowarr] (f4) -- (f3);
-\draw[flowarr] (f4) -- (fc);
+\draw[flowarr] (ts) -- (f2);
+\draw[flowarr] (ts) -- (f3);
+\draw[flowarr] (ts) -- (fc);
 \draw[flowarr] (f2) -- (sky);
 \draw[flowarr] (f3) -- (air);
 \draw[flowarr] (f8) -- (air) node[midway,below,font=\scriptsize] {latent};
 \draw[flowarr,draw=red!60] (fc) -- (bld);
-% ---- water flows
 \draw[wateharr] (rain) -- (f67);
 \draw[wateharr] (f67) -- (f8);
-\draw[wateharr] (f8) -- (f4) node[midway,left,font=\scriptsize] {cools};
-% ---- boundary
+% --- the self-regulating loop
+\draw[-{Latex[length=2mm]},thick,draw=orange!85!black,dash pattern=on 4pt off 2pt]
+  (ts.south east) .. controls +(1.4,-1.4) and +(-1.4,0.6) .. (f8.west);
+\node[font=\scriptsize\bfseries,color=orange!85!black,align=center]
+  at (-1.5,-1.1) {\textbf{F9}\\ higher $T_s$\\ $\Rightarrow$ stronger removal};
 \begin{scope}[on background layer]
-  \node[draw=zhawblue,dashed,rounded corners=4pt,fit=(f1)(f4)(f2)(f3)(f8)(f67)(fc),
-        inner sep=8pt] (fb) {};
+  \node[draw=zhawblue,dashed,rounded corners=4pt,fit=(f1)(ts)(f2)(f3)(f8)(f67)(fc),
+        inner sep=9pt] (fb) {};
 \end{scope}
 \node[font=\scriptsize\bfseries,color=zhawblue,anchor=west]
-  at ($(fb.north west)+(0.15,0.28)$) {SYSTEM BOUNDARY (envelope surface)};
-% ---- legend
-\node[font=\scriptsize,anchor=west] at (-6.9,-3.6)
+  at ($(fb.north west)+(0.15,0.30)$) {SYSTEM BOUNDARY (heat-regulating outer layer)};
+\node[font=\scriptsize,anchor=west] at (-7.0,-3.9)
   {\textcolor{black!65}{\textbf{---}} energy flow \quad
    \textcolor{zhawblue}{\textbf{--\,--}} water flow \quad
+   \textcolor{orange!85!black}{\textbf{--\,--}} self-regulating coupling \quad
    \textcolor{red!70}{\textbf{---}} flow to be minimised};
 \end{tikzpicture}
-\caption{Solution-neutral functional diagram of the envelope surface.
-Supporting functions F9--F11 (keep clean, resist degradation, attach) act on
-all functions inside the boundary and are omitted here for readability.}
+\caption{Solution-neutral functional diagram. Only functions and flows are
+shown, no components and no materials. The orange coupling is F9 and is what
+distinguishes this project from a fixed high-albedo surface: the state variable
+$T_s$ feeds back into the strength of the removal functions. Supporting
+functions F10--F12 act on everything inside the boundary and are omitted for
+readability.}
 \label{fig:funcdiagram}
 \end{figure}
 
@@ -526,143 +565,170 @@ The functions are translated into questions to nature, which form the search
 strategy for Section~3.1:
 
 \begin{itemize}
-  \item How does nature reflect intense solar radiation without pigments that
-        bleach --- and how does it stay white or bright over a lifetime?
+  \item How does nature use the heat it receives to get rid of that same heat?
+  \item How does nature make a response stronger when the load is stronger,
+        without a controller?
   \item How does nature release excess heat to the night sky?
-  \item How does nature dissipate heat where water is scarce?
-  \item How does nature capture, store and meter out small amounts of water?
-  \item How does nature buffer a daily temperature extreme instead of
-        resisting it?
+  \item How does nature reflect intense solar radiation without pigments that
+        bleach, and without a mirror finish?
+  \item How does nature capture, store and meter out scarce water so that a
+        reserve lasts a whole dry period?
+  \item How does nature buffer a daily temperature extreme instead of resisting
+        it?
   \item How does nature keep a functional surface clean without cleaning it?
-  \item How does nature repair a surface that is damaged by weathering?
 \end{itemize}
 
 \subsection{Performance criteria and KPIs}
 \label{sec:kpi}
 
 The KPIs are derived from the functions, interfaces and constraints identified
-above --- not invented independently of them. They are used twice: to guide the
-engineering checks in Section~3.2 and to compare the concepts in
-Section~3.3.
+above, not invented independently of them. They are used twice: to guide the
+engineering checks in Section~3.2 and to compare the concepts in Section~3.3.
 
 \begin{table}[htbp]
 \centering
 \caption{Performance criteria. Function $\rightarrow$ KPI $\rightarrow$ unit
 $\rightarrow$ target. Reference case: an existing Zurich façade or roof with a
-solar reflectance of about $0.3$, the value the city uses for un-greened
-façades \parencite[114]{stadtzuerich2020}.}
+solar reflectance of about $0.3$, the value the city uses for un-greened façades
+\parencite[114]{stadtzuerich2020}.}
 \label{tab:kpi}
 \renewcommand{\arraystretch}{1.25}
 \footnotesize
-\begin{tabularx}{\textwidth}{L{0.6cm} L{2.4cm} L{3.1cm} L{1.7cm} X}
+\begin{tabularx}{\textwidth}{L{0.5cm} L{2.2cm} L{3.0cm} L{1.7cm} X}
 \toprule
 \textbf{\#} & \textbf{Function} & \textbf{KPI} & \textbf{Unit} & \textbf{Target / benchmark} \\
 \midrule
-1 & F1 Reflect short-wave radiation
+1 & F9 Couple response to load
+  & Self-regulation gradient $\partial P_\mathrm{cool}/\partial T_s$
+  & \unit{\watt\per\square\metre\per\kelvin}
+  & Must be clearly positive and larger than for a fixed high-albedo surface.
+    \textbf{The defining criterion of this project} --- it is the quantity the
+    design question asks for. \todo{set a target after the derivative check in
+    Section~3.2} \\
+2 & F1 Reflect short-wave radiation
   & Solar reflectance $\alpha_\mathrm{sol}$ (300--2500\,nm)
   & --
   & $\geq 0.80$, the threshold the city defines for \enquote{high albedo}
     \parencite[128]{stadtzuerich2020}. Baseline $0.3$. Ultra-white laboratory
     paints reach $\approx 0.98$ \parencite{li2021}. \\
-2 & F2 Emit long-wave radiation
-  & Thermal emittance $\varepsilon$ in the atmospheric window (8--13\,\textmu m)
-  & --
-  & $\geq 0.90$. Required for sub-ambient radiative cooling
-    \parencite{raman2014}. Not addressed by the incumbent measure. \\
-3 & F0 Regulate heat gain
+3 & F0 Regulate heat
   & Peak surface temperature reduction $\Delta T_s$ vs.\ reference, clear sky,
     14:00
   & K
-  & $\geq \qty{15}{\kelvin}$. \todo{confirm by calculation or measurement
-    before claiming it} \\
+  & $\geq \qty{15}{\kelvin}$. \todo{confirm by calculation or measurement before
+    claiming it} \\
 4 & F0 (day, people)
   & PET reduction at \qty{2}{\metre} above ground, 14:00
   & K
   & Beat the incumbent: HA~11 achieves \qty{-1.0}{\kelvin} (façade) and
-    \qty{-1.2}{\kelvin} (roof) median
-    \parencite[Tab.~11]{stadtzuerich2020}. This is the metric the client
-    actually uses. \\
-5 & F2, F4 (night)
-  & Net radiative cooling power at 02:00, clear sky; and night air temperature
-    effect
-  & \unit{\watt\per\square\metre}; K
-  & $\geq \qty{40}{\watt\per\square\metre}$
-    \parencite{raman2014,zhai2017}, and a night effect better than the
-    \qty{-0.1}{\kelvin} of HA~11 \parencite[Tab.~11]{stadtzuerich2020}.
-    \textbf{The decisive criterion of this project.} \\
+    \qty{-1.2}{\kelvin} (roof) median \parencite[Tab.~11]{stadtzuerich2020}.
+    This is the metric the client uses. \\
+5 & F2, F4 (evening / night)
+  & Net cooling power at 22:00 and heat discharged over the night window
+  & \unit{\watt\per\square\metre}; \unit{\watt\hour\per\square\metre}
+  & $\geq \qty{40}{\watt\per\square\metre}$ instantaneous
+    \parencite{raman2014,zhai2017}, and a night-time air temperature effect
+    better than the \qty{-0.1}{\kelvin} of HA~11
+    \parencite[Tab.~11]{stadtzuerich2020}. \\
 6 & F6--F8 Water path
-  & Potable water consumption
-  & \unit{\litre\per\square\metre\per\day}
-  & $= 0$ (hard constraint). Harvested rainwater reported separately. \\
-7 & F9/F10 Durability
-  & Retention of $\alpha_\mathrm{sol}$ after soiling / weathering
+  & Potable water consumption; and days of autonomy on harvested rainwater
+  & \unit{\litre\per\square\metre\per\day}; d
+  & Potable water $= 0$ (hard constraint). Autonomy $\geq$ \qty{5}{days}, so the
+    reserve survives a typical dry spell. \todo{derive the required storage from
+    the latent heat of vaporisation, \qty{2.45}{\mega\joule\per\kilo\gram}} \\
+7 & F10/F11 Durability
+  & Retention of the cooling function after soiling and weathering
   & \unit{\percent} of initial
   & $\geq \qty{90}{\percent}$ after three years. Soiling is the weakness the
     city names for high-albedo envelopes \parencite[128]{stadtzuerich2020};
     aged cool roofs commonly lose a significant fraction of their initial
     reflectance \parencite{santamouris2014}. \\
+8 & Constraints: economy and effort
+  & Installed cost; and embodied greenhouse gas of the added build-up
+  & CHF\,\unit{\per\square\metre}; \unit{\kilo\gram}\,CO$_2$-eq\,\unit{\per\square\metre}
+  & Within the range of a conventional refurbishment, and the embodied emissions
+    must be repaid by the avoided cooling demand within the service life.
+    \todo{both benchmarks still to be sourced} \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\paragraph{Two changes to the team's original KPI list.} Two of the KPIs
+originally proposed were reformulated, in both cases because of the rule that
+KPIs must follow from the functions and the system view.
+
+\emph{Urban heat island intensity} was dropped as a selection KPI. It is a
+district-scale quantity, and a single retrofitted building cannot move it
+measurably; keeping it would invite exactly the confusion between surface and
+air temperature described below. It remains in Section~1 as the context that
+motivates the project, and it is replaced operationally by KPI~4, which measures
+the same concern where it is actually attributable to our system.
+
+\emph{Sustainability cost} was not a measurable quantity as stated. It is
+replaced by the embodied-emissions half of KPI~8, which has a unit, a
+benchmark and a decision rule.
 
 \paragraph{One quantity deliberately not a KPI.} The heat conducted through the
 envelope into the building is reported in Section~3.2 as a secondary result,
 because it follows from the same energy balance at no extra cost and matters to
 the building owner. It is not a selection KPI: indoor comfort and building
-services lie outside the project boundary (Table~\ref{tab:inout}), and mixing
-an out-of-boundary benefit into the concept comparison would distort it.
-
-\paragraph{Note on the targets.} The target values above are the team's
-\emph{aspirational} benchmarks set during scoping. They are hypotheses, not
-results. Every one of them is checked in Section~3.2 and either confirmed,
-revised or explicitly declared unverified. \todo{before hand-in: verify each
-cited benchmark value against the primary source --- the rubric penalises
-unchecked claims}
+services lie outside the project boundary (Table~\ref{tab:inout}).
 
 \paragraph{Important distinction.} KPI~3 measures a \emph{surface} temperature,
-not the air temperature of the city. A high-reflectance surface can easily be
-\qty{20}{\kelvin} cooler than a dark one, while the effect on the air
-temperature of the district is smaller by roughly two orders of magnitude
+KPI~4 an effect on people. A high-reflectance surface can be \qty{20}{\kelvin}
+cooler than a dark one while the effect on the air temperature of the district
+is smaller by roughly two orders of magnitude
 \parencite{santamouris2014,akbari2009}. Conflating the two is the most common
-error in urban-heat-island projects and would invalidate our evaluation, so
-both quantities are reported separately throughout this report.
+error in urban-heat-island projects, so the two are reported separately
+throughout this report.
+
+\paragraph{Note on the targets.} The targets above are aspirational benchmarks
+set during scoping. They are hypotheses, not results. Each is checked in
+Section~3.2 and either confirmed, revised or explicitly declared unverified.
+\todo{before hand-in: verify every cited benchmark value against its primary
+source}
 
 \subsection{Relevant Life's Principles}
 \label{sec:lifesprinciples}
 
-The Life's Principles that are most relevant to this specific challenge, and
-that are used again as a sustainability benchmark in Section~4:
+The Life's Principles most relevant to this challenge, used again as a
+sustainability benchmark in Section~4:
 
 \begin{itemize}
-  \item \textbf{Use low energy processes} --- the entire cooling function must
-        be passive; this is the hard energy constraint.
-  \item \textbf{Be locally attuned and responsive} --- the concept must respond
-        to the local diurnal cycle and the local water availability, not to an
-        average annual climate.
+  \item \textbf{Use low energy processes} --- the whole cooling function must be
+        passive. This is the hard energy constraint and follows from the design
+        question itself.
+  \item \textbf{Be locally attuned and responsive} --- the principle that the
+        design question is built on. The response must track the local load and
+        the locally available water, not an annual average. F9 is this principle
+        expressed as a function.
+  \item \textbf{Adapt to changing conditions} --- performance is required in a
+        heat wave, in an ordinary summer and in winter, from one surface.
   \item \textbf{Be resource efficient (material and energy)} --- fit form to
-        function, low added mass per square metre (see also KPI~7).
-  \item \textbf{Adapt to changing conditions} --- performance is needed in a
-        summer heat wave, but the same surface must not harm the winter
-        energy balance.
-  \item \textbf{Maintain integrity through self-renewal} --- the optical
-        function degrades through soiling; a self-cleaning or self-renewing
-        surface preserves the KPI over the service life.
+        function; low added mass and low embodied emissions per square metre
+        (KPI~8).
+  \item \textbf{Maintain integrity through self-renewal} --- the function
+        degrades through soiling; a self-cleaning surface preserves KPI~7 over
+        the service life.
   \item \textbf{Use life-friendly chemistry} --- relevant when selecting
-        pigments, binders and biocides for the outer layer.
+        pigments, binders and any biocide in the outer layer.
 \end{itemize}
 
-\paragraph{Quality check (slide 29).}
+\paragraph{Quality check.}
 \begin{itemize}[label=$\square$]
-  \item Is our system of interest clearly defined? --- Yes: the outer envelope
-        surface of an existing building.
+  \item Is our system of interest clearly defined? --- Yes, and singular: the
+        heat-regulating outer layer of an existing building.
   \item Is our project boundary manageable? --- Yes, see Table~\ref{tab:inout}.
+        Seasonal storage and electricity generation are explicitly out.
   \item Are our functions solution-neutral? --- Yes, verbs only; no components
-        named in Table~\ref{tab:functions} or Figure~\ref{fig:funcdiagram}.
-  \item Did the systems view reveal additional functions or constraints? ---
-        Yes: F2 (emit to the sky), the night operating window, and the
-        water-scarcity constraint.
-  \item Are our most important functions measurable? --- Yes, KPIs 1--7.
+        in Table~\ref{tab:functions} or Figure~\ref{fig:funcdiagram}.
+  \item Did the systems view reveal additional functions or constraints? --- Yes:
+        F2 and F6--F8 from the sky and the discarded rainwater, the evening
+        window from the residents, and the installation and maintenance
+        constraints.
+  \item Are our most important functions measurable? --- Yes, KPIs 1--8, each
+        with a unit.
   \item Is the \enquote{How might we\ldots?} question open to different
-        solutions? --- Yes: radiative, evaporative and geometric strategies
-        all remain possible.
+        solutions? --- Yes: evaporative, radiative and geometric strategies all
+        remain possible, and Section~3.2 must choose between them on evidence.
 \end{itemize}
