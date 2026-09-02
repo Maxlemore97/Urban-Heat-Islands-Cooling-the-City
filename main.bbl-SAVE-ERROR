@@ -1,0 +1,1441 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{akbari2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6e4c1c4a6cfb7a90fc255fca03e1239b}{%
+           family={Akbari},
+           familyi={A\bibinitperiod},
+           given={Hashem},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1159b966fe558ab2cfcfd22379cb72fd}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Surabi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d8d658e0ce847adb4c81d47168189e4}{%
+           family={Rosenfeld},
+           familyi={R\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eec4f3b3de724f7e7e4cd31742171df7}
+      \strng{fullhash}{9055e617dd158926209c3e146ff71849}
+      \strng{fullhashraw}{9055e617dd158926209c3e146ff71849}
+      \strng{bibnamehash}{9055e617dd158926209c3e146ff71849}
+      \strng{authorbibnamehash}{9055e617dd158926209c3e146ff71849}
+      \strng{authornamehash}{eec4f3b3de724f7e7e4cd31742171df7}
+      \strng{authorfullhash}{9055e617dd158926209c3e146ff71849}
+      \strng{authorfullhashraw}{9055e617dd158926209c3e146ff71849}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Climatic Change}
+      \field{number}{3}
+      \field{title}{Global cooling: Increasing world-wide urban albedos to offset {CO2}}
+      \field{volume}{94}
+      \field{year}{2009}
+      \field{pages}{275\bibrangedash 286}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/s10584-008-9515-9
+      \endverb
+    \endentry
+    \entry{asknature_bark}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Bark Keeps Surface Cool Under the Sun}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/bark-keeps-surface-cool-under-the-sun/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/bark-keeps-surface-cool-under-the-sun/
+      \endverb
+    \endentry
+    \entry{asknature_seastar}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Body Buffers Thermal Variations}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/body-buffers-thermal-variations/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/body-buffers-thermal-variations/
+      \endverb
+    \endentry
+    \entry{asknature_morpho}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Butterflies Hack Light Waves to Produce Brilliant Color}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/wing-scales-cause-light-to-diffract-and-interfere/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/wing-scales-cause-light-to-diffract-and-interfere/
+      \endverb
+    \endentry
+    \entry{asknature_cactus}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Cactus Ribs Keep Them Cool}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/shape-shades-and-enhances-heat-radiation/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/shape-shades-and-enhances-heat-radiation/
+      \endverb
+    \endentry
+    \entry{asknature_hydrocanopy}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute, Innovation}
+      \field{title}{Cooling Façade Inspired by Frogs and the Leaf Canopy}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/innovation/evaporative-cooling-facade-inspired-by-frogs-and-the-leaf-canopy/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/innovation/evaporative-cooling-facade-inspired-by-frogs-and-the-leaf-canopy/
+      \endverb
+    \endentry
+    \entry{asknature_hotspots}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Hot Spots on Skin Keep Elephants Cool}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/skin-fine-tunes-internal-temperature/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/skin-fine-tunes-internal-temperature/
+      \endverb
+    \endentry
+    \entry{asknature_jackrabbit}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{How Blood Flow Keeps Jackrabbits Cool}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/how-blood-flow-keeps-jackrabbits-cool/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/how-blood-flow-keeps-jackrabbits-cool/
+      \endverb
+    \endentry
+    \entry{asknature_ears}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Large Ears Aid Cooling}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/large-ears-aid-cooling/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/large-ears-aid-cooling/
+      \endverb
+    \endentry
+    \entry{asknature_camel}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute, Innovation}
+      \field{note}{Bilayer hydrogel--aerogel cooler developed at MIT. \todo{trace to the primary publication}}
+      \field{title}{Passive Cooling System Inspired by Camels}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/innovation/passive-cooling-system-inspired-by-camels/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/innovation/passive-cooling-system-inspired-by-camels/
+      \endverb
+    \endentry
+    \entry{asknature_pinecone}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{10}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{10}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Pine Cones Open and Close in Response to Weather}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/pine-cones-open-and-close-in-response-to-weather/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/pine-cones-open-and-close-in-response-to-weather/
+      \endverb
+    \endentry
+    \entry{asknature_snail}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{11}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{11}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Shell Protects From Heat}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/shell-protects-from-heat/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/shell-protects-from-heat/
+      \endverb
+    \endentry
+    \entry{asknature_leaves}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{12}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{12}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{note}{Used for the boundary-layer argument. \todo{the \qty{23}{\percent} figure comes from the University of Notre Dame biomechanics blog --- trace it to the underlying study}}
+      \field{title}{Small Leaves Buffer Insect Eggs From Heat}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/small-leaves-buffer-ambient-temperature
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/small-leaves-buffer-ambient-temperature
+      \endverb
+    \endentry
+    \entry{asknature_bees}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f280f2ccfd5b3fbc3440133114f5b911}{%
+           family={{AskNature}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{fullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{bibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorbibnamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authornamehash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhash}{f280f2ccfd5b3fbc3440133114f5b911}
+      \strng{authorfullhashraw}{f280f2ccfd5b3fbc3440133114f5b911}
+      \field{extraname}{13}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{13}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Biomimicry Institute}
+      \field{title}{Varying Response Thresholds Aid Hive Thermoregulation}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asknature.org/strategy/varying-response-thresholds-aid-hive-thermoregulation/
+      \endverb
+      \verb{url}
+      \verb https://asknature.org/strategy/varying-response-thresholds-aid-hive-thermoregulation/
+      \endverb
+    \endentry
+    \entry{baumeister2014}{book}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8838282bd9ef95182cbd59279024bc39}{%
+           family={Baumeister},
+           familyi={B\bibinitperiod},
+           given={Dayna},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a55b48905f6316871e7c4ac37b7ca59e}{%
+           family={Tocke},
+           familyi={T\bibinitperiod},
+           given={Rose},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c488a613d0b40d0126cbcf50bb0099f3}{%
+           family={Dwyer},
+           familyi={D\bibinitperiod},
+           given={Jamie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34fcb1ca18b98fc60b857b9a5da38cf7}{%
+           family={Ritter},
+           familyi={R\bibinitperiod},
+           given={Sherry},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=644173f505c6c6f6deadd7e433bef5b7}{%
+           family={Benyus},
+           familyi={B\bibinitperiod},
+           given={Janine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Missoula, MT}%
+      }
+      \list{publisher}{1}{%
+        {Biomimicry 3.8}%
+      }
+      \strng{namehash}{83200954d76872761b158fe0868d17ed}
+      \strng{fullhash}{8cb59f58668ff84cf6d8d66157b98dae}
+      \strng{fullhashraw}{8cb59f58668ff84cf6d8d66157b98dae}
+      \strng{bibnamehash}{83200954d76872761b158fe0868d17ed}
+      \strng{authorbibnamehash}{83200954d76872761b158fe0868d17ed}
+      \strng{authornamehash}{83200954d76872761b158fe0868d17ed}
+      \strng{authorfullhash}{8cb59f58668ff84cf6d8d66157b98dae}
+      \strng{authorfullhashraw}{8cb59f58668ff84cf6d8d66157b98dae}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Biomimicry Resource Handbook: A Seed Bank of Best Practices}
+      \field{year}{2014}
+    \endentry
+    \entry{hok2013}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b086eb5e63951613d6dae3d27f6de276}{%
+           family={{Biomimicry 3.8}},
+           familyi={B\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=c640181f98e81365b2f51032e7308884}{%
+           family={{HOK}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Biomimicry Group, Inc.}%
+        {HOK Group, Inc.}%
+      }
+      \strng{namehash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{fullhash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{fullhashraw}{de65197954ec898cb4068e205cbec0ba}
+      \strng{bibnamehash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{authorbibnamehash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{authornamehash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{authorfullhash}{de65197954ec898cb4068e205cbec0ba}
+      \strng{authorfullhashraw}{de65197954ec898cb4068e205cbec0ba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Design strategies of the temperate broadleaf forest biome translated to the built environment. Local copy in the course folder \enquote{Day 2 Discovering and abstracting}.}
+      \field{title}{Genius of Biome: Temperate Broadleaf Forest}
+      \field{year}{2013}
+    \endentry
+    \entry{asknature}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8e91d79199221fdbe2f50cc338febcdb}{%
+           family={{Biomimicry Institute}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{fullhash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{fullhashraw}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{bibnamehash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{authorbibnamehash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{authornamehash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{authorfullhash}{8e91d79199221fdbe2f50cc338febcdb}
+      \strng{authorfullhashraw}{8e91d79199221fdbe2f50cc338febcdb}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://asknature.org/}}
+      \field{note}{Accessed \todo{date}}
+      \field{title}{{AskNature}}
+    \endentry
+    \entry{ehleringer1978}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=69d75ad52a9434d8f39cae904a76f7dd}{%
+           family={Ehleringer},
+           familyi={E\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cebb1ffed9d211fbcc806485882f853}{%
+           family={Mooney},
+           familyi={M\bibinitperiod},
+           given={Harold\bibnamedelima A.},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{fullhash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{fullhashraw}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{bibnamehash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{authorbibnamehash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{authornamehash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{authorfullhash}{777d3ac8a8ee7403fda6c8553519afa4}
+      \strng{authorfullhashraw}{777d3ac8a8ee7403fda6c8553519afa4}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Oecologia}
+      \field{number}{2}
+      \field{title}{Leaf hairs: Effects on physiological activity and adaptive value to a desert shrub}
+      \field{volume}{37}
+      \field{year}{1978}
+      \field{pages}{183\bibrangedash 200}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/BF00344990
+      \endverb
+    \endentry
+    \entry{helms2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4e48660b4834e97c672d1808d637b6d0}{%
+           family={Helms},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d62a5cc670bea0c9301a55cb2164ebfe}{%
+           family={Vattam},
+           familyi={V\bibinitperiod},
+           given={Swaroop\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6f4ad5924b425a95e7c0f2ecf20f32d}{%
+           family={Goel},
+           familyi={G\bibinitperiod},
+           given={Ashok\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ae102457da949a163be24d692f0ed9e}
+      \strng{fullhash}{22f141ad3b04a025dcf65c987db1a61e}
+      \strng{fullhashraw}{22f141ad3b04a025dcf65c987db1a61e}
+      \strng{bibnamehash}{22f141ad3b04a025dcf65c987db1a61e}
+      \strng{authorbibnamehash}{22f141ad3b04a025dcf65c987db1a61e}
+      \strng{authornamehash}{6ae102457da949a163be24d692f0ed9e}
+      \strng{authorfullhash}{22f141ad3b04a025dcf65c987db1a61e}
+      \strng{authorfullhashraw}{22f141ad3b04a025dcf65c987db1a61e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Design Studies}
+      \field{number}{5}
+      \field{title}{Biologically inspired design: Process and products}
+      \field{volume}{30}
+      \field{year}{2009}
+      \field{pages}{606\bibrangedash 622}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.destud.2009.04.003
+      \endverb
+    \endentry
+    \entry{li2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=fc2923cf2bb4bae12a09ae4d9cd20967}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiangyu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=baeaf4884f4b6e04b4a78b54a9caad12}{%
+           family={Peoples},
+           familyi={P\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=108ca8d3cb7f3227f74f03863801e40d}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Peiyan},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5fe3c956c23baac7ae7904f652be623}{%
+           family={Ruan},
+           familyi={R\bibinitperiod},
+           given={Xiulin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c0a07afdf4d5534ce2c0d58e28e56ed}
+      \strng{fullhash}{025bfcb0b7add6f58c581084c4e7f32f}
+      \strng{fullhashraw}{025bfcb0b7add6f58c581084c4e7f32f}
+      \strng{bibnamehash}{8c0a07afdf4d5534ce2c0d58e28e56ed}
+      \strng{authorbibnamehash}{8c0a07afdf4d5534ce2c0d58e28e56ed}
+      \strng{authornamehash}{8c0a07afdf4d5534ce2c0d58e28e56ed}
+      \strng{authorfullhash}{025bfcb0b7add6f58c581084c4e7f32f}
+      \strng{authorfullhashraw}{025bfcb0b7add6f58c581084c4e7f32f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACS Applied Materials \& Interfaces}
+      \field{number}{18}
+      \field{title}{Ultrawhite {BaSO4} paints and films for remarkable daytime subambient radiative cooling}
+      \field{volume}{13}
+      \field{year}{2021}
+      \field{pages}{21733\bibrangedash 21739}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1021/acsami.1c02368
+      \endverb
+    \endentry
+    \entry{martins2018}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=4281aa7334c8d715e68cdd77ba6edee7}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={António\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6db5fa0d532a7664c116203d5551b096}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Nigel\bibnamedelima C.},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d234e0fb06d22e3af41bbd847f525834}{%
+           family={Clavel},
+           familyi={C\bibinitperiod},
+           given={Sylvie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57e4326e27f413bfd6abc941a23af02a}{%
+           family={Groenewald},
+           familyi={G\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5990b667a872c5356c358ed0534892e}{%
+           family={Hensman},
+           familyi={H\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb5784ca8e3b95baaaa22092aca311ba}{%
+           family={Hoby},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d204d2e6053514409e07a1c7e18f22eb}{%
+           family={Joris},
+           familyi={J\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa51b0fe5ea8c9b385442988ef07c625}{%
+           family={Manger},
+           familyi={M\bibinitperiod},
+           given={Paul\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1402041b2eb46c59a28e1db162d997e6}{%
+           family={Milinkovitch},
+           familyi={M\bibinitperiod},
+           given={Michel\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{842e55c8fddd3dad79f6c959955a6c8d}
+      \strng{fullhash}{d85adc3bfa5ae30bf3b8e8890bff8112}
+      \strng{fullhashraw}{d85adc3bfa5ae30bf3b8e8890bff8112}
+      \strng{bibnamehash}{842e55c8fddd3dad79f6c959955a6c8d}
+      \strng{authorbibnamehash}{842e55c8fddd3dad79f6c959955a6c8d}
+      \strng{authornamehash}{842e55c8fddd3dad79f6c959955a6c8d}
+      \strng{authorfullhash}{d85adc3bfa5ae30bf3b8e8890bff8112}
+      \strng{authorfullhashraw}{d85adc3bfa5ae30bf3b8e8890bff8112}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{Locally-curved geometry generates bending cracks in the {A}frican elephant skin}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{3865}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-018-06257-3
+      \endverb
+    \endentry
+    \entry{meteoswiss}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=47573f6cfc64a83a41c65d1b5d32e3dc}{%
+           family={{MeteoSwiss}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{fullhash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{fullhashraw}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{bibnamehash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{authorbibnamehash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{authornamehash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{authorfullhash}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \strng{authorfullhashraw}{47573f6cfc64a83a41c65d1b5d32e3dc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Federal Office of Meteorology and Climatology MeteoSwiss}
+      \field{note}{Zurich stations; access via IDAWEB / opendata. \todo{name the exact stations and reference period you use}}
+      \field{title}{Climate data of the automatic monitoring network}
+    \endentry
+    \entry{oke1982}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b137bc8a542aaa54a7b55ff8a729ff46}{%
+           family={Oke},
+           familyi={O\bibinitperiod},
+           given={T.\bibnamedelimi R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{fullhash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{fullhashraw}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{bibnamehash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{authorbibnamehash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{authornamehash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{authorfullhash}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \strng{authorfullhashraw}{b137bc8a542aaa54a7b55ff8a729ff46}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quarterly Journal of the Royal Meteorological Society}
+      \field{number}{455}
+      \field{title}{The energetic basis of the urban heat island}
+      \field{volume}{108}
+      \field{year}{1982}
+      \field{pages}{1\bibrangedash 24}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1002/qj.49710845502
+      \endverb
+    \endentry
+    \entry{raman2014}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e0a1f125c31dc586a9dcbbb67e764e18}{%
+           family={Raman},
+           familyi={R\bibinitperiod},
+           given={Aaswath\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=644121c54b6b67260e62af33515615de}{%
+           family={Anoma},
+           familyi={A\bibinitperiod},
+           given={Marc\bibnamedelima Abou},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10a684e088f0d54e4925a375f473686e}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Linxiao},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd365ba6de12c1052306bee48f917f83}{%
+           family={Rephaeli},
+           familyi={R\bibinitperiod},
+           given={Eden},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f949287454ec425b0cf7493a1d881de9}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Shanhui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d4436d470f58b73855edd8509fd8ef72}
+      \strng{fullhash}{e6f681f2cc9882fc267d7f6206e09af9}
+      \strng{fullhashraw}{e6f681f2cc9882fc267d7f6206e09af9}
+      \strng{bibnamehash}{d4436d470f58b73855edd8509fd8ef72}
+      \strng{authorbibnamehash}{d4436d470f58b73855edd8509fd8ef72}
+      \strng{authornamehash}{d4436d470f58b73855edd8509fd8ef72}
+      \strng{authorfullhash}{e6f681f2cc9882fc267d7f6206e09af9}
+      \strng{authorfullhashraw}{e6f681f2cc9882fc267d7f6206e09af9}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7528}
+      \field{title}{Passive radiative cooling below ambient air temperature under direct sunlight}
+      \field{volume}{515}
+      \field{year}{2014}
+      \field{pages}{540\bibrangedash 544}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/nature13883
+      \endverb
+    \endentry
+    \entry{santamouris2014}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=de4356f7f79381703a57e584fc42d63f}{%
+           family={Santamouris},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{fullhash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{fullhashraw}{de4356f7f79381703a57e584fc42d63f}
+      \strng{bibnamehash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{authorbibnamehash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{authornamehash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{authorfullhash}{de4356f7f79381703a57e584fc42d63f}
+      \strng{authorfullhashraw}{de4356f7f79381703a57e584fc42d63f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Solar Energy}
+      \field{title}{Cooling the cities --- A review of reflective and green roof mitigation technologies to fight heat island and improve comfort in urban environments}
+      \field{volume}{103}
+      \field{year}{2014}
+      \field{pages}{682\bibrangedash 703}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.solener.2012.07.003
+      \endverb
+    \endentry
+    \entry{shi2015}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=10727900550763ff891f602aaad4c565}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Norman\bibnamedelima Nan},
+           giveni={N\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e6da6210b176d2141a6f1fbb2e914da}{%
+           family={Tsai},
+           familyi={T\bibinitperiod},
+           given={Cheng-Chia},
+           giveni={C\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c663006cc317ee60ced7ca70ce847fa2}{%
+           family={Camino},
+           familyi={C\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e80a952fa004f2f89995e01009f35b4d}{%
+           family={Bernard},
+           familyi={B\bibinitperiod},
+           given={Gary\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88884c3d6d964c5504a589f98158d426}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Nanfang},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d8974b833d889e6f6da5f7deca48c2d}{%
+           family={Wehner},
+           familyi={W\bibinitperiod},
+           given={Rüdiger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0ebfb8926c33a85dcdf1b21db67af50f}
+      \strng{fullhash}{633f8159e63fdff435971347c1bb38dc}
+      \strng{fullhashraw}{633f8159e63fdff435971347c1bb38dc}
+      \strng{bibnamehash}{0ebfb8926c33a85dcdf1b21db67af50f}
+      \strng{authorbibnamehash}{0ebfb8926c33a85dcdf1b21db67af50f}
+      \strng{authornamehash}{0ebfb8926c33a85dcdf1b21db67af50f}
+      \strng{authorfullhash}{633f8159e63fdff435971347c1bb38dc}
+      \strng{authorfullhashraw}{633f8159e63fdff435971347c1bb38dc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6245}
+      \field{title}{Keeping cool: Enhanced optical reflection and radiative heat dissipation in {S}aharan silver ants}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{298\bibrangedash 301}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.aab3564
+      \endverb
+    \endentry
+    \entry{stadtzuerich2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d804f57414333c3bc7efbe8b1b2bea}{%
+           family={{Stadt Zürich}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Grün Stadt Zürich}%
+      }
+      \list{location}{1}{%
+        {Zürich}%
+      }
+      \strng{namehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{bibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorbibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authornamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{1}
+      \field{note}{Modelling by GEO-NET Umweltconsulting GmbH. File: \texttt{fp-hitzeminderung-bericht.pdf}}
+      \field{title}{Fachplanung Hitzeminderung}
+      \field{type}{Programm Klimaanpassung}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.stadt-zuerich.ch/fachplanung_hitzeminderung
+      \endverb
+      \verb{url}
+      \verb https://www.stadt-zuerich.ch/fachplanung_hitzeminderung
+      \endverb
+    \endentry
+    \entry{stadtzuerich_teilplaene}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d804f57414333c3bc7efbe8b1b2bea}{%
+           family={{Stadt Zürich}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{bibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorbibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authornamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Stadt Zürich}
+      \field{note}{Files: \texttt{teilplan-hitzeminderung.pdf}, \texttt{teilplan-kaltluftsystem.pdf}, \texttt{teilplan-entlastungssystem.pdf}}
+      \field{title}{Teilpläne zur Fachplanung Hitzeminderung: Hitzeminderung, Kaltluftsystem, Entlastungssystem}
+      \field{year}{2020}
+    \endentry
+    \entry{stadtzuerich_agenda}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d804f57414333c3bc7efbe8b1b2bea}{%
+           family={{Stadt Zürich}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Umwelt- und Gesundheitsschutz Zürich}%
+      }
+      \list{location}{1}{%
+        {Zürich}%
+      }
+      \strng{namehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{bibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorbibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authornamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{1}
+      \field{note}{File: \texttt{fp-hitzeminderung-umsetzungsagenda.pdf}}
+      \field{title}{Umsetzungsagenda 2020--2023 zur Fachplanung Hitzeminderung}
+      \field{type}{Programm Klimaanpassung}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{stadtzuerich_merkblatt}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d804f57414333c3bc7efbe8b1b2bea}{%
+           family={{Stadt Zürich}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{bibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorbibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authornamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Umwelt- und Gesundheitsschutz Zürich, Fachbereich Umweltpolitik}
+      \field{note}{Planning aid for building and land owners. File: \texttt{merkblatt-fp-hitzeminderung.pdf}}
+      \field{title}{Merkblatt Hitzeminderung in der Stadt Zürich}
+      \field{year}{2021}
+    \endentry
+    \entry{stadtzuerich_opendata}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d804f57414333c3bc7efbe8b1b2bea}{%
+           family={{Stadt Zürich}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{fullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{bibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorbibnamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authornamehash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhash}{72d804f57414333c3bc7efbe8b1b2bea}
+      \strng{authorfullhashraw}{72d804f57414333c3bc7efbe8b1b2bea}
+      \field{extraname}{5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://data.stadt-zuerich.ch/}}
+      \field{note}{Building footprints, tree cadastre, climate layers. Accessed \todo{date}}
+      \field{title}{Open Data Katalog der Stadt Zürich}
+    \endentry
+    \entry{sto_lotusan}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=39e9e7bfc2e54cfb300707531d2cc86f}{%
+           family={{Sto SE \& Co. KGaA}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{fullhash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{fullhashraw}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{bibnamehash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{authorbibnamehash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{authornamehash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{authorfullhash}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \strng{authorfullhashraw}{39e9e7bfc2e54cfb300707531d2cc86f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Product documentation}
+      \field{note}{Micro-structured superhydrophobic façade paint; the manufacturer states resistance to algae and fungi without biocide film protection. \todo{verify the durability claims against independent literature before citing them as fact}}
+      \field{title}{{StoColor Lotusan} --- exterior coating with {Lotus-Effect} technology}
+      \field{urlday}{2}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sto.com/biomimetics/en/biomimetics/lotusan/index.html
+      \endverb
+      \verb{url}
+      \verb https://www.sto.com/biomimetics/en/biomimetics/lotusan/index.html
+      \endverb
+    \endentry
+    \entry{sonnendach}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e17afcf33b90171f1021af49f29b2d09}{%
+           family={{Swiss Federal Office of Energy}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{fullhash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{fullhashraw}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{bibnamehash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{authorbibnamehash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{authornamehash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{authorfullhash}{e17afcf33b90171f1021af49f29b2d09}
+      \strng{authorfullhashraw}{e17afcf33b90171f1021af49f29b2d09}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sonnendach.ch/}}
+      \field{note}{Irradiation, orientation, tilt and usable area per roof. Accessed \todo{date}}
+      \field{title}{sonnendach.ch --- solar irradiance per roof surface}
+    \endentry
+    \entry{turner2008}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d030e0c4469779f6c4ed17bfc92a2def}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi Scott},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db77da534c6854ee29019f9c23177c85}{%
+           family={Soar},
+           familyi={S\bibinitperiod},
+           given={Rupert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Loughborough University}%
+      }
+      \strng{namehash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{fullhash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{fullhashraw}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{bibnamehash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{authorbibnamehash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{authornamehash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{authorfullhash}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \strng{authorfullhashraw}{cd6efa2062f6ae18b5ec3c312f487f5d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the First International Conference on Industrialized, Intelligent Construction (I3CON)}
+      \field{note}{Critical re-assessment of the termite-mound ventilation narrative --- read before citing the Eastgate Centre example}
+      \field{title}{Beyond biomimicry: What termites can tell us about realizing the living building}
+      \field{year}{2008}
+    \endentry
+    \entry{vukusic2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=73d281e693d018748f666763cd800a8d}{%
+           family={Vukusic},
+           familyi={V\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=822106761e3853ca3d9d1774111011dc}{%
+           family={Hallam},
+           familyi={H\bibinitperiod},
+           given={Benny},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe289574dd8ce68313241d3a463b3f7d}{%
+           family={Noyes},
+           familyi={N\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{885d37232952b7007c935b56c272c334}
+      \strng{fullhash}{4d44cfe342637ab91ecbaf2914856b93}
+      \strng{fullhashraw}{4d44cfe342637ab91ecbaf2914856b93}
+      \strng{bibnamehash}{4d44cfe342637ab91ecbaf2914856b93}
+      \strng{authorbibnamehash}{4d44cfe342637ab91ecbaf2914856b93}
+      \strng{authornamehash}{885d37232952b7007c935b56c272c334}
+      \strng{authorfullhash}{4d44cfe342637ab91ecbaf2914856b93}
+      \strng{authorfullhashraw}{4d44cfe342637ab91ecbaf2914856b93}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5810}
+      \field{title}{Brilliant whiteness in ultrathin beetle scales}
+      \field{volume}{315}
+      \field{year}{2007}
+      \field{pages}{348}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1126/science.1134666
+      \endverb
+    \endentry
+    \entry{zhai2017}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=de207bea862598c96ed1db6209d73e29}{%
+           family={Zhai},
+           familyi={Z\bibinitperiod},
+           given={Yao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3faf749b9b2c888c816255b108f40233}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yaoguang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebbb97ce7c8446fad86ae412b727da68}{%
+           family={David},
+           familyi={D\bibinitperiod},
+           given={Sabrina\bibnamedelima N.},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f05e9a2881226824b3b3d56b8c9a896}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Dongliang},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f69e5f9e4e761c277a60391eefb7a989}{%
+           family={Lou},
+           familyi={L\bibinitperiod},
+           given={Runnan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1494604e6a0845ef6a1e0607b7f606a}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bec1dee266b4151b956976428e6f841a}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Ronggui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7faca63198d1487b3c831e529e0f0f1b}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Xiaobo},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91a4702f3cc08173e9ddae717f5c1c92}
+      \strng{fullhash}{e67e8b23af03170b3dd97bddfc511ef1}
+      \strng{fullhashraw}{e67e8b23af03170b3dd97bddfc511ef1}
+      \strng{bibnamehash}{91a4702f3cc08173e9ddae717f5c1c92}
+      \strng{authorbibnamehash}{91a4702f3cc08173e9ddae717f5c1c92}
+      \strng{authornamehash}{91a4702f3cc08173e9ddae717f5c1c92}
+      \strng{authorfullhash}{e67e8b23af03170b3dd97bddfc511ef1}
+      \strng{authorfullhashraw}{e67e8b23af03170b3dd97bddfc511ef1}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6329}
+      \field{title}{Scalable-manufactured randomized glass-polymer hybrid metamaterial for daytime radiative cooling}
+      \field{volume}{355}
+      \field{year}{2017}
+      \field{pages}{1062\bibrangedash 1066}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1126/science.aai7899
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

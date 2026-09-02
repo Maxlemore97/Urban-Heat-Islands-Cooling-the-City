@@ -30,8 +30,67 @@ AskNature Chat & Discovering biological strategies for functions F1--F8 &
 \end{tabularx}
 \end{table}
 
-\section*{Appendix B -- Optional Supporting Material}
-\addcontentsline{toc}{section}{Appendix B -- Optional Supporting Material}
+\section*{Appendix B -- Decision Log}
+\addcontentsline{toc}{section}{Appendix B -- Decision Log}
 
-\todo{Additional calculations, extended concept drawings, raw measurement data
-or prompt excerpts where useful.}
+Every decision below is argued at the place named in the last column. This table
+exists so that the reasoning can be checked without re-reading the report, and
+so that what was \emph{not} chosen stays visible: a design process is only
+legible if the discarded alternatives are on the record.
+
+\renewcommand{\thetable}{B.\arabic{table}}
+\setcounter{table}{0}
+
+\begin{longtable}{L{2.6cm} L{3.0cm} L{3.0cm} L{5.7cm}}
+\caption{Decision log. What was chosen, what it displaced, and why.}
+\label{tab:decisionlog}\\
+\toprule
+\textbf{Decision} & \textbf{Chosen} & \textbf{Rejected alternative} & \textbf{Reason, and where it is argued} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Decision} & \textbf{Chosen} & \textbf{Rejected alternative} & \textbf{Reason, and where it is argued} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+Design question & Let the absorbed heat drive its own removal, self-regulating & Four other candidates, from \enquote{prevent heat build-up in cities} to \enquote{turn heat into a resource} & Too broad, unanchored, factually wrong, or not verifiable in the time available. The chosen question adds the self-regulating clause, which is the actual content of the project. Section~\ref{sec:designquestion} \\
+
+Reference city & Zurich & A generic European city & An adopted municipal heat strategy, published target values, open geodata and long-term stations make the targets checkable instead of invented. Section~\ref{sec:context} \\
+
+Reference site & Modellierungsgebiet 03, closed perimeter block & A freely chosen building & The city publishes modelled baseline and climate-optimised results for exactly this area, so the concept is compared against a documented reference. Section~\ref{sec:context} \\
+
+Design case & Five consecutive hot days & One hot afternoon & Only a multi-day case stresses the water reserve and the reset behaviour of the store; a concept that works on day one and saturates by day three has not solved the problem. Section~\ref{sec:context} \\
+
+Evening window & 18:00--24:00 & 20:00--24:00 & A window must contain the instant at which its own KPI is evaluated, and the two hours before 20:00 are among the hottest of the day at the surface. Section~\ref{sec:context} \\
+
+System of interest & The façade, with the roof as the release interface & The envelope as a whole, roof included & The roof receives more than twice the noon irradiance, but releases its heat upward to a sky it can see; the façade releases sideways into the canyon at head height, and Section~1 fixes that as where the effect must appear. Section~\ref{sec:context} \\
+
+Number of systems & One & Two --- \enquote{reduce heat} and \enquote{prevent heat} & The systems view showed these are two functions of one system, coupled by the design question. Section~\ref{sec:systemview} \\
+
+Scope of \enquote{use the heat} & Let it drive its own removal & Seasonal storage and electricity generation & Conversion competes with photovoltaics for the same surface and any seasonal store lies outside the envelope. Section~\ref{sec:systemview} \\
+
+Selection KPI for the urban effect & PET at \qty{2}{\metre} above ground & Urban heat island intensity & A district-scale quantity that a single retrofit cannot move measurably, and it invites the surface-versus-air confusion. Section~\ref{sec:kpi} \\
+
+Cost and embodied emissions & Constraints & An eighth KPI & A KPI must follow from a function; these are conditions to satisfy, not measures of performance. The move also brings the list inside the required four to seven. Section~\ref{sec:kpi} \\
+
+Albedo target & $\geq0.80$, the city's threshold & The technical maximum of $\approx0.98$ & Life's Principles ask for optimised rather than maximised; further reflectance costs glare, winter gains and photovoltaic yield. Section~\ref{sec:lifesprinciples} \\
+
+Life's Principles claimed & Four claimed with the sub-principle named & \enquote{Creates opportunities for life} and \enquote{Evolve to survive} for the artefact & A damp textured surface invites the algal growth KPI~7 penalises, and a façade layer does not evolve across generations. Naming the conflict is more honest than claiming the principle. Section~\ref{sec:lifesprinciples} \\
+
+Search strategy & By function, through the taxonomy & By organism & Searching for organisms would not have produced F9, which is the pairing of two taxonomy branches rather than a single one. Section~\ref{sec:researchpath} \\
+
+Termite mound & De-selected & The standard biomimicry reference for passive cooling & The chimney account is contested in the literature, and the building usually cited for it uses fans. Section~\ref{sec:discovering} \\
+
+Fog harvesting & De-selected & The Namib beetle, the most-cited water model & Fog in Zurich is a winter phenomenon; a heat wave brings neither rain nor fog. Section~\ref{sec:discovering} \\
+
+Green façades & Out of scope & An obvious and proven measure & Already the client's HA~09 and HA~10, and in direct competition with our own water reserve, which is scarcest exactly when planting needs most. Section~\ref{sec:discovering} \\
+
+Evidence standard & Primary papers & AskNature entries as evidence & AskNature and AI-assisted search find candidates; the mechanism claims are referenced to the literature. Section~\ref{sec:researchpath} \\
+
+Concept pair & \todo{decide} & \todo{the two directions not developed} & \todo{state the physical distinction that makes the pair meaningful} \\
+
+Final concept & \todo{A, B or a justified hybrid} & \todo{} & \todo{name the weakness in V1 that V2 answers} \\
+
+\end{longtable}
