@@ -271,6 +271,7 @@ Installation & soft & Must be installable by ordinary trades on an occupied buil
 Maintenance & soft & Must remain functional with little maintenance. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}. Service life target $\geq$ \qty{20}{years}. \\
 Solar energy & soft & Should not unnecessarily compromise roof- or façade-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State which envelope areas the concept claims. \\
 Structural & soft & Limited additional dead load and build-up thickness on an existing envelope. \\
+Embodied emissions & soft & The greenhouse gas embodied in the added build-up must be repaid by the avoided cooling demand within the service life. Measured in \unit{\kilo\gram}\,CO$_2$-eq\,\unit{\per\square\metre}. \todo{source a benchmark} \\
 Economic & soft & The city expects higher cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal refurbishment. \todo{find a benchmark figure and cite it} \\
 \bottomrule
 \end{tabularx}
@@ -342,6 +343,23 @@ concept earns its place here if it does at least one of the following:
         above all glare and soiling, which are precisely the points where
         biological surfaces are strong.
 \end{enumerate}
+
+\paragraph{Two precedents outside the city's own catalogue.} The Fachplanung
+lists what the client does; it does not list what the field has already built.
+Two cases bear directly on our functions and are treated here as state of the
+art rather than as biological models. \emph{StoColor Lotusan}, a
+micro-structured superhydrophobic façade paint modelled on the lotus leaf, has
+been on the market since 1999 and is stated by its manufacturer to resist algae
+and fungal growth \emph{without biocide film protection}
+\parencite{sto_lotusan}. That is a commercial answer to precisely the soiling
+weakness the city names for HA~11, and it establishes that the physical route to
+F10 is not speculative. \emph{HydroCanopy}, a façade system inspired by the
+mucous glands of frogs and by the density gradient of leaves in a tree canopy,
+combines solar regulation, ventilation, thermal inertia and evaporative cooling
+in one multi-layer build-up \parencite{asknature_hydrocanopy}. It is the closest
+published prior art to the concept direction of this project, which obliges us to
+state what our concept adds: a self-regulating link between load and cooling
+power (F9), and an effect in the night window.
 
 \todo{Note for Section~5: the running text on p.~128 of the Fachplanung quotes a
 maximum PET reduction of \qty{2.3}{\kelvin} for a south-west facing façade,
@@ -435,7 +453,7 @@ Residents, transport and public transit
 & Defines where the effect has to be delivered: at pedestrian level in the
   street canyon and in the flats on the upper floors, not on the roof membrane.
   This is why PET at \qty{2}{\metre} above ground becomes a KPI, and it fixes
-  the evening window 20:00--24:00, when people are outdoors and then sleeping. \\
+  the evening window 18:00--24:00, when people are outdoors and then sleeping. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -610,7 +628,13 @@ readability.}
 \label{sec:biologized}
 
 The functions are translated into questions to nature, which form the search
-strategy for Section~3.1:
+strategy for Section~3.1. The challenge brief asks a further question directly
+--- what can be learned from desert plants and animals about passive cooling ---
+and the answer shapes where we looked: the organisms most challenged by our
+problem, and unfazed by it, live where solar load is extreme and water is
+scarce. That is why the models of Section~\ref{sec:discovering} are
+disproportionately desert organisms, and why the two that transfer best are
+those whose strategy is a structure rather than a metabolic process.
 
 \begin{itemize}
   \item How does nature use the heat it receives to get rid of that same heat?
@@ -693,12 +717,6 @@ solar reflectance of about $0.3$, the value the city uses for un-greened façade
     city names for high-albedo envelopes \parencite[128]{stadtzuerich2020};
     aged cool roofs commonly lose a significant fraction of their initial
     reflectance \parencite{santamouris2014}. \\
-8 & Constraints: economy and effort
-  & Installed cost; and embodied greenhouse gas of the added build-up
-  & CHF\,\unit{\per\square\metre}; \unit{\kilo\gram}\,CO$_2$-eq\,\unit{\per\square\metre}
-  & Within the range of a conventional refurbishment, and the embodied emissions
-    must be repaid by the avoided cooling demand within the service life.
-    \todo{both benchmarks still to be sourced} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -709,6 +727,14 @@ temperature and the state of charge of the heat store at 06:00 must not drift
 upwards from one day to the next. A concept that cools well on the first day but
 saturates by the third fails the design case even if every single-day KPI is
 met. \todo{report the five-day trend in Section~3.2, not only day one}
+
+\paragraph{Why cost and embodied emissions are not KPIs.} An earlier version of
+this table carried installed cost and embodied greenhouse gas as an eighth KPI.
+They have been moved into the constraints of Table~\ref{tab:constraints},
+because a KPI must follow from a \emph{function}, and neither of these does:
+they are conditions the design has to satisfy, not measures of how well it
+performs its job. The move also brings the list to seven, within the four to
+seven the task specification asks for.
 
 \paragraph{Two changes to the team's original KPI list.} Two of the KPIs
 originally proposed were reformulated, in both cases because of the rule that
@@ -722,8 +748,8 @@ motivates the project, and it is replaced operationally by KPI~4, which measures
 the same concern where it is actually attributable to our system.
 
 \emph{Sustainability cost} was not a measurable quantity as stated. It is
-replaced by the embodied-emissions half of KPI~8, which has a unit, a
-benchmark and a decision rule.
+replaced by the embodied-emissions constraint in
+Table~\ref{tab:constraints}, which has a unit, a benchmark and a decision rule.
 
 \paragraph{One quantity deliberately not a KPI.} The heat conducted through the
 envelope into the building is reported in Section~3.2 as a secondary result,
@@ -748,28 +774,56 @@ source}
 \subsection{Relevant Life's Principles}
 \label{sec:lifesprinciples}
 
-The Life's Principles most relevant to this challenge, used again as a
-sustainability benchmark in Section~4:
+The six Life's Principles are used here at the level the handbook defines them,
+with the sub-principle we actually claim named underneath. Listing a principle is
+not applying it; the assessment of how well the final concept achieves them is
+Section~\ref{sec:sustainability}.
 
 \begin{itemize}
-  \item \textbf{Use low energy processes} --- the whole cooling function must be
-        passive. This is the hard energy constraint and follows from the design
-        question itself.
-  \item \textbf{Be locally attuned and responsive} --- the principle that the
-        design question is built on. The response must track the local load and
-        the locally available water, not an annual average. F9 is this principle
-        expressed as a function.
-  \item \textbf{Adapt to changing conditions} --- performance is required in a
-        heat wave, in an ordinary summer and in winter, from one surface.
-  \item \textbf{Be resource efficient (material and energy)} --- fit form to
-        function; low added mass and low embodied emissions per square metre
-        (KPI~8).
-  \item \textbf{Maintain integrity through self-renewal} --- the function
-        degrades through soiling; a self-cleaning surface preserves KPI~7 over
-        the service life.
-  \item \textbf{Use life-friendly chemistry} --- relevant when selecting
-        pigments, binders and any biocide in the outer layer.
+  \item \textbf{Be locally attuned and responsive} --- sub-principles
+        \emph{harness freely available energy}, \emph{leverage existing cycles},
+        and above all \emph{the signal, the antennae that detect it and the
+        response match}. This is the principle the design question is built on,
+        and F9 is it expressed as a function. The two sinks we use --- the night
+        sky and the rainwater the city currently discards --- are both freely
+        available and both local.
+  \item \textbf{Be resource efficient (material and energy)} --- sub-principles
+        \emph{use low energy processes}, which is our hard energy constraint, and
+        \emph{a single design meets more than one need}, which is the tie-breaker
+        we apply in Section~\ref{sec:evaluation}: a build-up in which one layer
+        carries several functions beats one that needs a layer per function.
+  \item \textbf{Adapt to changing conditions} --- sub-principles \emph{adapt to
+        temporal and spatial changes} (the design case is a five-day heat wave,
+        not one hot afternoon), \emph{withstand disturbance while maintaining
+        function} (frost, freeze--thaw, driving rain, UV) and \emph{maintain
+        integrity through self-renewal} (soiling degrades the function; KPI~7).
+  \item \textbf{Use life-friendly chemistry} --- sub-principles \emph{use a safe
+        subset of the periodic table} and \emph{the breakdown results only in
+        harmless by-products}. This is not decorative for us: any biocide or
+        stabiliser that leaches from the surface enters the rainwater we intend to
+        collect and evaporate at pedestrian level, which is the place we are
+        trying to improve.
+  \item \textbf{Integrate development with growth} --- claimed only in the
+        limited sense of \emph{built to shape}: a modular element sized to a
+        façade grid produces no offcuts. The sub-principle \emph{create more
+        opportunities for life} is explicitly \emph{not} claimed --- a
+        permanently damp textured surface invites exactly the algal growth that
+        KPI~7 penalises, and naming that conflict is more honest than claiming
+        the principle.
+  \item \textbf{Evolve to survive} --- \textbf{not claimed for the artefact.} A
+        façade layer does not evolve across generations, and claiming it would be
+        decoration. It is claimed for the \emph{process}: this report builds on
+        the incumbent rather than starting from zero, uses the world café for
+        cross-pollination, and documents what was de-selected and why.
 \end{itemize}
+
+\paragraph{The umbrella principle, applied as a rule.} \emph{Create conditions
+conducive to life} opens with the requirement that a design be \emph{optimised
+rather than maximised}. For us this is a concrete decision rather than a
+platitude: ultra-white coatings reach a solar reflectance of about $0.98$
+\parencite{li2021}, but KPI~2 targets $\geq0.80$, the city's own threshold,
+because further reflectance costs glare, winter solar gains and photovoltaic
+yield.
 
 \paragraph{Quality check.}
 \begin{itemize}[label=$\square$]

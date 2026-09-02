@@ -1,133 +1,544 @@
 %=======================================================================
-%  3  BIO-INSPIRED DESIGN PROCESS   (scaffold -- to be filled in day 2+)
+%  3  BIO-INSPIRED DESIGN PROCESS
 %  Template: "Document the research and design path explicitly. The report
 %  should make the reasoning chain from challenge to biological mechanism,
 %  technical concept, validation and iteration visible."
 %=======================================================================
 \section{Bio-Inspired Design Process}
 
-\todo{One short paragraph: how the team organised the search and the design
-path, so the reasoning chain from Section 2 to Section 3.3 is visible.}
+The chain this section has to make visible is
+challenge $\rightarrow$ function $\rightarrow$ biology $\rightarrow$ abstraction
+$\rightarrow$ concept $\rightarrow$ engineering check $\rightarrow$ evaluation
+$\rightarrow$ iteration. Section~2 delivered the first two links. This section
+delivers the biology and the abstraction, and hands a set of transferable
+principles to the concept development in Section~\ref{sec:creating}.
 
 %-----------------------------------------------------------------------
 \subsection{Discovering \& Abstracting}
-%  Template bullets:
-%   - Use AskNature / AskNature Chat, literature and other credible sources.
-%   - Make the research path explicit: how were models found, which were
-%     selected, and why were others DE-selected?  <- the de-selection is
-%     where most teams lose points; the table below is prepared for it.
-%   - Describe mechanisms IN DEPTH. Explain HOW they work, not just which
-%     organism has them. Use figures.
-%   - Abstract into a transferable principle. Separate observation /
-%     abstraction / technical interpretation.
-%   - Identify relevant Life's Principles.
-%-----------------------------------------------------------------------
+\label{sec:discovering}
 
 \subsubsection{Research path}
+\label{sec:researchpath}
 
-\todo{Describe how you searched: AskNature functions used, search terms,
-databases, which biologized question from Section~\ref{sec:biologized} led to
-which model.}
+Every search started from a verb in the function list of
+Table~\ref{tab:functions}, never from an organism. This follows the rule that
+biological content is organised by the function it serves, which is also the
+structure of the Biomimicry Taxonomy and therefore of AskNature
+\parencite{asknature}. Table~\ref{tab:searchpath} records which taxonomy branch
+was searched for which of our functions, and what it returned; the biologized
+questions themselves are in Section~\ref{sec:biologized}.
 
 \begin{table}[htbp]
 \centering
-\caption{Biological models found, and the selection / de-selection decision.}
-\label{tab:models}
+\caption{Research path. Each of our functions was translated into a taxonomy
+branch before any organism was considered.}
+\label{tab:searchpath}
 \renewcommand{\arraystretch}{1.25}
 \small
-\begin{tabularx}{\textwidth}{L{3.0cm} L{1.5cm} X L{2.2cm}}
+\begin{tabularx}{\textwidth}{L{1.6cm} L{5.2cm} X}
 \toprule
-\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism (short)} & \textbf{Selected?} \\
+\textbf{Function} & \textbf{Taxonomy branch searched} & \textbf{Models it returned} \\
 \midrule
-Saharan silver ant \emph{Cataglyphis bombycina} & F1, F2 &
-Triangular hairs scatter visible and near-infrared light and simultaneously
-enhance emissivity in the mid-infrared \parencite{shi2015} & \todo{yes/no + why} \\
-White beetle \emph{Cyphochilus} & F1 &
-Brilliant whiteness from a disordered chitin network only a few micrometres
-thick, without pigment \parencite{vukusic2007} & \todo{yes/no + why} \\
-African elephant skin & F6--F8 &
-Network of micrometre-scale cracks retains water and extends evaporative
-cooling \parencite{martins2018} & \todo{yes/no + why} \\
-Desert shrub \emph{Encelia farinosa} & F1, F5 &
-Dense leaf pubescence raises reflectance and is adjusted seasonally
-\parencite{ehleringer1978} & \todo{yes/no + why} \\
-Termite mound & F3 &
-Classic biomimicry reference, but the \enquote{chimney air-conditioning}
-account is contested; measurements support wind-driven transient gas exchange
-rather than a thermosiphon \parencite{turner2008} &
-\todo{recommended: DE-SELECT with this justification} \\
-\todo{further models} & & & \\
+F1, F5 & Modify $\rightarrow$ physical state $\rightarrow$ light/colour;
+         Protect from non-living threats $\rightarrow$ light
+       & Desert snail, \emph{Morpho}, \emph{Cyphochilus}, tree bark, cactus ribs \\
+F2, F3 & Transform/convert energy $\rightarrow$ thermal, radiant;
+         Distribute $\rightarrow$ energy
+       & Elephant ears, elephant hairs, jackrabbit ears, Saharan silver ant \\
+F4     & Store $\rightarrow$ energy
+       & Sea star, desert snail \\
+F6--F8 & Capture, absorb or filter $\rightarrow$ liquids; Store $\rightarrow$
+         liquids; Distribute $\rightarrow$ liquids
+       & Leaf stomata, camel fur, honeybee water collection, bryophytes \\
+F9     & Sense signals $\rightarrow$ temperature \emph{paired with}
+         Process signals $\rightarrow$ respond to signals
+       & Honeybee fanning thresholds, leaf stomata, pine cone, elephant hot spots \\
+F10, F11 & Protect from non-living threats $\rightarrow$ dirt/solids, light, ice
+       & Lichen, lotus leaf \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsubsection{Mechanisms in depth}
+F9 is worth noting: it is the only one of our functions that does not sit in a
+single branch of the taxonomy. It is the \emph{pairing} of \enquote{sense
+signals: temperature} with \enquote{process signals: respond to signals}, which
+is the same construction the Life's Principles checklist uses when it asks that
+\enquote{the signal it sends, the antennae it uses to detect the signal, and its
+response match} \parencite{baumeister2014}. That the central function of our
+design question has to be assembled from two branches is itself a finding: it is
+why searching by organism would not have produced it.
 
-\todo{For the 2--3 selected models: explain the mechanism properly ---
-geometry, length scales, physics, and the evidence. Add a sketch. This is
-worth 20\,\% of the grade and descriptive text alone is not enough.}
+\paragraph{Sources, in the order they were used.} AskNature strategies and
+innovations to find candidates \parencite{asknature}; the \emph{Genius of Biome}
+report for the temperate broadleaf forest, which is the biome Zurich lies in,
+for models already translated to the built environment \parencite{hok2013};
+primary literature for the mechanisms; and commercial products where the
+transfer has already been made, which are treated as state of the art rather
+than as models. AskNature and AI-assisted search were used to \emph{find}
+candidates only; every mechanism claim carried into this report is referenced to
+a paper or to the organisation that published the strategy.
 
-\subsubsection{Abstraction into design principles}
+\paragraph{Which lenses were applied.} Of the five lenses in the method, two did
+most of the work. The \emph{operating-condition lens} — intense solar radiation,
+surfaces above \qty{60}{\celsius}, freeze--thaw, weeks without rain — led to the
+desert organisms. The \emph{local lens} led to \parencite{hok2013}, because
+Zurich sits in the temperate broadleaf forest biome and that report translates
+exactly this biome into building design. The \emph{function lens} produced
+Table~\ref{tab:searchpath}. The naturalist and ecological lenses contributed
+context but no model that survived selection.
 
-\todo{Fill in. Keep the three columns strictly separate.}
+\subsubsection{Models found, and the selection decision}
 
 \begin{table}[htbp]
 \centering
-\caption{From biological observation to transferable design principle.}
+\caption{Biological models found, and the selection or de-selection decision.
+The criterion applied throughout: a model must be transferable to a
+\emph{passive surface} that survives twenty years of the Swiss annual cycle.}
+\label{tab:models}
+\renewcommand{\arraystretch}{1.2}
+\footnotesize
+\begin{tabularx}{\textwidth}{L{2.9cm} L{1.3cm} X L{2.5cm}}
+\toprule
+\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism} & \textbf{Decision} \\
+\midrule
+\multicolumn{4}{l}{\textit{Prevention --- reduce what is absorbed}}\\
+Desert snail \emph{Sphincterochila boissieri} & F1, F4 &
+Shell reflects $\approx\qty{90}{\percent}$ of visible and
+$\approx\qty{95}{\percent}$ of near-infrared light; in extreme heat the aperture
+is sealed with a calcified plate and the animal withdraws, leaving an insulating
+air space between body and hot ground \parencite{asknature_snail} &
+\textbf{Selected.} Passive, mineral, non-metabolic --- the closest analogue to
+an envelope we found \\
+\emph{Morpho} butterfly & F1 &
+Transparent chitin--air layers a few hundred nanometres apart diffract and
+recombine light; colour comes from geometry, and the disordered structure keeps
+the reflection diffuse rather than specular
+\parencite{asknature_morpho} &
+\textbf{Selected.} Decouples appearance from absorptance, which is what the
+townscape constraint requires \\
+White beetle \emph{Cyphochilus} & F1 &
+Brilliant whiteness from a disordered chitin network only
+$7\pm\qty{1.5}{\micro\metre}$ thick, without pigment \parencite{vukusic2007} &
+\textbf{Selected} as the achromatic case of the same principle \\
+Saharan silver ant \emph{Cataglyphis bombycina} & F1, F2 &
+Triangular hairs scatter visible and near-infrared light and simultaneously
+raise emissivity in the mid-infrared \parencite{shi2015} &
+\textbf{Selected.} The only model that does F1 and F2 in one structure \\
+Cactus ribs & F5, F3, F2 &
+Peaks shade the troughs; the cooler trough air absorbs heat and rises out, while
+the folds enlarge the emitting area \parencite{asknature_cactus} &
+\textbf{Selected.} Geometry only --- no material, no water, nothing to bleach \\
+Tree bark & F1, F2 &
+Reflects part of the incoming radiation while emitting efficiently; rough
+layering shades itself and traps insulating air \parencite{asknature_bark} &
+\textbf{Selected.} A dead outer layer protecting a living structure --- the same
+role our build-up has \\
+\midrule
+\multicolumn{4}{l}{\textit{Removal --- get heat out again}}\\
+Elephant ears & F2, F3 &
+Warm blood is carried from the core into large thin ears; the surface releases
+it, and flapping raises the airflow \parencite{asknature_ears} &
+\textbf{Selected.} Separates the place of absorption from the place of release \\
+Elephant skin hairs & F3 &
+Sparse hairs reach through the still boundary layer so moving air reaches the
+skin; reported additional heat loss up to \qty{23}{\percent}
+\parencite{asknature_leaves} &
+\textbf{Selected.} Directly relevant at the low wind speeds of a canyon \\
+Jackrabbit ears & F9, F2 &
+Vasodilation varies the blood flow to a thin radiating surface; at
+$\approx\qty{30}{\celsius}$ air temperature the ears shed all excess heat, and
+the strategy exists to avoid spending water
+\parencite{asknature_jackrabbit} &
+\textbf{Selected.} The water-free route to a load-coupled response \\
+Elephant skin hot spots & F9 &
+Vasodilation in scattered patches rather than uniformly; the number of open
+\enquote{thermal windows} varies with the load
+\parencite{asknature_hotspots} &
+\textbf{Selected.} Regulation by active \emph{area} rather than by material \\
+\midrule
+\multicolumn{4}{l}{\textit{Water path and storage}}\\
+Leaf stomata & F9, F8 &
+Guard cells swell and shrink with their water content and so open and close the
+pore; evaporation itself pulls the water up, with no pump; leaf surfaces cool by
+\qtyrange{11}{17}{\kelvin} \parencite[62--65]{hok2013} &
+\textbf{Selected.} The clearest natural instance of F9 \\
+Camel fur over sweat glands & F7, F8 &
+Insulation over the evaporating layer; in the technical reproduction the pair
+held a sample \qty{7}{\kelvin} below ambient for \qty{200}{\hour}, five times
+longer than the wet layer alone \parencite{asknature_camel} &
+\textbf{Selected.} Turns the water reserve from a quantity into a duration \\
+Sea star & F4, F7, F9 &
+Takes up more cold water at high tide after a hot low tide, so the previous
+load sets the charge; fails once the sea is no longer colder than the air
+\parencite{asknature_seastar} &
+\textbf{Selected.} Charge-before-load, including its own failure mode \\
+Bryophytes & F6, F7 &
+No cuticle, no roots; a living layer over a decaying one holds moisture behind a
+still-air boundary, and the plant survives drying out
+\parencite[53--56]{hok2013} &
+\textbf{Not carried} into the concepts --- superseded by the camel bilayer,
+which achieves the same with a documented duration \\
+\midrule
+\multicolumn{4}{l}{\textit{Self-regulation and supporting functions}}\\
+Honeybee fanning thresholds & F9 &
+Each worker begins fanning at a slightly different temperature, and the spread is
+genetic; the number of active bees rises with the load, so binary units produce
+a graded colony response \parencite{asknature_bees} &
+\textbf{Selected.} Resolves whether a threshold can satisfy F9 \\
+Pine cone scales & F5, F9 &
+Two bonded layers swell differently with moisture, so the scale bends; the cone
+is dead tissue moved entirely by the weather
+\parencite{asknature_pinecone} &
+\textbf{Selected.} A passive actuator with no energy input \\
+Lichen \emph{Lecanora conizaeoides} & F10, F11 &
+Roughness at several scales keeps droplets perched so they roll off, while
+hydrophobin-coated channels stay dry and admit air: waterproof and breathable at
+once \parencite[41--44]{hok2013} &
+\textbf{Selected.} A physical answer to soiling, not a chemical one \\
+Desert shrub \emph{Encelia farinosa} & F1, F5 &
+Dense leaf pubescence raises reflectance and is adjusted seasonally
+\parencite{ehleringer1978} &
+\textbf{Selected} as the biological precedent for a seasonally switching surface \\
+African elephant skin cracks & F6--F8 &
+A network of micrometre-scale cracks retains water and extends evaporative
+cooling \parencite{martins2018} &
+\textbf{Selected.} Third mechanism from the same organism \\
+\midrule
+\multicolumn{4}{l}{\textit{De-selected, with reasons}}\\
+Termite mound & F3 &
+The classic reference, but the \enquote{chimney air-conditioning} account is
+contested; measurements support wind-driven transient gas exchange rather than a
+thermosiphon \parencite{turner2008} &
+\textbf{De-selected.} The evidence does not support the mechanism, and the
+building usually cited for it uses fans \\
+Namib desert beetle & F6 &
+Hydrophilic--hydrophobic patterning harvests water from fog &
+\textbf{De-selected.} Wrong season for our climate: fog in Zurich is a winter
+phenomenon, and a heat wave brings neither rain nor fog \\
+Thomson's gazelle carotid rete & F3 &
+Counter-current heat exchange cools the brain &
+\textbf{De-selected} as a whole-organism model --- internal physiology. The
+counter-current \emph{arrangement} is retained as an option for the liquid loop
+in Section~\ref{sec:creating} \\
+Tenrec aestivation & --- &
+Dormancy through the hot season &
+\textbf{De-selected.} A behaviour; an envelope has none \\
+Green façades and roofs & F1, F5 &
+Shading and evapotranspiration from planting &
+\textbf{Out of scope} by the project boundary (Table~\ref{tab:inout}), and in
+direct competition with our own water reserve: planting needs most water exactly
+when least is available \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Two features of Table~\ref{tab:models} are deliberate. First, the same organism
+appears three times --- the elephant supplies ear-based transport, boundary-layer
+hairs and localised hot spots, and these are three different mechanisms serving
+three different functions, not one model counted three times. Second, five
+models were rejected \emph{with a stated criterion} rather than quietly dropped.
+The criterion is the one at the head of the table, and it is worth stating
+explicitly because it explains an asymmetry in what survived: most cooling in
+nature is metabolic or behavioural, and an envelope has neither metabolism nor
+behaviour. The two models that transfer most directly --- the snail shell and the
+cactus rib --- are the two that are \emph{structures rather than processes}.
+
+\todo{Before hand-in: open every AskNature page cited in this table and replace
+it with the primary paper wherever one exists. Two are already identified: the
+silver-ant film reproduction is \emph{Biologically inspired flexible photonic
+films for efficient passive radiative cooling}, PNAS 2020, and the adaptive
+infrared material is \emph{A dynamic thermoregulatory material inspired by squid
+skin}, Nature Communications 2019. The course rule is explicit that AskNature
+finds candidates and the paper is the evidence.}
+
+\subsubsection{Mechanisms in depth}
+
+Three mechanisms are developed further here, one per functional family. They
+were chosen because each answers a question Section~2 left open.
+
+\paragraph{Prevention --- why reflection alone is not the strategy.} The desert
+snail survives on sun-exposed ground at up to \qty{50}{\celsius} without moving,
+without water, and without a metabolism that could help. Its shell reflects
+about \qty{90}{\percent} of visible and about \qty{95}{\percent} of near-infrared
+light, which is above the $\alpha_\mathrm{sol}\geq0.80$ that KPI~2 asks for and
+close to the ultra-white laboratory paints of \textcite{li2021} --- achieved with
+calcium carbonate rather than a manufactured pigment. The part that matters for
+us is what happens next. In extreme conditions the animal seals the aperture and
+retracts into the second whorl, so an air space separates its tissue from the
+shell wall nearest the hot ground. Reflection reduces what is absorbed; the air
+space stops what is still absorbed from reaching what must be protected. For a
+retrofit this maps onto a construction that already exists: a reflective outer
+skin in front of a ventilated cavity. That matters for the night window, because
+the \qty{7}{\kelvin} the city loses at night is heat released from mass that was
+charged during the day, and a decoupled outer skin charges far less of it.
+
+\paragraph{Regulation --- how a switch can behave like a controller.} In a
+honeybee colony the temperature at which an individual worker begins to fan
+varies between individuals, and the variation is genetic: a colony has one
+queen but many fathers, so it contains patrilines with different thresholds. As
+the nest warms, first a few bees fan, then more, then many, and the nest is held
+below about \qty{36}{\celsius} with no central control at all. Each bee is a
+binary switch; the colony response is continuous. This resolves an objection
+that would otherwise disqualify every switching material considered in
+Section~\ref{sec:creating}: a single threshold gives an almost infinite
+$\partial P/\partial T_s$ at the switching point and roughly zero either side of
+it, which is not the graded response KPI~1 asks for. A \emph{distribution} of
+thresholds across many small units restores it. The same pattern appears in
+\textcite{hok2013} as the \enquote{lots of littles} principle, arrived at
+independently.
+
+\paragraph{Water --- why metering matters more than harvesting.} A leaf cools
+itself by \qtyrange{11}{17}{\kelvin} through pores whose two guard cells swell
+and shrink with their water content, opening and closing the pore as they do;
+the water is drawn up by the evaporation itself, with no pump anywhere
+\parencite[62--65]{hok2013}. The valve responds directly to heat and dryness, so
+the effort tracks the load. The camel supplies the complementary half. Its fur
+is insulation worn \emph{in} the heat, and in the technical reproduction of that
+arrangement --- an evaporating hydrogel underneath a heat-blocking but
+vapour-permeable aerogel --- a sample was held \qty{7}{\kelvin} below ambient for
+\qty{200}{\hour}, five times longer than the wet layer alone
+\parencite{asknature_camel}. Insulating the wet layer, rather than exposing it,
+is what converts a fixed volume of water into a duration. Since KPI~6 asks for
+five days of autonomy and Zurich supplies no rain during the design heat wave,
+metering is the binding problem and harvesting is not.
+
+\todo{Add one figure per mechanism above. Prompts for generating them are in
+\texttt{Working documents/image\_prompts.md}; a generated figure is an
+illustration and must be captioned as schematic, and the AI use belongs in
+Appendix~A.}
+
+\subsubsection{Abstraction into design principles}
+
+Table~\ref{tab:abstraction} keeps the three columns strictly separate, as the
+method requires: what was observed, what the observation abstracts to, and what
+it might become technically. Only the third column contains anything that could
+be built, and nothing in it has been selected yet --- that is the work of
+Section~\ref{sec:creating}.
+
+\begin{table}[htbp]
+\centering
+\caption{From biological observation to transferable design principle. The third
+column lists possibilities, not decisions.}
 \label{tab:abstraction}
 \renewcommand{\arraystretch}{1.25}
-\small
+\footnotesize
 \begin{tabularx}{\textwidth}{X X X}
 \toprule
 \textbf{Biological observation} & \textbf{Abstracted principle} & \textbf{Possible technical interpretation} \\
 \midrule
-\todo{what was observed} & \todo{the principle, free of the organism} & \todo{how it could be built --- not yet a decision} \\
+The snail's shell reflects strongly \emph{and} an air space separates it from the
+hot substrate
+& Reflect first, then decouple whatever still gets through with a layer of air
+& Reflective outer skin over a ventilated cavity; structural white instead of a
+pigment \\
+\emph{Morpho} colour comes from layer geometry, not pigment, and the disordered
+structure stays diffuse
+& Separate what a surface looks like from what it does with heat
+& Structurally coloured or near-infrared-selective finish that keeps the
+existing façade colour \\
+Cactus peaks shade the troughs; cooler trough air absorbs heat and rises out
+& Use folded geometry for self-shading, more emitting area and better airflow
+& Ribbed or profiled façade and paving relief \\
+Sparse hairs reach through the still air layer clinging to the skin
+& Break the boundary layer so moving air reaches the surface
+& Millimetre-scale texture on façade and pavement \\
+The jackrabbit varies blood flow to a thin radiator; the elephant opens patches
+& Regulate by varying the \emph{transport} to a radiating surface, and place the
+radiator only where conditions are best
+& Pumpless density-driven liquid loop from the canyon face to a parapet-level
+radiator with a good sky view \\
+Guard cells open and close the pore in response to heat and dryness
+& Build the control into the opening, so the escape route widens with the load
+& Load-driven valve or wick, rather than a controlled one \\
+Camel fur insulates \emph{over} the evaporating skin
+& Cut the load first, then spend a little water on the remainder, and cover the
+wet layer so the reserve lasts
+& Absorbent layer beneath a vapour-permeable cover \\
+Worker bees each switch at a different temperature
+& Spread many binary elements across a range of trigger points and the sum
+responds continuously
+& Any switching element built as many small units with a deliberate spread of
+switching temperatures \\
+Pine cone scales bend because two bonded layers swell differently
+& Make moving parts from two layers that respond differently and let the
+environment actuate them
+& Bilayer shading element; hygroscopic or thermal actuation, no motor \\
+The sea star charges on cold water sized by the previous hot exposure
+& Charge the store during the cool phase, sized by the load of the previous cycle
+& Night-charged store, with an explicit reset condition across the five-day case \\
+Lichen roughness at several scales sheds water while staying breathable
+& Use geometry rather than chemistry to shed water and stay clean
+& Multi-scale textured finish; no biocide in the film \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
+\paragraph{One principle, found three times.} The jackrabbit and the elephant
+regulate by how much \emph{area} is active, the bees by how many \emph{units}
+have switched, and a bilayer shading element by how far it has \emph{deployed}.
+All three modulate how many elements act rather than how strongly each one acts,
+and all three arrive at a graded response without a controller. That convergence
+from three unrelated organisms is the strongest abstraction this project has
+produced, and it is the one carried into every concept in
+Section~\ref{sec:creating}.
+
+\subsubsection{Life's Principles evident in the selected strategies}
+
+The principles below are the ones the \emph{selected models} actually exhibit;
+Section~\ref{sec:sustainability} assesses how well our final concept applies
+them, which is a different question.
+
+\begin{itemize}
+  \item \textbf{Be locally attuned and responsive} --- present in every model
+        that couples its response to the local load, and named by the checklist
+        in the form our F9 requires: the signal, the antenna that detects it and
+        the response must match \parencite{baumeister2014}.
+  \item \textbf{Be resource efficient (material and energy)}, sub-principle
+        \emph{use low energy processes} --- none of the selected mechanisms
+        consumes energy; the load itself drives them.
+  \item \textbf{Adapt to changing conditions}, sub-principles \emph{incorporate
+        diversity} and \emph{maintain integrity through self-renewal} ---
+        \emph{Encelia} and the pine cone for the first, the lichen for the
+        second.
+  \item \textbf{Use life-friendly chemistry} --- the lichen and the
+        \emph{Cyphochilus} structure both achieve with geometry what industry
+        achieves with a compound that then has to be justified.
+\end{itemize}
+
+\todo{Section~4 must \emph{assess} these, not list them again. The rubric marks
+down a list.}
+
 %-----------------------------------------------------------------------
 \subsection{Creating: Engineering Concept Development}
-%  Template bullets:
-%   - Structured ideation (Crazy 8s and/or Morphological Matrix).
-%     At least THREE initial concept combinations before selecting two.
-%   - At least TWO technically distinct concept variants, with annotated
-%     drawings: components, functions, flows, materials, key parameters.
-%   - Engineering Canvas + 2-3 critical engineering questions.
-%   - At least 1-2 engineering checks, INCLUDING a quantitative estimate.
-%   - For calculations: formula, assumptions, units, result, meaning.
-%-----------------------------------------------------------------------
+\label{sec:creating}
 
 \subsubsection{Ideation}
 
-\todo{Document the method (Crazy 8s / morphological matrix). Include a photo
-or scan of the sheets. Show at least three initial combinations.}
+\todo{Run and document Crazy~8s: eight technically different ways of
+transferring the abstracted principles of Table~\ref{tab:abstraction}. Vary the
+mechanism, not the shape, and do not evaluate while generating. Include a photo
+or scan of the sheets. Warning: four of the eight ideas in the lecture's own
+worked example (night flush, evaporative inlet, thermal buffer, shading skin)
+overlap our function list. If our eight reproduce that list we have copied the
+example instead of using our own abstractions.}
+
+\subsubsection{Morphological matrix}
+
+The rows are chosen, not inherited. Of our thirteen functions, a row belongs in
+the matrix only where alternative principles would lead to a meaningfully
+different concept. On that criterion F0 is excluded as the main function, F10 and
+F11 are requirements and engineering checks rather than sources of concept
+variants, and F12 is included only if the mounting really changes the
+architecture. That leaves five rows.
+
+\begin{table}[htbp]
+\centering
+\caption{Morphological matrix. Rows are the five functions for which
+alternative principles produce genuinely different concepts; columns are the
+technical interpretations abstracted in Table~\ref{tab:abstraction}.}
+\label{tab:morph}
+\renewcommand{\arraystretch}{1.3}
+\small
+\begin{tabularx}{\textwidth}{L{3.4cm} X X X}
+\toprule
+\textbf{Function} & \textbf{Option A} & \textbf{Option B} & \textbf{Option C} \\
+\midrule
+F1, F5 \newline Reduce heat input
+& Structural white or near-infrared-selective finish
+& Ribbed, self-shading geometry
+& Deployable shading element \\
+F2, F3 \newline Move heat away
+& Broadband emitter with a good sky view
+& Boundary-layer texture for convection
+& Density-driven liquid loop to a parapet radiator \\
+F4 \newline Store and buffer
+& Thermal mass in the build-up
+& Latent store (phase change)
+& No added storage; decoupling only \\
+F6--F8 \newline Handle water
+& Absorbent layer under a vapour-permeable cover
+& Wick with load-driven release
+& No water path \\
+F9 \newline Couple response to load
+& Switching material, many units, spread thresholds
+& Load-driven valve or pore
+& Bilayer element that deploys with heat or moisture \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\todo{Read at least three coherent combinations off this matrix and name them.
+A column is not a concept: check that the options combined are physically
+compatible. Then select two that are technically distinct --- different physics,
+not different styling --- and develop them below.}
 
 \subsubsection{Concept A --- \todo{name}}
-\todo{Annotated drawing + description: components, functional chain, flows,
-candidate materials, key technical parameters.}
+\todo{Annotated drawing plus description: components, functional chain, flows,
+candidate materials, key technical parameters. Annotate inlet, channels, driving
+effect, outlet, heat path, materials, key dimensions and expected performance,
+and state explicitly which parts are inspired by biology and which are
+conventional engineering.}
 
 \subsubsection{Concept B --- \todo{name}}
-\todo{Must be technically DISTINCT from A --- a different physical principle,
-not a variant. E.g. a radiative (dry) concept vs.\ an evaporative or
-geometric (self-shading) concept.}
+\todo{Must be technically distinct from A. The four directions currently on the
+table are: a switching coating (prevention, no night effect); a self-deploying
+shade (prevention plus an open night sky, acts at pedestrian level); an
+evaporative build-up with a water path (removal, metered per the camel bilayer);
+and a ribbed geometry (prevention and convection, no material and no water). The
+pairing with the widest physical separation is the deploying shade against the
+evaporative build-up.}
 
 \subsubsection{Engineering Canvas and critical questions}
 
-\todo{Insert the Engineering Canvas. Then derive 2--3 critical engineering
-questions of the form: \enquote{What must be true for the concept to work?}}
+\begin{table}[htbp]
+\centering
+\caption{Engineering Canvas. One per concept; the output of the canvas is the
+list of critical questions below it.}
+\label{tab:canvas}
+\renewcommand{\arraystretch}{1.3}
+\small
+\begin{tabularx}{\textwidth}{L{4.2cm} X}
+\toprule
+\textbf{Field} & \textbf{Concept \todo{A / B}} \\
+\midrule
+Function --- what must it achieve? & \todo{} \\
+Biological mechanism & \todo{} \\
+Abstracted principle & \todo{} \\
+Technical principle --- what is transferred? & \todo{} \\
+Architecture --- components and interfaces & \todo{} \\
+Inputs / outputs --- material, energy, information & \todo{} \\
+Requirements / KPIs & \todo{} \\
+Assumptions & \todo{} \\
+Uncertainties --- what could invalidate it? & \todo{} \\
+Next check --- what should we calculate or test? & \todo{} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+A critical question names a quantity, a threshold and a scale. Three follow
+directly from the abstractions of Section~\ref{sec:discovering} and are carried
+forward as candidates:
 
 \begin{enumerate}
-  \item \todo{Critical question 1}
-  \item \todo{Critical question 2}
-  \item \todo{Critical question 3}
+  \item Is the buoyancy in a pumpless density-driven loop sufficient to move the
+        required heat flux over the height available in a five-storey block, and
+        does the loop survive a Swiss winter?
+  \item At what wind speed must a self-deploying shading element furl, and what
+        furls it? A thermal actuator cannot sense wind, so an independent and
+        equally passive release is required before the concept is safe over a
+        street.
+  \item Can a switching element be produced with a deliberate \emph{spread} of
+        switching temperatures, as the honeybee threshold model requires, or does
+        the chemistry force a single sharp threshold?
+  \item \todo{Select two or three of these, or replace them once the concepts are
+        fixed. They must be the assumptions that could change the design
+        decision.}
 \end{enumerate}
 
 \subsubsection{Engineering check 1: steady-state surface energy balance}
 
-\todo{This check is prepared because it is the most direct way to test KPI~1
-and KPI~3. Fill in your own numbers, state every assumption, and keep the
-units.}
+\todo{This check is prepared because it is the most direct way to test KPI~1 and
+KPI~3. Fill in your own numbers, state every assumption, and keep the units.}
 
 For an opaque surface in steady state, the energy balance per unit area is
 
@@ -156,12 +567,13 @@ $q_\mathrm{cond}$ the heat conducted into the construction.
 \toprule
 \textbf{Quantity} & \textbf{Value used} & \textbf{Justification / source} \\
 \midrule
-$G$              & \todo{} \unit{\watt\per\square\metre} & \todo{MeteoSwiss, clear-sky summer day} \\
-$T_a$            & \todo{} \unit{\celsius} & \todo{} \\
+$G$              & \todo{} \unit{\watt\per\square\metre} & \todo{MeteoSwiss, clear-sky summer day; Table~\ref{tab:windows} gives \qtyrange{900}{950}{\watt\per\square\metre} horizontal} \\
+$T_a$            & \todo{} \unit{\celsius} & \todo{Table~\ref{tab:windows}: \qtyrange{33}{36}{\celsius} in the load window} \\
 $h_c$            & \todo{} \unit{\watt\per\square\metre\per\kelvin} & \todo{low wind speed in a street canyon} \\
 $L_\downarrow$   & \todo{} \unit{\watt\per\square\metre} & \todo{clear-sky estimate; state the correlation used} \\
-$\alpha_\mathrm{sol}$ reference & \todo{} & \todo{aged bitumen / plaster} \\
-$\alpha_\mathrm{sol}$ concept   & \todo{} & \todo{} \\
+$\alpha_\mathrm{sol}$ reference & $0.3$ & Value the city uses for un-greened façades \parencite[114]{stadtzuerich2020} \\
+$\alpha_\mathrm{sol}$ concept   & \todo{} & \todo{target $\geq0.80$, KPI~2} \\
+$\varepsilon$    & \todo{} & \todo{state whether the concept changes emittance or only reflectance --- these are separate questions} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -174,57 +586,74 @@ Section~\ref{sec:kpi}).}
 \subsubsection{Engineering check 2: \todo{title}}
 
 \todo{Options that are realistic within the week: (a) a simple outdoor
-measurement --- identical plates with different surfaces, logged with a
-thermometer or a temperature sensor over a few hours; (b) a transient 1-D
-model of the build-up over a diurnal cycle; (c) a water balance --- litres of
-rainwater per square metre per hot day against the latent heat of vaporisation
-of \qty{2.45}{\mega\joule\per\kilo\gram}; (d) a material and cost comparison.
-Report method, raw data, result and uncertainty.}
+measurement --- identical plates with different surfaces, logged over a few
+hours; (b) a transient 1-D model of the build-up over a diurnal cycle;
+(c) a water balance --- litres of rainwater per square metre per hot day against
+the latent heat of vaporisation of \qty{2.45}{\mega\joule\per\kilo\gram},
+checked against the \qty{200}{\hour} the camel bilayer achieved
+\parencite{asknature_camel}; (d) a material and cost comparison. Report method,
+raw data, result and uncertainty.}
+
+\paragraph{A scale check that applies to four of our models.} Micro-scale
+effects do not automatically survive being made square metres large. The
+\emph{Cyphochilus} whiteness, the \emph{Morpho} colour, the lichen roughness and
+the stomatal valve all live at micrometre scale, and the failure mode is named
+explicitly in the method: upscaling can break the function. \todo{State for each
+of the four whether the effect scales, and cite the evidence. For the lotus
+effect the answer is partly known, because a lotus-effect façade paint has been
+manufactured since 1999 \parencite{sto_lotusan}.}
 
 %-----------------------------------------------------------------------
 \subsection{Concept Evaluation \& Iteration}
-%  Template bullets:
-%   - Compare the two variants against the KPIs from Section 2.
-%   - Transparent decision matrix, justify important ratings.
-%   - Use the engineering checks as evidence.
-%   - Peer review (world café), instructor feedback, AI as critical reviewer.
-%   - Select A, B or a justified hybrid.
-%   - Develop Final Concept V2 and show WHAT CHANGED and WHY.
-%-----------------------------------------------------------------------
+\label{sec:evaluation}
 
 \begin{table}[htbp]
 \centering
 \caption{Decision matrix. Ratings 1--5, weights from
-Section~\ref{sec:kpi}. Every rating must be justified in the text.}
+Section~\ref{sec:kpi}. Every rating must be justified in the text by a
+calculation or a reasoned estimate.}
 \label{tab:decision}
 \renewcommand{\arraystretch}{1.25}
 \small
 \begin{tabularx}{\textwidth}{L{5.2cm} c c c X}
 \toprule
-\textbf{KPI} & \textbf{Weight} & \textbf{Concept A} & \textbf{Concept B} & \textbf{Evidence used} \\
+\textbf{Criterion} & \textbf{Weight} & \textbf{Concept A} & \textbf{Concept B} & \textbf{Evidence used} \\
 \midrule
-1 -- Solar reflectance            & \todo{} & \todo{} & \todo{} & \todo{} \\
-2 -- Thermal emittance            & \todo{} & \todo{} & \todo{} & \todo{} \\
-3 -- Peak surface temperature      & \todo{} & \todo{} & \todo{} & \todo{} \\
-4 -- Heat into the building        & \todo{} & \todo{} & \todo{} & \todo{} \\
-5 -- Night radiative cooling       & \todo{} & \todo{} & \todo{} & \todo{} \\
-6 -- Potable water use             & \todo{} & \todo{} & \todo{} & \todo{} \\
-7 -- Durability of the optics      & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~1 -- Self-regulation gradient   & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~2 -- Solar reflectance          & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~3 -- Peak surface temperature   & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~4 -- PET at \qty{2}{\metre}     & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~5 -- Night radiative cooling    & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~6 -- Water path and autonomy    & \todo{} & \todo{} & \todo{} & \todo{} \\
+KPI~7 -- Durability of the function & \todo{} & \todo{} & \todo{} & \todo{} \\
 \midrule
-\textbf{Weighted total}            &         & \todo{} & \todo{} & \\
+Feasibility                          & \todo{} & \todo{} & \todo{} & \todo{} \\
+Quality of the biomimetic transfer   & \todo{} & \todo{} & \todo{} & \todo{} \\
+Evidence and uncertainty             & \todo{} & \todo{} & \todo{} & \todo{} \\
+\midrule
+\textbf{Weighted total}              &         & \todo{} & \todo{} & \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
+The last three rows are not KPIs and are deliberately separate from them. They
+carry the questions a KPI table cannot answer: whether the concept can be built,
+whether it genuinely transfers the biology or merely resembles it, and how well
+supported the ratings above are. The third of these is the one that prevents a
+confident-looking table from concealing guesswork.
+
 \subsubsection{Review and feedback}
 \todo{World café peer feedback, instructor feedback, and AI used as a critical
-reviewer --- including where the team disagreed with the AI and why. This
-belongs in Appendix~A as well.}
+reviewer. For every AI comment record the decision --- accept, reject or
+investigate --- and the justification. A documented rejection is worth more than
+a list of accepted comments, because it shows judgement. This belongs in
+Appendix~A as well.}
 
 \subsubsection{Selection and Final Concept V2}
 
-\todo{State which concept (or justified hybrid) was selected and describe V2 in
-detail.}
+\todo{State which concept, or which justified hybrid, was selected, and describe
+V2 in detail. The minimum evidence of iteration is one named weakness or
+uncertainty in the earlier concept and a documented response to it in V2.}
 
 \begin{table}[htbp]
 \centering
@@ -245,4 +674,6 @@ $\rightarrow$ Concept V2.}
 \end{table}
 
 \subsubsection{Remaining uncertainties}
-\todo{What is still unproven, and what should be tested or developed next.}
+\todo{What is still unproven, and what should be tested or developed next. The
+scale question above and the wind release for a deploying element are the two
+that are already known to be open.}
