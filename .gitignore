@@ -29,3 +29,6 @@
 
 # The built PDF (main.pdf) is intentionally TRACKED so the repository always
 # carries a readable copy. CI rebuilds and re-commits it on every push to main.
+
+# latexmk error artefacts
+*-SAVE-ERROR
