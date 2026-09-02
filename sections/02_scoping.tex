@@ -236,12 +236,27 @@ h = 90^{\circ} - 47.38^{\circ} + 23.44^{\circ} \approx 66^{\circ} .
 factor of $\sin h \approx 0.91$, but a vertical south-facing façade at only
 $\cos h \approx 0.41$. In midsummer the flat roof receives more than twice the
 direct irradiance of a south façade at noon, and it also has a far larger sky
-view factor for night-time long-wave emission. The system of interest is
-therefore deliberately \emph{not} restricted to the façade.
-\todo{Confirm with daily irradiation totals per orientation
-\parencite{sonnendach}, then justify whether the concept targets roof, façade or
-both. East and west façades peak in the morning and late afternoon, so a façade
-concept has a different load profile, not simply a smaller one.}
+view factor for night-time long-wave emission.
+
+\noindent Both facts argue for the roof as a good place to \emph{act}, and
+against it as the place where the problem is. The heat a roof stores is released
+\emph{upward}, to a sky the roof can see; the heat a façade stores is released
+\emph{sideways}, into the canyon, at the height of the people in it. Since
+Section~1 fixes the pedestrian-level outdoor space as the place where the effect
+has to appear, the system of interest is the \textbf{façade} --- not because it
+receives more radiation, but because its heat is released where it does harm.
+Two further considerations support the same cut: a façade concept does not
+compete with photovoltaics for the roof area, which the constraints in
+Table~\ref{tab:constraints} ask us to respect; and a systems view is meant to
+make a project more focused rather than larger.
+
+\noindent The roof does not disappear from the project. It changes role: it is
+no longer a second surface to be treated, but the \emph{interface with the good
+sky view} --- the place where heat collected on the façade can be released,
+which is what the concept in Section~\ref{sec:creating} requires.
+\todo{Confirm the load profile with daily irradiation totals per orientation
+\parencite{sonnendach}. East and west façades peak in the morning and late
+afternoon, so their load profile differs in shape, not only in size.}
 
 \paragraph{Constraints.} Table~\ref{tab:constraints} separates hard constraints
 (a violation disqualifies a concept) from soft ones (they weight the evaluation
@@ -692,9 +707,10 @@ solar reflectance of about $0.3$, the value the city uses for un-greened façade
 4 & F0 (day, people)
   & PET reduction at \qty{2}{\metre} above ground, 14:00
   & K
-  & Beat the incumbent: HA~11 achieves \qty{-1.0}{\kelvin} (façade) and
-    \qty{-1.2}{\kelvin} (roof) median \parencite[Tab.~11]{stadtzuerich2020}.
-    This is the metric the client uses. \\
+  & Beat the incumbent. Since the system of interest is the façade, the binding
+    figure is HA~11's \qty{-1.0}{\kelvin} median for a bright façade; the
+    \qty{-1.2}{\kelvin} for a bright roof is context, not our benchmark
+    \parencite[Tab.~11]{stadtzuerich2020}. This is the metric the client uses. \\
 5 & F2, F4 (evening / night)
   & Net cooling power at 02:00, clear sky; and heat discharged over the evening
     and night windows, 18:00--06:00
