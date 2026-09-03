@@ -10,25 +10,41 @@ Relevant AI-supported activities are documented below. Not every prompt is
 listed; the focus is on how AI contributed to the work and how important
 outputs were verified. AI output is not used as evidence for factual claims.
 
-\begin{table}[htbp]
-\centering
-\caption{AI use statement.}
-\label{tab:aiuse}
-\renewcommand{\arraystretch}{1.25}
-\small
-\begin{tabularx}{\textwidth}{L{2.6cm} L{3.0cm} X X}
+\begin{longtable}{L{2.4cm} L{3.0cm} L{4.6cm} L{4.2cm}}
+\caption{AI use statement.}\label{tab:aiuse}\\
 \toprule
 \textbf{AI tool} & \textbf{Used for} & \textbf{How the output influenced the project} & \textbf{How important output was verified} \\
 \midrule
-AskNature Chat & Discovering biological strategies for functions F1--F8 &
-\todo{e.g. generated candidate organisms for further research} &
-\todo{AskNature profile + peer-reviewed paper} \\
-\todo{LLM assistant} & \todo{e.g. structuring the scoping, drafting the LaTeX report template, critical review of the concepts} &
-\todo{e.g. produced the first draft of the function list, which the team revised} &
-\todo{e.g. every biological and physical claim checked against the cited primary sources; benchmark values recomputed by hand} \\
+\endfirsthead
+\toprule
+\textbf{AI tool} & \textbf{Used for} & \textbf{How the output influenced the project} & \textbf{How important output was verified} \\
+\midrule
+\endhead
 \bottomrule
-\end{tabularx}
-\end{table}
+\endfoot
+
+AskNature (search and strategy pages) & Discovering biological strategies for functions F1--F12, navigated by taxonomy branch rather than by organism &
+Produced the candidate list in Table~\ref{tab:models}, including four models that were subsequently de-selected &
+Every mechanism claim carried into the report is referenced. The pages could not be opened programmatically, so titles and URLs were taken from search results; the open item in Section~\ref{sec:discovering} records that each must be confirmed and, where a primary paper exists, replaced by it \\
+
+Large language model assistant & Structuring the scoping, distilling the course material into working notes, drafting report text, building the transient wall model of Section~\ref{sec:creating}, and generating prompts for figures &
+Draft text and table structures throughout Sections~1--4; the search-path table; the transient model and its figures &
+No factual claim entered the report without a named source. Benchmark values were checked against the Fachplanung. Two errors in the AI-built wall model were found and corrected: an air-cavity node made the explicit scheme unstable, and the synthetic weather drive had an inverted diurnal phase, which showed up as a peak surface temperature exactly equal to the air temperature \\
+
+AI as critical reviewer & \todo{Section~3.3 asks for this. Give the reviewer the concept sketch, the Engineering Canvas, the functions and KPIs, and the assumptions} &
+\todo{Record each comment and the team's decision: accept, reject or investigate} &
+\todo{A documented \emph{reject} with a reason is worth more here than a list of accepted comments, because it shows judgement} \\
+
+\todo{Further tools used by the team} & \todo{} & \todo{} & \todo{} \\
+\end{longtable}
+
+\paragraph{On the limits of this statement.} Nothing in this report is cited to
+an AI tool. Where an AI-assisted search surfaced a candidate, the candidate was
+carried forward only with a source of its own, and the two remaining places where
+that chain is incomplete are marked as open items rather than left implicit: the
+AskNature pages listed above, and the \qty{23}{\percent} figure for elephant
+hair, which traces to a university blog rather than to a study
+\parencite{notredame_elephant}.
 
 \section*{Appendix B -- Decision Log}
 \addcontentsline{toc}{section}{Appendix B -- Decision Log}
@@ -87,7 +103,7 @@ Fog harvesting & De-selected & The Namib beetle, the most-cited water model & Fo
 
 Green façades & Out of scope & An obvious and proven measure & Already the client's HA~09 and HA~10, and in direct competition with our own water reserve, which is scarcest exactly when planting needs most. Section~\ref{sec:discovering} \\
 
-Evidence standard & Primary papers & AskNature entries as evidence & AskNature and AI-assisted search find candidates; the mechanism claims are referenced to the literature. Section~\ref{sec:researchpath} \\
+Evidence standard & Primary papers where they exist, the publishing organisation otherwise & AskNature entries treated as evidence in their own right & AskNature and AI-assisted search find candidates. Twelve of twenty model entries still rest on an AskNature page alone; this is recorded as a shortfall rather than presented as met. Section~\ref{sec:researchpath} \\
 
 Concept pair & \todo{decide} & \todo{the two directions not developed} & \todo{state the physical distinction that makes the pair meaningful} \\
 

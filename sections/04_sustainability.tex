@@ -1,5 +1,5 @@
 %=======================================================================
-%  4  SUSTAINABILITY & LIFE'S PRINCIPLES   (scaffold)
+%  4  SUSTAINABILITY & LIFE'S PRINCIPLES
 %  Template bullets:
 %   - Which Life's Principles are most relevant to the FINAL concept, and
 %     how well does the concept actually apply them (assess, do not list).
@@ -12,35 +12,302 @@
 \section{Sustainability \& Life's Principles}
 \label{sec:sustainability}
 
-\subsection{Application of Life's Principles to the final concept}
+\subsection{What this section assesses, and what it does not claim}
 
-\todo{Take the principles from Section~\ref{sec:lifesprinciples} and assess
-each one honestly: how well does the final concept apply it, and where does it
-fall short? A table with a short assessment per principle works well. Listing
-principles without assessing them is explicitly marked down in the rubric.}
+Section~\ref{sec:lifesprinciples} named the principles this project works under.
+Naming them is not applying them, and the difference is the whole content of
+this section: each principle below is stated as a \emph{claim}, followed by the
+evidence for it and by the point at which the concept falls short of it. A
+principle with no shortfall named is a principle that has not been assessed.
+
+Two limits are stated at the outset rather than buried. First, the assessment
+of the final concept can only be as specific as the concept, and
+Section~\ref{sec:evaluation} has not yet fixed it; the parts of this section
+that depend on that choice are marked. Second, no life cycle assessment was
+carried out. Where embodied emissions are discussed they are discussed as a
+\emph{criterion with a decision rule}, not as a computed result, and the words
+\enquote{sustainable} and \enquote{resource efficient} are avoided as
+descriptions of the concept because on the present evidence neither could be
+defended.
+
+\subsection{Life's Principles applied to the concept}
+
+\begin{table}[htbp]
+\centering
+\caption{Life's Principles assessed against the concept. The last column is the
+part that matters: a principle claimed without a shortfall has not been
+assessed.}
+\label{tab:lpassess}
+\renewcommand{\arraystretch}{1.3}
+\footnotesize
+\begin{tabularx}{\textwidth}{L{3.2cm} L{4.4cm} X}
+\toprule
+\textbf{Principle and sub-principle claimed} & \textbf{How the concept applies it} & \textbf{Where it falls short} \\
+\midrule
+\textbf{Be locally attuned and responsive} \newline \emph{the signal, the antenna and the response match}
+& F9 is this principle expressed as a function: the surface temperature is the
+signal, the physics of the removal path is the antenna, and the cooling power is
+the response. Both sinks used --- the night sky and rainwater the city currently
+drains away --- are local and freely available.
+& The response is attuned to \emph{temperature}, not to the quantity that
+actually matters to people, which is radiant load at eye level. The concept
+optimises what it can sense, not what it is for. \todo{Revisit once V2 is fixed.} \\
+
+\textbf{Be resource efficient} \newline \emph{use low energy processes} and \emph{one design meets more than one need}
+& The cooling function consumes no auxiliary energy; this is a hard constraint,
+not an aspiration. Multi-functionality is set as an explicit tie-breaker for
+Section~\ref{sec:evaluation}: a build-up in which one layer carries several
+functions is to be preferred to one that needs a layer per function.
+& Nothing has yet been counted. \enquote{Resource efficient} is a claim we cannot
+make until the embodied emissions of the added build-up are estimated against the
+cooling it delivers over its service life. \\
+
+\textbf{Adapt to changing conditions} \newline \emph{adapt to temporal and spatial changes}, \emph{maintain integrity through self-renewal}
+& The design case is a five-day heat wave with a reset condition, not one hot
+afternoon. Durability against soiling is a criterion in its own right (KPI~7)
+rather than an afterthought.
+& The seasonal half of the principle is weakly served. A surface optimised for
+July is a surface that also faces January, and the winter trade-off is currently
+a constraint we accept rather than a behaviour we design. \\
+
+\textbf{Use life-friendly chemistry} \newline \emph{safe subset}, \emph{harmless breakdown products}
+& The decision that self-cleaning must be physical rather than chemical follows
+directly from this principle, and it is a design constraint, not a preference:
+anything that leaches from the surface enters rainwater which the concept then
+evaporates at pedestrian level.
+& The principle is currently satisfied by \emph{exclusion} --- we have ruled
+substances out. No substance we intend to use has yet been checked in a toxicity
+database. See Section~\ref{sec:leaching}. \\
+
+\textbf{Integrate development with growth} \newline \emph{built to shape}
+& A modular element sized to a façade grid produces no offcuts. On-site material
+waste in construction is put at \qtyrange{10}{15}{\percent} by the Ellen
+MacArthur Foundation \parencite{emf_denmark}, so this is a measurable quantity
+rather than a gesture.
+& Claimed narrowly and on purpose. The sub-principle \emph{creates more
+opportunities for life} is \textbf{not} claimed: a permanently damp textured
+surface invites exactly the algal growth KPI~7 penalises. \\
+
+\textbf{Evolve to survive}
+& \textbf{Not claimed for the artefact.} A façade layer does not evolve across
+generations. It is claimed for the \emph{process}: this report builds on the
+incumbent measure rather than starting from zero, and documents what was
+de-selected and why.
+& --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Eco-efficient or eco-effective?}
+
+Cradle to Cradle draws a distinction that this project has to face directly
+\parencite{braungart2002}. An \emph{eco-efficient} design is less bad: it does
+the same thing while emitting less. An \emph{eco-effective} design is actively
+good: its outputs are inputs somewhere else. The standard illustration is a
+brake pad --- one version emits fewer particles but still emits thousands of
+tonnes, the other is made of a material that can safely re-enter a biological
+cycle. Nature, the argument runs, is not efficient at all: a cherry tree
+produces blossom wastefully, and is nonetheless effective because every part of
+that waste is a nutrient.
+
+Measured against that distinction, most of this concept is \textbf{eco-efficient
+and no more}. A façade that absorbs less solar radiation is a less bad façade;
+it produces no nutrient for anything. Saying so plainly is more useful than
+claiming otherwise, because it locates the one place where the project does
+better.
+
+That place is the water path. The rainwater this concept collects is water the
+city currently drains away as fast as possible --- Section~\ref{sec:systemview}
+identifies it as a cooling reserve being discarded, and the storm sewer is the
+parallel system that discards it. Taking that output and making it the input of
+the cooling function is \emph{waste equals food} in the strict sense, and it is
+the only claim of this kind the project can make honestly. It is also an argument the comparison in Section~\ref{sec:evaluation} has to
+weigh: \emph{if} the wet direction is carried forward, it is on this ground and
+not on cooling power alone, because a dry concept is merely efficient while the
+wet one closes a loop that is currently open.
+
+\subsection{The material perspective: which layer belongs in which cycle}
+
+Cradle to Cradle divides materials into \emph{biological nutrients}, which are
+consumed and must return safely to the environment, and \emph{technical
+nutrients}, which are used without being consumed and are recovered
+\parencite{braungart2002}. The rule that assigns a material to one or the other
+is about wear:
+
+\begin{quote}
+Anything that is consumed --- worn out --- has to come from the biological
+cycle. Anything that is merely used, without wear, can come from the technical
+nutrient cycle.
+\end{quote}
+
+Applied layer by layer, this decides the material strategy of the build-up
+before any material has been chosen, and it produces one uncomfortable result.
+
+\begin{table}[htbp]
+\centering
+\caption{The wear rule applied to the build-up.}
+\label{tab:cycles}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{4.2cm} L{3.4cm} X}
+\toprule
+\textbf{Layer} & \textbf{Worn or used?} & \textbf{Consequence} \\
+\midrule
+Outer finish or coating & \textbf{Worn} --- UV, driving rain, freeze--thaw, soiling
+& Must be biologically benign in breakdown. It is abraded into the street, and
+into the run-off we collect \\
+Water-carrying absorbent layer & Worn, and in direct contact with the run-off
+& Same requirement, for the same reason \\
+Ventilated cavity, sub-structure, fixings & \textbf{Used}, not consumed
+& Technical cycle: recoverable, demountable, and worth specifying as separable
+single materials \\
+Masonry behind & Untouched by the retrofit & Outside the product \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{The uncomfortable result.} The layer we would most readily engineer
+with chemistry --- the outer finish, where the optical performance lives --- is
+precisely the layer that must be biologically benign, because it is the one that
+wears away into the place we are trying to improve. That inverts the usual
+order of a coating specification, in which durability and optical performance
+are chosen first and the environmental profile is checked afterwards.
+
+\subsection{Circular design principles: an honest status}
+
+\begin{table}[htbp]
+\centering
+\caption{The eight cycle design principles, with the status of each. Three can
+be answered today, three depend on the final concept, and two lie outside the
+project boundary.}
+\label{tab:c2c}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabularx}{\textwidth}{L{0.4cm} L{4.2cm} L{2.2cm} X}
+\toprule
+& \textbf{Principle} & \textbf{Status} & \textbf{Evidence or reason} \\
+\midrule
+1 & No ecotoxic chemicals & \textbf{Answered} & Ruled out by constraint; the self-cleaning function must be physical (Section~\ref{sec:leaching}) \\
+2 & Recyclable materials & Depends on V2 & \todo{state the material of each layer and whether it is separable} \\
+3 & Easy to dismantle, modular & Partly answered & Built to shape and demountable is a stated design rule; the fixing detail is not designed \\
+4 & Durability & \textbf{Answered} & KPI~7: $\geq\qty{90}{\percent}$ of the cooling function retained after three years; service life target \qty{20}{years} \\
+5 & Maintainability and reparability & Partly answered & Soft constraint \enquote{functional with little maintenance}; no repair concept exists \\
+6 & Cascade use of raw materials & \textbf{Not addressed} & Nothing in the concept anticipates a second life for its materials \\
+7 & Planned return logistics & \textbf{Out of boundary} & Requires a business model; Table~\ref{tab:inout} places this outside the project \\
+8 & Efficient use of energy & \textbf{Answered} & Hard constraint: no auxiliary energy for the cooling function \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Items 6 and 7 are the honest weaknesses of this project from a circular
+perspective, and they are related. Both need somebody to own the material after
+its first life, which in turn needs a business model --- rental, service or
+deposit --- rather than a sale. The reason is structural and is worth stating
+because it is not our oversight: in a sales model the manufacturer transfers
+ownership, so the value created by durable, recoverable design accrues to the
+recycler, the user and the maintenance trade, and not to the party who paid for
+it. That split incentive is named as the principal obstacle to circular
+construction \parencite{emf_denmark}, and a façade retrofit has it in an acute
+form: the owner pays, the tenant gains comfort, the street gains the cooling,
+and nobody owns the outcome.
 
 \subsection{Environmental benefits, limitations and trade-offs}
 
-\todo{Quantify where possible. The trade-offs that are already visible for
-this challenge:}
+\paragraph{Summer against winter.} A high solar reflectance reduces summer heat
+gain and also reduces useful passive solar gains in winter. The constraint in
+Table~\ref{tab:constraints} requires that heating demand must not appreciably
+rise. \todo{Estimate both halves for the Swiss climate and give the net annual
+balance. Until that number exists this is a known unquantified risk, not a
+solved trade-off.}
 
-\begin{itemize}
-  \item \textbf{Summer vs.\ winter:} a high solar reflectance reduces summer
-        heat gain but also reduces useful passive solar gains in winter.
-        \todo{estimate both and give the net balance for the Swiss climate}
-  \item \textbf{Cooling vs.\ water:} evaporative cooling costs roughly
-        \qty{2.45}{\mega\joule} per kilogram of water evaporated. \todo{convert
-        this into litres per square metre per hot day and check it against the
-        rainwater actually available on site --- during a heat wave it will not
-        rain, which is precisely the point of the storage function F7}
-  \item \textbf{Local vs.\ global:} the concept moves heat out of the street
-        canyon; state clearly whether it reduces total energy demand or only
-        redistributes heat.
-  \item \textbf{Materials:} \todo{pigments, binders, biocides against algae,
-        end of life, separability of the layers, recyclability}
-\end{itemize}
+\paragraph{Cooling against water.} Evaporative cooling costs
+\qty{2.45}{\mega\joule} per kilogram of water evaporated. For an indicative
+\qty{100}{\watt\per\square\metre} over the seven-hour load window this is of the
+order of one litre per square metre and day, so roughly five litres per square
+metre across the five-day design case --- which is within what a
+\qty{20}{\milli\metre} absorbent layer can hold, and therefore not the binding
+limit. \todo{Recompute with our own assumptions and report a range rather than a
+point.} The binding limits are metering, frost, and the fact that during a heat
+wave it does not rain: the reserve must be charged beforehand.
 
-\subsection{Influence of sustainability considerations on the design}
+\paragraph{Local against global.} The concept moves heat out of the street
+canyon. Whether it \emph{reduces} the total energy in the system or merely
+\emph{redistributes} it is a different question, and the honest answer differs
+by mechanism: a radiative path sends energy to space and is a genuine removal,
+while a convective or evaporative path relocates it within the urban boundary
+layer. \todo{State which of these the final concept relies on, and do not claim
+a reduction where the mechanism only redistributes.}
 
-\todo{Name at least one concrete design decision that was changed because of a
-sustainability consideration --- otherwise this section reads as an add-on.}
+\paragraph{Materials.} \todo{Pigments, binders, any biocide, the separability of
+the layers at end of life, and the embodied greenhouse gas of the added build-up
+against the constraint in Table~\ref{tab:constraints}.}
+
+\subsection{Circular does not mean sustainable}
+\label{sec:leaching}
+
+Keeping a material in circulation is not by itself an environmental benefit. The
+standard counter-example is an additive that is harmless in its first
+application, in a laptop housing, and hazardous in its second after recycling
+into a children's toy: the substance did not change, the exposure pathway did.
+
+Our project has the same failure mode one step earlier, and it is the reason the
+life-friendly-chemistry principle is not decorative here. A biocide or a
+stabiliser that is entirely acceptable \emph{in} a façade coating becomes
+unacceptable once it leaves that coating, because the path it leaves by is the
+rainwater this concept deliberately collects and then evaporates at pedestrian
+level. A substance that would be diluted into a sewer in the incumbent case is,
+in our case, delivered to the air people breathe. The concept concentrates its
+own emissions where its beneficiaries are.
+
+Two consequences follow. The self-cleaning function must be structural rather
+than chemical --- which the lichen strategy of Section~\ref{sec:discovering}
+shows is physically possible and the commercial lotus-effect coating cited in
+Section~\ref{sec:stateofart} shows is manufacturable. And any substance that does
+remain in the specification must be checked rather than assumed.
+
+\todo{Do this check and report it: name the substance, the database, and the
+result. The REACH registry at the European Chemicals Agency
+\parencite{echa_reach} is the primary source; PubChem and the EPA DSSTox
+database are alternatives. One short paragraph naming a substance, a database
+and a finding is worth more here than a page of general language.}
+
+\subsection{Did sustainability considerations change the design?}
+
+The template asks this directly, and it is the question a sustainability section
+most easily fails, because the honest answer is often no. Here it is yes, in
+three documented instances, each traceable to a decision recorded in
+Table~\ref{tab:decisionlog} in Appendix~B.
+
+\begin{enumerate}
+  \item \textbf{The reflectance target was lowered from what is technically
+        possible.} Ultra-white coatings reach a solar reflectance of about
+        $0.98$ \parencite{li2021}, and an earlier version of this project treated
+        that as the goal. KPI~2 now targets $\geq0.80$, the city's own threshold,
+        because the principle of optimising rather than maximising makes the
+        further reflectance a cost in glare, winter gains and photovoltaic yield
+        rather than a benefit. The performance target was changed by a
+        sustainability argument.
+  \item \textbf{The self-cleaning function was constrained to a physical
+        mechanism.} The obvious solution to soiling is a biocide in the film. The
+        leaching argument of Section~\ref{sec:leaching} removed that option
+        before any concept was developed, which is why the lichen strategy
+        entered the model table at all.
+  \item \textbf{Cost and embodied emissions were reclassified.} They were
+        originally an eighth KPI. Recognising that a KPI must follow from a
+        function moved them into the constraints of
+        Table~\ref{tab:constraints} --- where a violation disqualifies a concept
+        rather than merely scoring against it. The change made the requirement
+        stricter, not weaker.
+\end{enumerate}
+
+\subsection{Limits of this assessment}
+
+No life cycle assessment was performed, so no statement in this report should be
+read as a quantified environmental balance. The embodied emissions of the added
+build-up are a constraint with a decision rule and not a measured figure. The
+assessment of Life's Principles above is made against a concept direction rather
+than a finished design, and \todo{must be repeated against Concept~V2 once
+Section~\ref{sec:evaluation} selects it}. Finally, two of the eight circular
+design principles --- cascade use and return logistics --- are not addressed at
+all, and the reason is a boundary decision rather than an analysis: they require
+a business model, and this project does not design one.

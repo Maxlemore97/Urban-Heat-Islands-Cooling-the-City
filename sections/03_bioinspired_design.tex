@@ -74,9 +74,20 @@ report for the temperate broadleaf forest, which is the biome Zurich lies in,
 for models already translated to the built environment \parencite{hok2013};
 primary literature for the mechanisms; and commercial products where the
 transfer has already been made, which are treated as state of the art rather
-than as models. AskNature and AI-assisted search were used to \emph{find}
-candidates only; every mechanism claim carried into this report is referenced to
-a paper or to the organisation that published the strategy.
+than as models. AskNature and AI-assisted search were used to \emph{find} candidates only.
+Every mechanism claim carried into this report is referenced --- but not yet
+uniformly to a primary paper: twelve of the twenty entries in
+Table~\ref{tab:models} currently rest on the AskNature strategy page alone. That
+is a stated shortfall rather than a claimed standard, and the open item below
+names the two papers already identified as replacements.
+
+\paragraph{The inverse question.} The method also asks what nature would
+\emph{not} do, and the answers narrowed the search as effectively as the
+positive ones. Nature would not use a mirror finish, would not run a compressor,
+would not pump drinking water onto a wall, and would not build one fixed
+response for both January and July. Three of those four are constraints in
+Table~\ref{tab:constraints}; the fourth is the seasonal problem this project
+does not yet solve.
 
 \paragraph{Which lenses were applied.} Of the five lenses in the method, two did
 most of the work. The \emph{operating-condition lens} — intense solar radiation,
@@ -89,18 +100,23 @@ context but no model that survived selection.
 
 \subsubsection{Models found, and the selection decision}
 
-\begin{table}[htbp]
-\centering
+{\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{L{2.6cm} L{1.5cm} L{7.3cm} L{2.5cm}}
 \caption{Biological models found, and the selection or de-selection decision.
 The criterion applied throughout: a model must be transferable to a
 \emph{passive surface} that survives twenty years of the Swiss annual cycle.}
-\label{tab:models}
-\renewcommand{\arraystretch}{1.2}
-\footnotesize
-\begin{tabularx}{\textwidth}{L{2.9cm} L{1.3cm} X L{2.5cm}}
+\label{tab:models}\\
 \toprule
 \textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism} & \textbf{Decision} \\
 \midrule
+\endfirsthead
+\toprule
+\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism} & \textbf{Decision} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
 \multicolumn{4}{l}{\textit{Prevention --- reduce what is absorbed}}\\
 Desert snail \emph{Sphincterochila boissieri} & F1, F4 &
 Shell reflects $\approx\qty{90}{\percent}$ of visible and
@@ -114,8 +130,11 @@ Transparent chitin--air layers a few hundred nanometres apart diffract and
 recombine light; colour comes from geometry, and the disordered structure keeps
 the reflection diffuse rather than specular
 \parencite{asknature_morpho} &
-\textbf{Selected.} Decouples appearance from absorptance, which is what the
-townscape constraint requires \\
+\textbf{Selected, with a stated limitation.} It decouples appearance from
+absorptance, which is what the townscape constraint requires --- but the
+\emph{Morpho} demonstrates structural \emph{colour}, not near-infrared heat
+rejection. That transfer needs separate technical verification; the organism
+does not establish it \\
 White beetle \emph{Cyphochilus} & F1 &
 Brilliant whiteness from a disordered chitin network only
 $7\pm\qty{1.5}{\micro\metre}$ thick, without pigment \parencite{vukusic2007} &
@@ -126,7 +145,8 @@ raise emissivity in the mid-infrared \parencite{shi2015} &
 \textbf{Selected.} The only model that does F1 and F2 in one structure \\
 Cactus ribs & F5, F3, F2 &
 Peaks shade the troughs; the cooler trough air absorbs heat and rises out, while
-the folds enlarge the emitting area \parencite{asknature_cactus} &
+the folds enlarge the emitting area and disturb the airflow around the body
+\parencite{asknature_cactus} &
 \textbf{Selected.} Geometry only --- no material, no water, nothing to bleach \\
 Tree bark & F1, F2 &
 Reflects part of the incoming radiation while emitting efficiently; rough
@@ -140,9 +160,11 @@ Warm blood is carried from the core into large thin ears; the surface releases
 it, and flapping raises the airflow \parencite{asknature_ears} &
 \textbf{Selected.} Separates the place of absorption from the place of release \\
 Elephant skin hairs & F3 &
-Sparse hairs reach through the still boundary layer so moving air reaches the
-skin; reported additional heat loss up to \qty{23}{\percent}
-\parencite{asknature_leaves} &
+At this density the hairs do not insulate --- it lies well below the crossover
+at which insulation becomes dominant --- so each acts as a small heat-transfer
+\emph{fin}, reaching through the still boundary layer that clings to the skin so
+that moving air reaches the surface. Reported additional heat loss up to
+\qty{23}{\percent} \parencite{notredame_elephant} &
 \textbf{Selected.} Directly relevant at the low wind speeds of a canyon \\
 Jackrabbit ears & F9, F2 &
 Vasodilation varies the blood flow to a thin radiating surface; at
@@ -158,14 +180,20 @@ Vasodilation in scattered patches rather than uniformly; the number of open
 \midrule
 \multicolumn{4}{l}{\textit{Water path and storage}}\\
 Leaf stomata & F9, F8 &
-Guard cells swell and shrink with their water content and so open and close the
-pore; evaporation itself pulls the water up, with no pump; leaf surfaces cool by
-\qtyrange{11}{17}{\kelvin} \parencite[62--65]{hok2013} &
+Environmental and chemical signals change the solute concentration in the two
+guard cells; osmosis moves water accordingly, turgor changes, and the cells bend
+open or shut the pore. The mechanism therefore regulates gas exchange \emph{and}
+limits water loss in the same movement. Evaporation itself pulls the water up,
+with no pump; leaf surfaces cool by \qtyrange{11}{17}{\kelvin}
+\parencite[62--65]{hok2013} &
 \textbf{Selected.} The clearest natural instance of F9 \\
 Camel fur over sweat glands & F7, F8 &
-Insulation over the evaporating layer; in the technical reproduction the pair
-held a sample \qty{7}{\kelvin} below ambient for \qty{200}{\hour}, five times
-longer than the wet layer alone \parencite{asknature_camel} &
+The fur works on all three transfer paths at once: it limits radiative gain
+through its light colour, conduction through the air trapped between the hairs,
+and convection by damping air movement close to the skin --- and only then is
+sweat spent on what is left. In the technical reproduction of that arrangement
+the pair held a sample \qty{7}{\kelvin} below ambient for \qty{200}{\hour},
+five times longer than the wet layer alone \parencite{asknature_camel} &
 \textbf{Selected.} Turns the water reserve from a quantity into a duration \\
 Sea star & F4, F7, F9 &
 Takes up more cold water at high tide after a hot low tide, so the previous
@@ -186,14 +214,17 @@ genetic; the number of active bees rises with the load, so binary units produce
 a graded colony response \parencite{asknature_bees} &
 \textbf{Selected.} Resolves whether a threshold can satisfy F9 \\
 Pine cone scales & F5, F9 &
-Two bonded layers swell differently with moisture, so the scale bends; the cone
-is dead tissue moved entirely by the weather
+Two bonded layers swell differently with moisture: taking up moisture makes one
+expand more, so the scale bends and closes, and as it dries it returns towards
+the open state. The movement is reversible and the cone is dead tissue, moved
+entirely by the weather
 \parencite{asknature_pinecone} &
 \textbf{Selected.} A passive actuator with no energy input \\
 Lichen \emph{Lecanora conizaeoides} & F10, F11 &
-Roughness at several scales keeps droplets perched so they roll off, while
-hydrophobin-coated channels stay dry and admit air: waterproof and breathable at
-once \parencite[41--44]{hok2013} &
+Roughness at several scales keeps droplets perched on the peaks so they are
+shed, while the hydrophobic micropores between them stay dry and remain open to
+gas exchange even in the wet: the surface separates liquid transport from gas
+transport across the same plane \parencite[41--44]{hok2013} &
 \textbf{Selected.} A physical answer to soiling, not a chemical one \\
 Desert shrub \emph{Encelia farinosa} & F1, F5 &
 Dense leaf pubescence raises reflectance and is adjusted seasonally
@@ -228,9 +259,7 @@ Shading and evapotranspiration from planting &
 \textbf{Out of scope} by the project boundary (Table~\ref{tab:inout}), and in
 direct competition with our own water reserve: planting needs most water exactly
 when least is available \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}}
 
 Two features of Table~\ref{tab:models} are deliberate. First, the same organism
 appears three times --- the elephant supplies ear-based transport, boundary-layer
@@ -343,8 +372,8 @@ Sparse hairs reach through the still air layer clinging to the skin
 & Break the boundary layer so moving air reaches the surface
 & Millimetre-scale texture on façade and pavement \\
 The jackrabbit varies blood flow to a thin radiator; the elephant opens patches
-& Regulate by varying the \emph{transport} to a radiating surface, and place the
-radiator only where conditions are best
+& Regulate by varying the \emph{thermal connection} between the store and a
+radiating surface, and place that radiator only where conditions favour loss
 & Pumpless density-driven liquid loop from the canyon face to a parapet-level
 radiator with a good sky view \\
 Guard cells open and close the pore in response to heat and dryness
@@ -400,9 +429,11 @@ them, which is a different question.
         diversity} and \emph{maintain integrity through self-renewal} ---
         \emph{Encelia} and the pine cone for the first, the lichen for the
         second.
-  \item \textbf{Use life-friendly chemistry} --- the lichen and the
-        \emph{Cyphochilus} structure both achieve with geometry what industry
-        achieves with a compound that then has to be justified.
+  \item \textbf{Use life-friendly chemistry} --- \emph{Cyphochilus} achieves
+        with geometry what industry achieves with titanium dioxide. The lichen is
+        the more careful case: its water repellency does involve a compound, but
+        that compound works \emph{with} a multi-scale geometry rather than
+        instead of it, and nothing is released to do the job.
 \end{itemize}
 
 \todo{Section~4 must \emph{assess} these, not list them again. The rubric marks
@@ -424,7 +455,10 @@ example instead of using our own abstractions.}
 
 \subsubsection{Morphological matrix}
 
-The rows are chosen, not inherited. Of our thirteen functions, a row belongs in
+The method is function-based concept generation \parencite{nagel2010}: the
+rows of the matrix are functions, the columns are alternative principles that
+serve them, and a concept is a path across the rows. The rows are chosen, not
+inherited. Of our thirteen functions, a row belongs in
 the matrix only where alternative principles would lead to a meaningfully
 different concept. On that criterion F0 is excluded as the main function, F10 and
 F11 are requirements and engineering checks rather than sources of concept
@@ -630,6 +664,7 @@ KPI~7 -- Durability of the function & \todo{} & \todo{} & \todo{} & \todo{} \\
 Feasibility                          & \todo{} & \todo{} & \todo{} & \todo{} \\
 Quality of the biomimetic transfer   & \todo{} & \todo{} & \todo{} & \todo{} \\
 Evidence and uncertainty             & \todo{} & \todo{} & \todo{} & \todo{} \\
+Life's Principles fit                & \todo{} & \todo{} & \todo{use the assessment in Table~\ref{tab:lpassess}} \\
 \midrule
 \textbf{Weighted total}              &         & \todo{} & \todo{} & \\
 \bottomrule

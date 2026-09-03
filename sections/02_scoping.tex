@@ -397,7 +397,7 @@ explosion.
    urban microclimate, street canyon, radiation balance, air flow, urban water cycle};
 \node[soibox,minimum width=6.2cm,text width=5.8cm] (soi) at (0,2.4)
   {SYSTEM OF INTEREST\\[1mm]
-   \normalfont Heat-regulating outer layer of an\\ existing building (roof and façade)\\
+   \normalfont Heat-regulating outer layer of an\\ existing façade, with the roof\\ as release interface\\
    \normalfont\itshape the thermal interface between\\ building and city};
 \node[sysbox,minimum width=3.7cm,text width=3.3cm] (p1) at (-5.5,3.1)
   {\textbf{PARALLEL 1}\\ Stormwater and sewer system};
@@ -744,34 +744,15 @@ upwards from one day to the next. A concept that cools well on the first day but
 saturates by the third fails the design case even if every single-day KPI is
 met. \todo{report the five-day trend in Section~3.2, not only day one}
 
-\paragraph{Why cost and embodied emissions are not KPIs.} An earlier version of
-this table carried installed cost and embodied greenhouse gas as an eighth KPI.
-They have been moved into the constraints of Table~\ref{tab:constraints},
-because a KPI must follow from a \emph{function}, and neither of these does:
-they are conditions the design has to satisfy, not measures of how well it
-performs its job. The move also brings the list to seven, within the four to
-seven the task specification asks for.
-
-\paragraph{Two changes to the team's original KPI list.} Two of the KPIs
-originally proposed were reformulated, in both cases because of the rule that
-KPIs must follow from the functions and the system view.
-
-\emph{Urban heat island intensity} was dropped as a selection KPI. It is a
-district-scale quantity, and a single retrofitted building cannot move it
-measurably; keeping it would invite exactly the confusion between surface and
-air temperature described below. It remains in Section~1 as the context that
-motivates the project, and it is replaced operationally by KPI~4, which measures
-the same concern where it is actually attributable to our system.
-
-\emph{Sustainability cost} was not a measurable quantity as stated. It is
-replaced by the embodied-emissions constraint in
-Table~\ref{tab:constraints}, which has a unit, a benchmark and a decision rule.
-
-\paragraph{One quantity deliberately not a KPI.} The heat conducted through the
-envelope into the building is reported in Section~3.2 as a secondary result,
-because it follows from the same energy balance at no extra cost and matters to
-the building owner. It is not a selection KPI: indoor comfort and building
-services lie outside the project boundary (Table~\ref{tab:inout}).
+\paragraph{Three changes to the team's original KPI list.} Installed cost and
+embodied greenhouse gas were originally an eighth KPI; they are now constraints
+in Table~\ref{tab:constraints}, because a KPI must follow from a \emph{function}
+and neither does. That also brings the list to the seven the task asks for.
+\emph{Urban heat island intensity} was dropped as a selection KPI --- it is a
+district-scale quantity a single retrofit cannot move measurably --- and is
+replaced operationally by KPI~4. \emph{Sustainability cost} was not measurable
+as stated and became the embodied-emissions constraint, which has a unit, a
+benchmark and a decision rule.
 
 \paragraph{Important distinction.} KPI~3 measures a \emph{surface} temperature,
 KPI~4 an effect on people. A high-reflectance surface can be \qty{20}{\kelvin}
@@ -790,56 +771,42 @@ source}
 \subsection{Relevant Life's Principles}
 \label{sec:lifesprinciples}
 
-The six Life's Principles are used here at the level the handbook defines them,
-with the sub-principle we actually claim named underneath. Listing a principle is
-not applying it; the assessment of how well the final concept achieves them is
-Section~\ref{sec:sustainability}.
+The integrate step of the method asks which principles are \emph{relevant},
+not how well the design achieves them; the assessment belongs to
+Section~\ref{sec:sustainability} and is made there against
+Table~\ref{tab:lpassess}. Each principle below is therefore named with the
+sub-principle actually claimed, in one clause.
 
 \begin{itemize}
-  \item \textbf{Be locally attuned and responsive} --- sub-principles
-        \emph{harness freely available energy}, \emph{leverage existing cycles},
-        and above all \emph{the signal, the antennae that detect it and the
-        response match}. This is the principle the design question is built on,
-        and F9 is it expressed as a function. The two sinks we use --- the night
-        sky and the rainwater the city currently discards --- are both freely
-        available and both local.
-  \item \textbf{Be resource efficient (material and energy)} --- sub-principles
-        \emph{use low energy processes}, which is our hard energy constraint, and
-        \emph{a single design meets more than one need}, which is the tie-breaker
-        we apply in Section~\ref{sec:evaluation}: a build-up in which one layer
-        carries several functions beats one that needs a layer per function.
-  \item \textbf{Adapt to changing conditions} --- sub-principles \emph{adapt to
-        temporal and spatial changes} (the design case is a five-day heat wave,
-        not one hot afternoon), \emph{withstand disturbance while maintaining
-        function} (frost, freeze--thaw, driving rain, UV) and \emph{maintain
-        integrity through self-renewal} (soiling degrades the function; KPI~7).
-  \item \textbf{Use life-friendly chemistry} --- sub-principles \emph{use a safe
-        subset of the periodic table} and \emph{the breakdown results only in
-        harmless by-products}. This is not decorative for us: any biocide or
-        stabiliser that leaches from the surface enters the rainwater we intend to
-        collect and evaporate at pedestrian level, which is the place we are
-        trying to improve.
-  \item \textbf{Integrate development with growth} --- claimed only in the
-        limited sense of \emph{built to shape}: a modular element sized to a
-        façade grid produces no offcuts. The sub-principle \emph{create more
-        opportunities for life} is explicitly \emph{not} claimed --- a
-        permanently damp textured surface invites exactly the algal growth that
-        KPI~7 penalises, and naming that conflict is more honest than claiming
-        the principle.
-  \item \textbf{Evolve to survive} --- \textbf{not claimed for the artefact.} A
-        façade layer does not evolve across generations, and claiming it would be
-        decoration. It is claimed for the \emph{process}: this report builds on
-        the incumbent rather than starting from zero, uses the world café for
-        cross-pollination, and documents what was de-selected and why.
+  \item \textbf{Be locally attuned and responsive} --- \emph{the signal, the
+        antennae that detect it and the response match}. The principle the design
+        question is built on; F9 is it expressed as a function.
+  \item \textbf{Be resource efficient} --- \emph{use low energy processes},
+        which is the hard energy constraint, and \emph{one design meets more than
+        one need}, which becomes a tie-breaker in
+        Section~\ref{sec:evaluation}.
+  \item \textbf{Adapt to changing conditions} --- \emph{adapt to temporal and
+        spatial changes} (a five-day heat wave, not one afternoon),
+        \emph{withstand disturbance} (frost, driving rain, UV) and
+        \emph{maintain integrity through self-renewal} (KPI~7).
+  \item \textbf{Use life-friendly chemistry} --- \emph{a safe subset} and
+        \emph{harmless breakdown products}. Not decorative here: whatever leaches
+        from the surface enters rainwater the concept evaporates at pedestrian
+        level.
+  \item \textbf{Integrate development with growth} --- claimed only as
+        \emph{built to shape}. \emph{Creates more opportunities for life} is
+        deliberately \textbf{not} claimed: a permanently damp textured surface
+        invites the algal growth KPI~7 penalises.
+  \item \textbf{Evolve to survive} --- \textbf{not claimed for the artefact}. A
+        façade layer does not evolve across generations. Claimed for the
+        \emph{process} only.
 \end{itemize}
 
 \paragraph{The umbrella principle, applied as a rule.} \emph{Create conditions
-conducive to life} opens with the requirement that a design be \emph{optimised
-rather than maximised}. For us this is a concrete decision rather than a
-platitude: ultra-white coatings reach a solar reflectance of about $0.98$
-\parencite{li2021}, but KPI~2 targets $\geq0.80$, the city's own threshold,
-because further reflectance costs glare, winter solar gains and photovoltaic
-yield.
+conducive to life} requires a design to be \emph{optimised rather than
+maximised}. That is a decision here, not a platitude: ultra-white coatings reach
+about $0.98$ \parencite{li2021}, but KPI~2 targets the city's own $\geq0.80$,
+because further reflectance costs glare, winter gains and photovoltaic yield.
 
 \paragraph{Quality check.}
 \begin{itemize}[label=$\square$]
@@ -853,7 +820,7 @@ yield.
         F2 and F6--F8 from the sky and the discarded rainwater, the evening
         window from the residents, and the installation and maintenance
         constraints.
-  \item Are our most important functions measurable? --- Yes, KPIs 1--8, each
+  \item Are our most important functions measurable? --- Yes, KPIs 1--7, each
         with a unit.
   \item Is the \enquote{How might we\ldots?} question open to different
         solutions? --- Yes: evaporative, radiative and geometric strategies all
