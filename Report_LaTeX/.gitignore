@@ -1,0 +1,34 @@
+# ---- LaTeX build output -------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+
+# ---- editors / OS -------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---- ProtonDrive sync artefacts ----------------------------------------
+*# Edit conflict *#*
+
+# The built PDF (main.pdf) is intentionally TRACKED so the repository always
+# carries a readable copy. CI rebuilds and re-commits it on every push to main.
+
+# latexmk error artefacts
+*-SAVE-ERROR

@@ -35,6 +35,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          working_directory: Report_LaTeX
           root_file: main.tex
           latexmk_use_lualatex: false
           latexmk_use_xelatex: false
@@ -42,7 +43,7 @@ jobs:
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Copy PDF under a distribution name
-        run: cp main.pdf biomimicry-report-urban-heat-islands.pdf
+        run: cp Report_LaTeX/main.pdf biomimicry-report-urban-heat-islands.pdf
 
       - name: Upload PDF as build artifact
         uses: actions/upload-artifact@v5
@@ -58,13 +59,13 @@ jobs:
       - name: Commit rebuilt PDF back to the repository
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
-          if git diff --quiet -- main.pdf; then
-            echo "main.pdf is unchanged - nothing to commit."
+          if git diff --quiet -- Report_LaTeX/main.pdf; then
+            echo "Report_LaTeX/main.pdf is unchanged - nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add main.pdf
+          git add Report_LaTeX/main.pdf
           git commit -m "Rebuild main.pdf from ${GITHUB_SHA::7} [skip ci]"
           git push
 

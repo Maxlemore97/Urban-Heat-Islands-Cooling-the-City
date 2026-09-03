@@ -1,34 +1,28 @@
-# ---- LaTeX build output -------------------------------------------------
-*.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.run.xml
-*.synctex.gz
-*.toc
-*.lof
-*.lot
-*.nav
-*.snm
-*.vrb
-*.xdv
-*.dvi
+# ---- project-level ignores ---------------------------------------------
+# LaTeX build artefacts are handled by Report_LaTeX/.gitignore.
+
+# Course handouts and third-party reference PDFs: ~160 MB of material we did
+# not write and may not redistribute. Kept locally, out of the repository.
+Course material/
+Referenz Material/
+
+# Generated simulation animations. Reproducible with
+#   cd Output && python3 fetch_weather.py && python3 house_render.py
+# The still figures next to them are tracked, because the report may cite them.
+Output/wall_model/*.gif
 
 # ---- editors / OS -------------------------------------------------------
 .DS_Store
-.vscode/
 .idea/
+.vscode/
 *.swp
+__pycache__/
+*.pyc
 
-# ---- ProtonDrive sync artefacts ----------------------------------------
+# ---- Proton Drive sync artefacts ---------------------------------------
 *# Edit conflict *#*
+*.BACKUP.docx
+*.BACKUP2.docx
 
-# The built PDF (main.pdf) is intentionally TRACKED so the repository always
-# carries a readable copy. CI rebuilds and re-commits it on every push to main.
-
-# latexmk error artefacts
-*-SAVE-ERROR
+# ---- scratch ------------------------------------------------------------
+*.tmp
