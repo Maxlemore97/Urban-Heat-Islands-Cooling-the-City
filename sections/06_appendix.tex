@@ -23,7 +23,7 @@ outputs were verified. AI output is not used as evidence for factual claims.
 \bottomrule
 \endfoot
 
-AskNature (search and strategy pages) & Discovering biological strategies for functions F1--F12, navigated by taxonomy branch rather than by organism &
+AskNature (search and strategy pages) & Discovering biological strategies for functions F1--F8, navigated by taxonomy branch rather than by organism &
 Produced the candidate list in Table~\ref{tab:models}, including four models that were subsequently de-selected &
 Every mechanism claim carried into the report is referenced. The pages could not be opened programmatically, so titles and URLs were taken from search results; the open item in Section~\ref{sec:discovering} records that each must be confirmed and, where a primary paper exists, replaced by it \\
 
@@ -46,8 +46,157 @@ AskNature pages listed above, and the \qty{23}{\percent} figure for elephant
 hair, which traces to a university blog rather than to a study
 \parencite{notredame_elephant}.
 
-\section*{Appendix B -- Decision Log}
-\addcontentsline{toc}{section}{Appendix B -- Decision Log}
+\section*{Appendix B -- Optional Supporting Material}
+\addcontentsline{toc}{section}{Appendix B -- Optional Supporting Material}
+
+\subsection*{B.1 Biological models found, and the selection decision}
+
+Referenced from Section~\ref{sec:discovering}. The criterion applied throughout: a model must be transferable to a \emph{passive surface} that survives twenty years of the Swiss annual cycle.
+
+{\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{L{2.6cm} L{1.5cm} L{7.3cm} L{2.5cm}}
+\caption{Biological models found, and the selection or de-selection decision.
+The criterion applied throughout: a model must be transferable to a
+\emph{passive surface} that survives twenty years of the Swiss annual cycle.}
+\label{tab:models}\\
+\toprule
+\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism} & \textbf{Decision} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Organism / model} & \textbf{Function} & \textbf{Mechanism} & \textbf{Decision} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{4}{l}{\textit{Prevention --- reduce what is absorbed}}\\
+Desert snail \emph{Sphincterochila boissieri} & F2, F6 &
+Shell reflects $\approx\qty{90}{\percent}$ of visible and
+$\approx\qty{95}{\percent}$ of near-infrared light; in extreme heat the aperture
+is sealed with a calcified plate and the animal withdraws, leaving an insulating
+air space between body and hot ground \parencite{asknature_snail} &
+\textbf{Selected.} Passive, mineral, non-metabolic --- the closest analogue to
+an envelope we found \\
+\emph{Morpho} butterfly & F2 &
+Transparent chitin--air layers a few hundred nanometres apart diffract and
+recombine light; colour comes from geometry, and the disordered structure keeps
+the reflection diffuse rather than specular
+\parencite{asknature_morpho} &
+\textbf{Selected, with a stated limitation.} It decouples appearance from
+absorptance, which is what the townscape constraint requires --- but the
+\emph{Morpho} demonstrates structural \emph{colour}, not near-infrared heat
+rejection. That transfer needs separate technical verification; the organism
+does not establish it \\
+White beetle \emph{Cyphochilus} & F2 &
+Brilliant whiteness from a disordered chitin network only
+$7\pm\qty{1.5}{\micro\metre}$ thick, without pigment \parencite{vukusic2007} &
+\textbf{Selected} as the achromatic case of the same principle \\
+Saharan silver ant \emph{Cataglyphis bombycina} & F2, F4 &
+Triangular hairs scatter visible and near-infrared light and simultaneously
+raise emissivity in the mid-infrared \parencite{shi2015} &
+\textbf{Selected.} The only model that does F2 and F4 in one structure \\
+Cactus ribs & F3, F5, F4 &
+Peaks shade the troughs; the cooler trough air absorbs heat and rises out, while
+the folds enlarge the emitting area and disturb the airflow around the body
+\parencite{asknature_cactus} &
+\textbf{Selected.} Geometry only --- no material, no water, nothing to bleach \\
+Tree bark & F2, F4 &
+Reflects part of the incoming radiation while emitting efficiently; rough
+layering shades itself and traps insulating air \parencite{asknature_bark} &
+\textbf{Selected.} A dead outer layer protecting a living structure --- the same
+role our build-up has \\
+\midrule
+\multicolumn{4}{l}{\textit{Removal --- get heat out again}}\\
+Elephant ears & F4, F5 &
+Warm blood is carried from the core into large thin ears; the surface releases
+it, and flapping raises the airflow \parencite{asknature_ears} &
+\textbf{Selected.} Separates the place of absorption from the place of release \\
+Elephant skin hairs & F5 &
+At this density the hairs do not insulate --- it lies well below the crossover
+at which insulation becomes dominant --- so each acts as a small heat-transfer
+\emph{fin}, reaching through the still boundary layer that clings to the skin so
+that moving air reaches the surface. Reported additional heat loss up to
+\qty{23}{\percent} \parencite{notredame_elephant} &
+\textbf{Selected.} Directly relevant at the low wind speeds of a canyon \\
+Jackrabbit ears & F7, F4 &
+Vasodilation varies the blood flow to a thin radiating surface; at
+$\approx\qty{30}{\celsius}$ air temperature the ears shed all excess heat, and
+the strategy exists to avoid spending water
+\parencite{asknature_jackrabbit} &
+\textbf{Selected.} The water-free route to a load-coupled response \\
+Elephant skin hot spots & F7 &
+Vasodilation in scattered patches rather than uniformly; the number of open
+\enquote{thermal windows} varies with the load
+\parencite{asknature_hotspots} &
+\textbf{Selected.} Regulation by active \emph{area} rather than by material \\
+\midrule
+\multicolumn{4}{l}{\textit{Self-regulation and supporting functions}}\\
+Leaf stomata & F7 &
+Environmental and chemical signals change the solute concentration in the two
+guard cells; osmosis moves water accordingly, turgor changes, and the cells bend
+open or shut the pore. The regulation is built into the opening itself
+\parencite[62--65]{hok2013} &
+\textbf{Selected for the valve, not for the transpiration.} The clearest natural
+instance of an aperture whose width follows the load; the evaporative half is
+out of scope (Table~\ref{tab:inout}) \\
+Sea star & F6, F7 &
+Takes up more cold water at high tide after a hot low tide, so the previous load
+sets the charge; fails once the sea is no longer colder than the air
+\parencite{asknature_seastar} &
+\textbf{Selected for the charging rule.} Charge the store during the cool phase,
+sized by the previous cycle --- including its own failure mode \\
+Honeybee fanning thresholds & F7 &
+Each worker begins fanning at a slightly different temperature, and the spread is
+genetic; the number of active bees rises with the load, so binary units produce
+a graded colony response \parencite{asknature_bees} &
+\textbf{Selected.} Resolves whether a threshold can satisfy F7 \\
+Pine cone scales & F3, F7 &
+Two bonded layers swell differently with moisture: taking up moisture makes one
+expand more, so the scale bends and closes, and as it dries it returns towards
+the open state. The movement is reversible and the cone is dead tissue, moved
+entirely by the weather
+\parencite{asknature_pinecone} &
+\textbf{Selected.} A passive actuator with no energy input \\
+Lichen \emph{Lecanora conizaeoides} & F8 &
+Roughness at several scales keeps droplets perched on the peaks so they are
+shed, while the hydrophobic micropores between them stay dry and remain open to
+gas exchange even in the wet: the surface separates liquid transport from gas
+transport across the same plane \parencite[41--44]{hok2013} &
+\textbf{Selected.} A physical answer to soiling, not a chemical one \\
+Desert shrub \emph{Encelia farinosa} & F2, F3 &
+Dense leaf pubescence raises reflectance and is adjusted seasonally
+\parencite{ehleringer1978} &
+\textbf{Selected} as the biological precedent for a seasonally switching surface \\
+\midrule
+\multicolumn{4}{l}{\textit{De-selected, with reasons}}\\
+Termite mound & F5 &
+The classic reference, but the \enquote{chimney air-conditioning} account is
+contested; measurements support wind-driven transient gas exchange rather than a
+thermosiphon \parencite{turner2008} &
+\textbf{De-selected.} The evidence does not support the mechanism, and the
+building usually cited for it uses fans \\
+Namib desert beetle & --- &
+Hydrophilic--hydrophobic patterning harvests water from fog &
+\textbf{De-selected} twice over: fog in Zurich is a winter phenomenon and a heat
+wave brings neither rain nor fog, and the water path is outside the boundary
+(Table~\ref{tab:inout}) \\
+Thomson's gazelle carotid rete & F5 &
+Counter-current heat exchange cools the brain &
+\textbf{De-selected} as a whole-organism model --- internal physiology. The
+counter-current \emph{arrangement} is retained as an option for the liquid loop
+in Section~\ref{sec:creating} \\
+Tenrec aestivation & --- &
+Dormancy through the hot season &
+\textbf{De-selected.} A behaviour; an envelope has none \\
+Green façades and roofs & F2, F3 &
+Shading and evapotranspiration from planting &
+\textbf{Out of scope} by the project boundary (Table~\ref{tab:inout}), and in
+direct competition with our own water reserve: planting needs most water exactly
+when least is available \\
+\end{longtable}}
+
+\subsection*{B.2 Decision log}
 
 Every decision below is argued at the place named in the last column. This table
 exists so that the reasoning can be checked without re-reading the report, and
@@ -71,7 +220,7 @@ legible if the discarded alternatives are on the record.
 \bottomrule
 \endfoot
 
-Design question & Let the absorbed heat drive its own removal, self-regulating & Four other candidates, from \enquote{prevent heat build-up in cities} to \enquote{turn heat into a resource} & Too broad, unanchored, factually wrong, or not verifiable in the time available. The chosen question adds the self-regulating clause, which is the actual content of the project. Section~\ref{sec:designquestion} \\
+Design question & Let the absorbed heat drive its own removal, self-regulating & Three other candidates, from \enquote{prevent heat build-up in cities} to \enquote{prevent heat waves causing heat islands} & Too broad, unanchored, or factually wrong. The chosen question adds the self-regulating clause, which is the actual content of the project. Section~\ref{sec:designquestion} \\
 
 Reference city & Zurich & A generic European city & An adopted municipal heat strategy, published target values, open geodata and long-term stations make the targets checkable instead of invented. Section~\ref{sec:context} \\
 
@@ -83,19 +232,21 @@ Evening window & 18:00--24:00 & 20:00--24:00 & A window must contain the instant
 
 System of interest & The façade, with the roof as the release interface & The envelope as a whole, roof included & The roof receives more than twice the noon irradiance, but releases its heat upward to a sky it can see; the façade releases sideways into the canyon at head height, and Section~1 fixes that as where the effect must appear. Section~\ref{sec:context} \\
 
-Number of systems & One & Two --- \enquote{reduce heat} and \enquote{prevent heat} & The systems view showed these are two functions of one system, coupled by the design question. Section~\ref{sec:systemview} \\
+Number of systems & One & Two --- \enquote{reduce heat} and \enquote{prevent heat} & The systems view showed these are two functions of one system, coupled by the self-regulation decision. Section~\ref{sec:systemview} \\
 
 Scope of \enquote{use the heat} & Let it drive its own removal & Seasonal storage and electricity generation & Conversion competes with photovoltaics for the same surface and any seasonal store lies outside the envelope. Section~\ref{sec:systemview} \\
 
 Selection KPI for the urban effect & PET at \qty{2}{\metre} above ground & Urban heat island intensity & A district-scale quantity that a single retrofit cannot move measurably, and it invites the surface-versus-air confusion. Section~\ref{sec:kpi} \\
 
-Cost and embodied emissions & Constraints & An eighth KPI & A KPI must follow from a function; these are conditions to satisfy, not measures of performance. The move also brings the list inside the required four to seven. Section~\ref{sec:kpi} \\
+Cost and embodied emissions & Constraints & A seventh KPI & A KPI must follow from a function; these are conditions to satisfy, not measures of performance. The move also keeps the list inside the required four to seven. Section~\ref{sec:kpi} \\
 
-Albedo target & $\geq0.80$, the city's threshold & The technical maximum of $\approx0.98$ & Life's Principles ask for optimised rather than maximised; further reflectance costs glare, winter gains and photovoltaic yield. Section~\ref{sec:lifesprinciples} \\
+Albedo target & $\geq0.80$, the city's threshold & The technical maximum of $\approx0.98$ & Life's Principles ask for optimised rather than maximised; further reflectance costs glare, winter gains and photovoltaic yield. Section~\ref{sec:kpi} \\
 
-Life's Principles claimed & Four claimed with the sub-principle named & \enquote{Creates opportunities for life} and \enquote{Evolve to survive} for the artefact & A damp textured surface invites the algal growth KPI~7 penalises, and a façade layer does not evolve across generations. Naming the conflict is more honest than claiming the principle. Section~\ref{sec:lifesprinciples} \\
+Life's Principles claimed & Three used as scored criteria, two as rules & \enquote{Creates opportunities for life} and \enquote{Evolve to survive} for the artefact & A damp textured surface invites the algal growth KPI~6 penalises, and a façade layer does not evolve across generations. Naming the conflict is more honest than claiming the principle. Section~\ref{sec:kpi} \\
 
-Search strategy & By function, through the taxonomy & By organism & Searching for organisms would not have produced F9, which is the pairing of two taxonomy branches rather than a single one. Section~\ref{sec:researchpath} \\
+Self-cleaning & Physical: multi-scale surface geometry & A biocide or film stabiliser, the obvious answer to soiling & Whatever leaves the outer finish is abraded into the street canyon the project exists to improve, so the life-friendly-chemistry principle rules it out before any concept exists. This is why the lichen entered the model table at all. Section~\ref{sec:leaching} \\
+
+Search strategy & By function, through the taxonomy & By organism & Searching for organisms would not have produced F7, which is the pairing of two taxonomy branches rather than a single one. Section~\ref{sec:researchpath} \\
 
 Termite mound & De-selected & The standard biomimicry reference for passive cooling & The chimney account is contested in the literature, and the building usually cited for it uses fans. Section~\ref{sec:discovering} \\
 
@@ -103,7 +254,9 @@ Fog harvesting & De-selected & The Namib beetle, the most-cited water model & Fo
 
 Green façades & Out of scope & An obvious and proven measure & Already the client's HA~09 and HA~10, and in direct competition with our own water reserve, which is scarcest exactly when planting needs most. Section~\ref{sec:discovering} \\
 
-Evidence standard & Primary papers where they exist, the publishing organisation otherwise & AskNature entries treated as evidence in their own right & AskNature and AI-assisted search find candidates. Twelve of twenty model entries still rest on an AskNature page alone; this is recorded as a shortfall rather than presented as met. Section~\ref{sec:researchpath} \\
+Evidence standard & Primary papers where they exist, the publishing organisation otherwise & AskNature entries treated as evidence in their own right & AskNature and AI-assisted search find candidates. Ten of twenty-one model entries still rest on an AskNature page alone; this is recorded as a shortfall rather than presented as met. Section~\ref{sec:researchpath} \\
+
+Water path & Out of the boundary; the concept is dry & Capture, retention and metered evaporation of rainwater (F6--F8 and a water KPI in the earlier scoping) & Evaporation is the steepest load-following mechanism, but the reserve must be charged before a rainless heat wave, the damp layer invites the algal growth KPI~6 penalises, and it must survive twenty freeze--thaw cycles. Section~\ref{sec:systemview}; the cost of the decision is stated in Section~\ref{sec:sustainability} \\
 
 Concept pair & \todo{decide} & \todo{the two directions not developed} & \todo{state the physical distinction that makes the pair meaningful} \\
 
@@ -111,120 +264,3 @@ Final concept & \todo{A, B or a justified hybrid} & \todo{} & \todo{name the wea
 
 \end{longtable}
 
-\clearpage
-\section*{Appendix C -- Scoping Detail}
-\addcontentsline{toc}{section}{Appendix C -- Scoping Detail}
-\setcounter{table}{0}
-\renewcommand{\thetable}{C.\arabic{table}}
-
-\noindent Three tables that document the scoping decisions of
-Section~\ref{sec:designquestion} to Section~\ref{sec:systemview}. They are
-placed here rather than in the body so that Section~2 stays within the page
-budget while the reasoning behind it remains on record.
-
-\begin{table}[htbp]
-\centering
-\caption{Design questions considered, and why four were rejected.
-Referenced from Section~\ref{sec:designquestion}.}
-\label{tab:questions}
-\renewcommand{\arraystretch}{1.2}
-\small
-\begin{tabularx}{\textwidth}{L{0.5cm} X L{4.6cm}}
-\toprule
-\textbf{\#} & \textbf{Candidate} & \textbf{Assessment} \\
-\midrule
-1 & How do we prevent heat build-up in urban areas?
-  & \emph{Too broad.} No place, no time, no intervention point --- the
-    equivalent of \enquote{How might we end hunger?} \\
-2 & How could we use the energy or heat build-up positively while lowering
-    temperature?
-  & Right idea, but unanchored: no location, and \enquote{positively} does not
-    say for what. Refined into candidate~5. \\
-3 & How might we get the heat that Zurich's existing buildings store during the
-    day back out of the city before the next morning, without using energy?
-  & Well formed and highly testable. Rejected only because it discards the
-    team's central idea of \emph{using} the heat. Its night-time focus is
-    retained in the selected question. \\
-4 & How can we prevent heat waves causing heat islands?
-  & \emph{Factually wrong.} Heat waves do not cause heat islands. The urban
-    heat island is a permanent consequence of urban surface properties and
-    geometry and exists on ordinary summer days; a heat wave makes it
-    dangerous, it does not create it \parencite{oke1982}. \\
-5 & How might we turn the heat that accumulates in a city into a useful
-    resource, instead of reflecting or discarding it?
-  & Good direction, but the reading \enquote{store summer heat for winter} is
-    not verifiable within the project, and it has no biological support:
-    organisms store chemical energy across seasons, not sensible heat.
-    Narrowed into the selected question. \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\begin{table}[htbp]
-\centering
-\caption{Context conditions and constraints in full. Hard constraints
-disqualify a concept when violated; soft constraints weight the evaluation in
-Section~\ref{sec:evaluation}. Summarised in Section~\ref{sec:context}.}
-\label{tab:constraints}
-\renewcommand{\arraystretch}{1.2}
-\small
-\begin{tabularx}{\textwidth}{L{2.3cm} L{1.4cm} X}
-\toprule
-\textbf{Type} & \textbf{Class} & \textbf{Constraint} \\
-\midrule
-Energy & hard & No auxiliary electrical energy for the cooling function itself. This follows directly from the design question: the heat load must drive the response. Sensors used for validation are excluded. \\
-Water & hard & No potable water. Only rainwater harvested on site or atmospheric moisture. \\
-Existing building & hard & Retrofit onto an existing envelope. Load-bearing structure, floor plan and window openings are not redesigned. \\
-Townscape & hard & The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbour rights can restrict visible changes \parencite[128]{stadtzuerich2020}. \\
-Glare & hard & No specular glare towards streets, neighbouring flats or traffic. The city names glare as the main objection to bright envelopes \parencite[128]{stadtzuerich2020}, which favours diffuse over mirror-like surfaces. \\
-Climate & hard & Must survive the Swiss annual cycle: frost to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV, and periods of several dry weeks in summer. \\
-Winter & hard & Must not appreciably increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off must be quantified, not ignored. \\
-Installation & soft & Must be installable by ordinary trades on an occupied building, ideally without full scaffolding. \todo{state an installation-time target per \unit{\square\metre}} \\
-Maintenance & soft & Must remain functional with little maintenance. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}. Service life target $\geq$ \qty{20}{years}. \\
-Solar energy & soft & Should not unnecessarily compromise roof- or façade-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State which envelope areas the concept claims. \\
-Structural & soft & Limited additional dead load and build-up thickness on an existing envelope. \\
-Embodied emissions & soft & The greenhouse gas embodied in the added build-up must be repaid by the avoided cooling demand within the service life. Measured in \unit{\kilo\gram}\,CO$_2$-eq\,\unit{\per\square\metre}. \todo{source a benchmark} \\
-Economic & soft & The city expects higher cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal refurbishment. \todo{find a benchmark figure and cite it} \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\begin{table}[htbp]
-\centering
-\caption{What the comparison with each parallel system contributed to the
-scoping. Referenced from Figure~\ref{fig:systemview} and
-Section~\ref{sec:systemview}.}
-\label{tab:parallel}
-\renewcommand{\arraystretch}{1.2}
-\small
-\begin{tabularx}{\textwidth}{L{3.6cm} X}
-\toprule
-\textbf{Parallel system} & \textbf{What the comparison adds} \\
-\midrule
-Stormwater and sewer system
-& Rainwater is currently drained away as fast as possible. Seen from our system
-  it is a cooling reserve that is being discarded --- and during a heat wave it
-  is the only water available under the \enquote{no potable water} constraint.
-  This adds the functions \emph{capture}, \emph{retain} and \emph{meter} water
-  (F6--F8) and makes storage capacity a design variable rather than an
-  afterthought. \\
-Street and pavement network
-& The street is treated by the same client with the same logic (HA~06,
-  Table~\ref{tab:incumbent}), and it achieves a slightly larger daytime effect
-  than the envelope. The comparison sets a benchmark we must beat, and it shows
-  that the envelope's advantage has to come from the night window, where the
-  street performs no better. \\
-Power grid and building energy system
-& The obvious way to \enquote{use} heat is to convert it. The comparison shows
-  why that is a different project: conversion competes with photovoltaics for
-  the same surface, and any seasonal store lies outside the envelope. It is
-  therefore placed out of the boundary, while the milder reading of
-  \enquote{use} --- letting the heat drive its own removal --- stays in. \\
-Residents, transport and public transit
-& Defines where the effect has to be delivered: at pedestrian level in the
-  street canyon and in the flats on the upper floors, not on the roof membrane.
-  This is why PET at \qty{2}{\metre} above ground becomes a KPI, and it fixes
-  the evening window 18:00--24:00, when people are outdoors and then sleeping. \\
-\bottomrule
-\end{tabularx}
-\end{table}

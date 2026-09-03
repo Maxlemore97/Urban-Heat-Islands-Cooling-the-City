@@ -101,6 +101,42 @@
 \input{sections/04_sustainability}
 \input{sections/05_discussion}
 
+\section{Glossary}
+\label{sec:glossary}
+
+\begin{description}\setlength{\itemsep}{2pt}
+  \item[Short-wave radiation] The radiation the sun delivers, roughly
+    \qtyrange{300}{2500}{\nano\metre} (ultraviolet, visible and near-infrared).
+    It is what a surface can \emph{reflect}; the fraction reflected is the solar
+    reflectance $\alpha_\mathrm{sol}$ of criterion~2. Function F2 acts on it.
+  \item[Long-wave radiation] The thermal radiation a surface at ordinary
+    temperatures emits by itself, roughly \qtyrange{4}{50}{\micro\metre}. It is
+    what a surface can \emph{give away}, including at night and to a clear sky,
+    and it is governed by the emittance $\varepsilon$ rather than by
+    $\alpha_\mathrm{sol}$. Function F4 acts on it. The two are separate
+    properties: a surface can be bright in the short wave and still a poor
+    emitter in the long wave, which is why criterion~2 and criterion~5 are
+    reported apart.
+  \item[Atmospheric window] The band near \qtyrange{8}{13}{\micro\metre} in
+    which a clear sky is largely transparent, so long-wave radiation emitted
+    there escapes to space rather than being returned. It is what makes
+    night-time radiative cooling below air temperature possible.
+  \item[Albedo] The share of incoming short-wave radiation a surface reflects.
+    The city classes $\leq 0.30$ as low and $\geq 0.80$ as high
+    \parencite[128]{stadtzuerich2020}.
+  \item[PET] Physiologically equivalent temperature: the temperature a person
+    would experience given air temperature, radiation, humidity and wind. It is
+    the metric the client uses to judge a measure at street level, and it is a
+    different quantity from surface temperature.
+  \item[UHI] Urban heat island: the persistent temperature difference between a
+    city and its rural surroundings, caused by urban surface properties and
+    geometry \parencite{oke1982}. In Zurich it reaches about \qty{7}{\kelvin} at
+    night \parencite{stadtzuerich_merkblatt}.
+  \item[Solution-neutral] A statement of \emph{what} must happen that names no
+    means of achieving it. Design questions and functions in this report are
+    written this way so the biology can propose the means.
+\end{description}
+
 \section{References}
 \printbibliography[heading=none]
 
