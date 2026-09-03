@@ -110,3 +110,121 @@ Concept pair & \todo{decide} & \todo{the two directions not developed} & \todo{s
 Final concept & \todo{A, B or a justified hybrid} & \todo{} & \todo{name the weakness in V1 that V2 answers} \\
 
 \end{longtable}
+
+\clearpage
+\section*{Appendix C -- Scoping Detail}
+\addcontentsline{toc}{section}{Appendix C -- Scoping Detail}
+\setcounter{table}{0}
+\renewcommand{\thetable}{C.\arabic{table}}
+
+\noindent Three tables that document the scoping decisions of
+Section~\ref{sec:designquestion} to Section~\ref{sec:systemview}. They are
+placed here rather than in the body so that Section~2 stays within the page
+budget while the reasoning behind it remains on record.
+
+\begin{table}[htbp]
+\centering
+\caption{Design questions considered, and why four were rejected.
+Referenced from Section~\ref{sec:designquestion}.}
+\label{tab:questions}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabularx}{\textwidth}{L{0.5cm} X L{4.6cm}}
+\toprule
+\textbf{\#} & \textbf{Candidate} & \textbf{Assessment} \\
+\midrule
+1 & How do we prevent heat build-up in urban areas?
+  & \emph{Too broad.} No place, no time, no intervention point --- the
+    equivalent of \enquote{How might we end hunger?} \\
+2 & How could we use the energy or heat build-up positively while lowering
+    temperature?
+  & Right idea, but unanchored: no location, and \enquote{positively} does not
+    say for what. Refined into candidate~5. \\
+3 & How might we get the heat that Zurich's existing buildings store during the
+    day back out of the city before the next morning, without using energy?
+  & Well formed and highly testable. Rejected only because it discards the
+    team's central idea of \emph{using} the heat. Its night-time focus is
+    retained in the selected question. \\
+4 & How can we prevent heat waves causing heat islands?
+  & \emph{Factually wrong.} Heat waves do not cause heat islands. The urban
+    heat island is a permanent consequence of urban surface properties and
+    geometry and exists on ordinary summer days; a heat wave makes it
+    dangerous, it does not create it \parencite{oke1982}. \\
+5 & How might we turn the heat that accumulates in a city into a useful
+    resource, instead of reflecting or discarding it?
+  & Good direction, but the reading \enquote{store summer heat for winter} is
+    not verifiable within the project, and it has no biological support:
+    organisms store chemical energy across seasons, not sensible heat.
+    Narrowed into the selected question. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Context conditions and constraints in full. Hard constraints
+disqualify a concept when violated; soft constraints weight the evaluation in
+Section~\ref{sec:evaluation}. Summarised in Section~\ref{sec:context}.}
+\label{tab:constraints}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabularx}{\textwidth}{L{2.3cm} L{1.4cm} X}
+\toprule
+\textbf{Type} & \textbf{Class} & \textbf{Constraint} \\
+\midrule
+Energy & hard & No auxiliary electrical energy for the cooling function itself. This follows directly from the design question: the heat load must drive the response. Sensors used for validation are excluded. \\
+Water & hard & No potable water. Only rainwater harvested on site or atmospheric moisture. \\
+Existing building & hard & Retrofit onto an existing envelope. Load-bearing structure, floor plan and window openings are not redesigned. \\
+Townscape & hard & The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbour rights can restrict visible changes \parencite[128]{stadtzuerich2020}. \\
+Glare & hard & No specular glare towards streets, neighbouring flats or traffic. The city names glare as the main objection to bright envelopes \parencite[128]{stadtzuerich2020}, which favours diffuse over mirror-like surfaces. \\
+Climate & hard & Must survive the Swiss annual cycle: frost to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV, and periods of several dry weeks in summer. \\
+Winter & hard & Must not appreciably increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off must be quantified, not ignored. \\
+Installation & soft & Must be installable by ordinary trades on an occupied building, ideally without full scaffolding. \todo{state an installation-time target per \unit{\square\metre}} \\
+Maintenance & soft & Must remain functional with little maintenance. Soiling and the resulting cleaning cost are named by the city as a specific weakness of high-albedo envelopes \parencite[128]{stadtzuerich2020}. Service life target $\geq$ \qty{20}{years}. \\
+Solar energy & soft & Should not unnecessarily compromise roof- or façade-integrated photovoltaics; the city notes that bright envelopes reduce PV yield \parencite[128]{stadtzuerich2020}. State which envelope areas the concept claims. \\
+Structural & soft & Limited additional dead load and build-up thickness on an existing envelope. \\
+Embodied emissions & soft & The greenhouse gas embodied in the added build-up must be repaid by the avoided cooling demand within the service life. Measured in \unit{\kilo\gram}\,CO$_2$-eq\,\unit{\per\square\metre}. \todo{source a benchmark} \\
+Economic & soft & The city expects higher cost for high-albedo envelopes \parencite[128]{stadtzuerich2020}. Target: cost per square metre in the range of a normal refurbishment. \todo{find a benchmark figure and cite it} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{What the comparison with each parallel system contributed to the
+scoping. Referenced from Figure~\ref{fig:systemview} and
+Section~\ref{sec:systemview}.}
+\label{tab:parallel}
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabularx}{\textwidth}{L{3.6cm} X}
+\toprule
+\textbf{Parallel system} & \textbf{What the comparison adds} \\
+\midrule
+Stormwater and sewer system
+& Rainwater is currently drained away as fast as possible. Seen from our system
+  it is a cooling reserve that is being discarded --- and during a heat wave it
+  is the only water available under the \enquote{no potable water} constraint.
+  This adds the functions \emph{capture}, \emph{retain} and \emph{meter} water
+  (F6--F8) and makes storage capacity a design variable rather than an
+  afterthought. \\
+Street and pavement network
+& The street is treated by the same client with the same logic (HA~06,
+  Table~\ref{tab:incumbent}), and it achieves a slightly larger daytime effect
+  than the envelope. The comparison sets a benchmark we must beat, and it shows
+  that the envelope's advantage has to come from the night window, where the
+  street performs no better. \\
+Power grid and building energy system
+& The obvious way to \enquote{use} heat is to convert it. The comparison shows
+  why that is a different project: conversion competes with photovoltaics for
+  the same surface, and any seasonal store lies outside the envelope. It is
+  therefore placed out of the boundary, while the milder reading of
+  \enquote{use} --- letting the heat drive its own removal --- stays in. \\
+Residents, transport and public transit
+& Defines where the effect has to be delivered: at pedestrian level in the
+  street canyon and in the flats on the upper floors, not on the roof membrane.
+  This is why PET at \qty{2}{\metre} above ground becomes a KPI, and it fixes
+  the evening window 18:00--24:00, when people are outdoors and then sleeping. \\
+\bottomrule
+\end{tabularx}
+\end{table}
