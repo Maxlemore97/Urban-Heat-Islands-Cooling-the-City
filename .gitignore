@@ -26,3 +26,6 @@ __pycache__/
 
 # ---- scratch ------------------------------------------------------------
 *.tmp
+
+# ---- generated audit bundle (report-audit skill) ------------------------
+report-audit/

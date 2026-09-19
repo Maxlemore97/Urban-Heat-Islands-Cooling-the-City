@@ -3,7 +3,9 @@
 %  Challenge 1: Urban Heat Islands -- Cooling the City
 %
 %  Build:  latexmk -pdf main.tex   (pdfLaTeX + biber)
-%  Section headings follow "Report_template_26_V3_final.docx" verbatim.
+%  Content follows "Urban Heat Island - Cooling the City - Report (1).docx"
+%  one to one; only design and formal matters (numbering, citations,
+%  headings, language slips) were adjusted in the LaTeX version.
 %=======================================================================
 \documentclass[11pt,a4paper]{article}
 
@@ -25,15 +27,22 @@
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{needspace}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[skip=6pt plus 2pt]{parskip}   % paragraphs: no indent, small gap (as in the Word draft)
 
 %------------------------------------------------------------ references
 \usepackage{csquotes}
 \usepackage[style=ieee,backend=biber,maxbibnames=6,minbibnames=3,urldate=long]{biblatex}
 \addbibresource{references.bib}
+% allow long URLs in the reference list to break
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburlucpenalty}{9000}
+\setcounter{biburllcpenalty}{9000}
 
 %--------------------------------------------------------------- styling
 \definecolor{zhawblue}{RGB}{0,90,140}
@@ -46,40 +55,41 @@
 \titleformat{\section}{\normalfont\Large\bfseries\color{zhawblue}}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
-\newcommand{\sectionbreak}{\clearpage}   % every main chapter starts on a new page
+% fourth level (the natural models in Section 3.1): unnumbered display heading
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries\itshape\color{zhawblue!80!black}}{}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{12pt plus 3pt minus 2pt}{4pt}
+% chapters run on continuously (no forced page break before a \section)
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small Biomimicry Challenge Report}
+\fancyhead[L]{\small Urban Heat Island -- Cooling the City}
 \fancyhead[R]{\small ZHAW -- Blockweek Bionics 2026}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
 \setlist{itemsep=2pt,parsep=0pt,topsep=4pt,beginpenalty=10000,midpenalty=10000}
-% Page-break hygiene: no single lines stranded at the top or bottom of a page,
-% no page break directly after a heading, \needspace for manual nudges.
-\usepackage{needspace}
 \clubpenalty=10000
 \widowpenalty=10000
 \displaywidowpenalty=10000
 \raggedbottom
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \sisetup{per-mode=symbol,detect-weight=true,range-phrase={--},range-units=single}
-\captionsetup{font=small,labelfont=bf,skip=4pt}
+\captionsetup{font=small,labelfont=bf,labelsep=endash,skip=5pt}
+\captionsetup[table]{position=above,skip=5pt}
+\captionsetup[sub]{font=small,labelfont=bf,labelsep=space}
 
-% Float placement: tables never on float pages, generous room at page top,
-% and more air around floats placed in the text.
+% Float placement
 \usepackage{float}
 \usepackage[section]{placeins}   % floats never drift past the next \section
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.6}
 \renewcommand{\textfraction}{0.07}
 \renewcommand{\floatpagefraction}{0.85}
-\setlength{\intextsep}{18pt plus 4pt minus 2pt}
-\setlength{\textfloatsep}{22pt plus 4pt minus 4pt}
-\setlength{\abovecaptionskip}{6pt}
+\setlength{\intextsep}{16pt plus 4pt minus 2pt}
+\setlength{\textfloatsep}{20pt plus 4pt minus 4pt}
 \makeatletter\setlength{\@fptop}{0pt}\makeatother
 
 % Tables and figures are numbered per section (Table 2.1, Figure 3.4 ...)
@@ -87,22 +97,10 @@
 \counterwithin{figure}{section}
 \counterwithin{equation}{section}
 
-% TikZ styles shared by the system view and the functional diagram
-\tikzset{
-  sysbox/.style   = {draw=zhawblue,fill=zhawblue!8,rounded corners=2pt,
-                     align=center,inner sep=5pt,minimum height=9mm,font=\small},
-  soibox/.style   = {draw=zhawblue,line width=1pt,fill=zhawblue!20,rounded corners=2pt,
-                     align=center,inner sep=5pt,minimum height=10mm,font=\small\bfseries},
-  subbox/.style   = {draw=gray,fill=boxgray,rounded corners=2pt,align=center,
-                     inner sep=4pt,minimum height=8mm,font=\scriptsize},
-  funcbox/.style  = {draw=black!70,fill=white,rounded corners=2pt,align=center,
-                     inner sep=4pt,minimum height=8mm,font=\scriptsize},
-  flowarr/.style  = {-{Latex[length=2mm]},thick,draw=black!65},
-  wateharr/.style = {-{Latex[length=2mm]},thick,draw=zhawblue,dashed},
-  infoarr/.style  = {-{Latex[length=2mm]},thick,draw=orange!85!black,dash pattern=on 4pt off 2pt},
-}
+% run-in labels used inside the natural models ("Biological mechanism" ...)
+\newcommand{\runin}[1]{\par\noindent\textbf{#1}\enspace}
+\newcommand{\lp}[1]{\par\noindent\textbf{Life's Principle:} #1\par}
 
-%--------------------------------------------------- placeholder command
 % \todo{...} marks an item the team must supply. None may remain at hand-in.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
 
@@ -119,7 +117,9 @@
 \input{sections/04_sustainability}
 \input{sections/05_discussion}
 
+\clearpage
 \section{References}
+\label{sec:references}
 \printbibliography[heading=none]
 
 \appendix

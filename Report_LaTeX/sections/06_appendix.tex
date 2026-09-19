@@ -1,19 +1,23 @@
 %=======================================================================
 %  APPENDICES
 %=======================================================================
+\clearpage
 \section*{Appendix A -- AI Use Statement}
 \label{sec:appendixA}
 \addcontentsline{toc}{section}{Appendix A -- AI Use Statement}
 \setcounter{table}{0}
 \renewcommand{\thetable}{A.\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A.\arabic{figure}}
 
-Table~\ref{tab:aiuse} lists the AI-supported activities in this project, what each
-contributed and how we checked the output. No factual claim in the report is cited to
-an AI tool; every biological and technical statement carries a reference of its own.
+Relevant AI-supported activities are documented in Table~\ref{tab:aiuse}. Not every
+prompt is listed; the focus is on how AI contributed to the work and how important
+outputs were verified. AI output is not used as evidence for factual claims.
 
-{\small
-\renewcommand{\arraystretch}{1.15}
-\begin{longtable}{L{2.4cm} L{3.2cm} L{4.0cm} L{4.4cm}}
+{\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{L{2.5cm} L{3.5cm} L{3.9cm} L{4.6cm}}
 \caption{AI use statement.}\label{tab:aiuse}\\
 \toprule
 \textbf{AI tool} & \textbf{Used for} & \textbf{How the output influenced the project} & \textbf{How important output was verified} \\
@@ -26,49 +30,65 @@ an AI tool; every biological and technical statement carries a reference of its 
 \bottomrule
 \endfoot
 
-AskNature website and AskNature Chat &
-Searching biological strategies for functions F1--F5 with the keywords and biologized
+AskNature (search, strategy pages and AskNature Chat) &
+Discovering biological strategies for functions F1--F5 with the keywords and biologized
 questions of Section~\ref{sec:researchpath} &
-Produced the candidate list of Table~\ref{tab:models}, including the models we later
-de-selected &
-Each strategy page was opened and read. Where a primary paper exists it is cited in
-Section~\ref{sec:models} instead of the AskNature page (silver ant, cactus, camel, snail,
-pine cone, honeybee); the AskNature pages remain cited as the lead for the elephant models
-and the Morpho \\
+Produced the candidate list of natural models in Section~\ref{sec:models}, including the
+models that were subsequently de-selected &
+Every mechanism claim carried into the report is referenced. Each strategy page was
+opened and read; the access dates are given in the reference list. Where a primary paper
+exists it is cited alongside or instead of the AskNature page (elephant hair, cactus
+ribs, silver ant, Morpho wing, pine cone, honeybee) \\
 
 Large language model assistant (Claude, Anthropic) &
-Structuring the scoping notes; drafting and editing report text; converting the report to
-\LaTeX; an editorial audit of the draft against the course rubric (repetition, unsupported
-claims, citation gaps); recomputing the engineering estimates &
-Draft wording in Sections~1--5 and the layout of most tables; the audit produced the list
-of corrections applied in this version (figure numbering, missing references, KPI
-definitions, removal of repeated passages) &
-The team decided on every audit finding. All numbers in Sections~\ref{sec:check1},
+Structuring the scoping notes; drafting and editing report text; converting the Word
+draft to \LaTeX; an editorial audit of the draft against the course rubric (repetition,
+unsupported claims, citation and numbering gaps) &
+Draft wording in Sections~\ref{sec:intro}--\ref{sec:discussion} and the layout of most
+tables; the audit produced the list of formal corrections applied in this version
+(figure and table numbering, missing references, citation style, headings) &
+The team decided on every audit finding. The numbers in Sections~\ref{sec:check1},
 \ref{sec:check2} and \ref{sec:v2check} were recomputed by hand from the stated inputs
 before the text was accepted. Any claim the assistant proposed without a source was
 either given a source we read ourselves or removed \\
 
-AI as critical reviewer &
-Reviewing Concept~A~V1 and B~V1 with the Engineering Canvas, the functions and the KPIs
+AI as critical reviewer (Claude, Anthropic, prompted as a critical engineering reviewer) &
+Reviewing Concept~A~V1 and B~V1 against the Engineering Canvas, the functions and the
+KPIs; identifying the assumptions most likely to change concept selection
 (Section~\ref{sec:review}) &
 Four review issues in Table~\ref{tab:review}; three were accepted and changed the design
 (pipes into external panels, reduced connected area, KPI units), one was qualified &
 Each issue was assessed by the team against the literature named in
-Section~\ref{sec:review}; the qualified issue (ventilation) was not accepted because the
-cited studies disagree \\
+Section~\ref{sec:review}; the qualified issue (ventilation) was not accepted as stated
+because the cited studies disagree \\
 
-Image generation &
-\todo{State whether any figure was AI-generated (for example the concept renders of
-Figures~\ref{fig:conceptA} and \ref{fig:v2loop}); if so, name the tool} &
-\todo{Illustration only; no figure is used as measurement or evidence} &
-\todo{Each generated image was compared with the hand sketch it was made from} \\
+Image generation (imagine.art) &
+Schematic illustrations of the elephant ears and hair (Figures~\ref{fig:ears} and
+\ref{fig:hair}) and the Concept~A~V1 sketch (Figure~\ref{fig:conceptA}) from prompts
+written by the team &
+Illustration only; no generated image is used as a measurement or as evidence. The
+renders of Concept~V2 (Figures~\ref{fig:roof}--\ref{fig:v2pipes}) are from the team's
+own 3D model &
+Each generated image was compared with the mechanism described in the cited source and
+labelled in the caption as schematic \\
 \end{longtable}}
 
+\runin{On the limits of this statement.} Nothing in this report is cited to an AI tool.
+Where an AI-assisted search surfaced a candidate, the candidate was carried forward only
+with a source of its own: the AskNature strategy pages are cited with their access dates,
+and where a primary paper exists it is cited in Section~\ref{sec:models}.
+
+\clearpage
 \section*{Appendix B -- Optional Supporting Material}
 \label{sec:appendixB}
 \addcontentsline{toc}{section}{Appendix B -- Optional Supporting Material}
 \renewcommand{\thetable}{B.\arabic{table}}
 \setcounter{table}{0}
+\renewcommand{\thefigure}{B.\arabic{figure}}
+\setcounter{figure}{0}
+
+This appendix collects the glossary and the full-size drawings of the Concept V2
+heat-transfer loop.
 
 \subsection*{B.1 Glossary}
 
@@ -82,36 +102,18 @@ Figures~\ref{fig:conceptA} and \ref{fig:v2loop}); if so, name the tool} &
   \item[UV-Light] Ultraviolet Light
 \end{description}
 
-\needspace{14\baselineskip}
-\subsection*{B.2 Decision log}
+\subsection*{B.2 Concept V2 heat-transfer loop}
 
-Table~\ref{tab:decisionlog} lists the decisions that shaped the concept, the alternative
-each displaced, and where in the report the reason is given.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_v2_loop.jpg}
+\caption{Closed-loop façade and roof cooling: assembled networks and intended circulation (full-size version of Figure~\ref{fig:v2loop}).}
+\label{fig:loop_full}
+\end{figure}
 
-{\small
-\renewcommand{\arraystretch}{1.15}
-\begin{longtable}{L{2.6cm} L{3.1cm} L{3.1cm} L{5.2cm}}
-\caption{Decision log.}\label{tab:decisionlog}\\
-\toprule
-\textbf{Decision} & \textbf{Chosen} & \textbf{Rejected alternative} & \textbf{Reason and where it is argued} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Decision} & \textbf{Chosen} & \textbf{Rejected alternative} & \textbf{Reason and where it is argued} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-Design question & Reduce the heat island by changing façade and roof of existing buildings & Three broader or wrongly framed candidates & Anchored to the system boundary and testable; Section~\ref{sec:designquestion} \\
-Reference city and site & Zurich, Modellierungsgebiet 03 & A generic city or a freely chosen building & Documented heat map and albedo classes, open geodata; Section~\ref{sec:context} \\
-System of interest & Façade and roof of the building envelope & The whole building, internal cooling & Keeps the project finishable; Table~\ref{tab:inout} \\
-KPI units & Physical units with baseline and target & Temperature labels without targets & Needed for a defensible comparison; Section~\ref{sec:kpi} \\
-Reflective surface & On the roof & On the façade (Concept C) & Reflective walls raised pedestrian heat stress in canyon simulations; Section~\ref{sec:morph} \\
-Water and power & No evaporating layer, no fans & Wet layer, fan-driven cavity & Water and Energy constraints of Table~\ref{tab:constraints}; Section~\ref{sec:morph} \\
-Concept pair & A (water façade) and B (textured coating) & C (responsive louvers) & Humidity is not a cooling signal; Section~\ref{sec:morph} \\
-Final concept & A, revised to V2 & B & B's benefit is unproven and of uncertain sign; Section~\ref{sec:review} \\
-Pipe location & Separable external collector panels with a drainage gap & Absorber layer without access (V1) & Hidden damage and no repair access; Section~\ref{sec:v2} \\
-Fins at ground level & Start at the first floor, thinner base & Fins to the ground (V1) & Pavement width and door operation; Section~\ref{sec:v2access} \\
-Roof network & Many short parallel circuits & Four long coils & Long coils lose about 67 times the available buoyancy pressure; Section~\ref{sec:v2check} \\
-Frost protection & Drainback & Glycol & Keeps an additive out of a loop on an occupied façade, at the cost of shoulder-season operation; Sections~\ref{sec:winter} and \ref{sec:benefits} \\
-\end{longtable}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig_loop_schematic.png}
+\caption{Flow schematic of the loop: ground-level distribution, façade heat absorption, warm riser, upper roof inlet, roof cooling array, lower roof outlet and protected cool return.}
+\label{fig:loop_schematic}
+\end{figure}

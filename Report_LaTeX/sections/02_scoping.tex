@@ -1,5 +1,5 @@
 %=======================================================================
-%  2. CHALLENGE & SCOPING  (text from the Word report; audit edits only)
+%  2  CHALLENGE & SCOPING
 %=======================================================================
 \section{Challenge \& Scoping}
 \label{sec:scoping}
@@ -7,63 +7,64 @@
 \subsection{Problem Definition}
 \label{sec:problem}
 
-Conventional cooling methods such as air conditioning worsen the Urban Heat Island
-effect by displacing the warm air from inside the building to the surrounding area.
-This local heat exchange causes the city to warm up more, increasing the need for
-air conditioning, which ultimately results in a self-reinforcing feedback loop.
+Conventional cooling methods such as air conditioning worsen the Urban Heat Island effect
+by displacing the warm air from inside the building to the surrounding area. This local
+heat exchange causes the city to warm up more, increasing the need for air conditioning,
+which ultimately results in a self-reinforcing (positive) feedback loop.
 
 \subsection{Context and Constraints}
 \label{sec:context}
 
-All context values, benchmarks and engineering checks in this report refer to the
-City of Zurich. Zürich was chosen for four reasons:
+All context values, benchmarks and engineering checks in this report refer to the City
+of Zurich. Fixing one reference city is what makes the constraints and the KPI targets
+checkable. Zürich was chosen for four reasons:
 
 \begin{enumerate}
-\item The city has adopted a heat-mitigation strategy, the Fachplanung
-  Hitzeminderung~\cite{stadtzuerich2020}, with an implementation agenda, a guidance
-  leaflet for building owners and thematic maps. The project therefore has a
-  documented heat map and an albedo classification to refer to.
-\item The city publishes an open climate analysis including geodata, which let us
-  select a documented reference site.
-\item MeteoSwiss operates long term measurement stations in and around the city.
-\item Its building style and infrastructure are representative of the Swiss
-  Mittelland, so results transfer to comparable Swiss cities.
+  \item The city has adopted a heat-mitigation strategy, the Fachplanung Hitzeminderung
+    \cite{stadtzuerich_web}, with an implementation agenda, a guidance leaflet for
+    building owners and thematic maps. The project therefore has a documented baseline
+    and published target values instead of invented ones.
+  \item The city publishes an open climate analysis including geodata, so the reference
+    site can be selected from measured data instead of intuition.
+  \item MeteoSwiss operates long term measurement stations in and around the city.
+  \item Its building style and infrastructure are representative of the Swiss
+    Mittelland, so results transfer to comparable Swiss cities.
 \end{enumerate}
+
+\clearpage
 
 \subsubsection{Reference Building}
 \label{sec:refbuilding}
 
-For comparison and reference purposes a building inside of Zurich was chosen. The
-chosen building is the Modellierungsgebiet 03 -- Geschlossene Randbebauung (closed
-perimeter block). It consists of two outward-closed blocks of five stories including
-a roof structure and an enclosed private courtyard. It is located in a dense
-district close to the city center. The city's assessment is that the reduced air
-exchange and lack of cold air supply makes this building overheat comparatively
-quickly~\cite[pp.~148--151]{stadtzuerich2020}.
+For comparison and reference purposes a building inside of Zurich was chosen. The chosen
+building is the Modellierungsgebiet 03 -- Geschlossene Randbebauung (closed perimeter
+block). It consists of two outward-closed blocks of five stories including a roof
+structure and an enclosed private courtyard. It is located in a dense district close to
+the city center. The city's assessment is that the reduced air exchange and lack of cold
+air supply makes this building overheat comparatively quickly.
 
 \subsubsection{Constraints}
 \label{sec:constraints}
 
-Table~\ref{tab:constraints} separates hard constraints where a violation
-disqualifies a concept, from soft constraints which weight the evaluation but do not
-necessarily disqualify a concept.
+Table~\ref{tab:constraints} separates hard constraints, where a violation disqualifies a
+concept, from soft constraints, which weight the evaluation but do not necessarily
+disqualify a concept.
 
-\begin{table}[!htb]
-\centering
+\begin{table}[H]
+\centering\small
 \caption{Context conditions and constraints.}
 \label{tab:constraints}
-\renewcommand{\arraystretch}{1.15}
-\small
-\begin{tabularx}{\textwidth}{L{2.7cm} L{0.9cm} X}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L{3.0cm} L{1.2cm} Y}
 \toprule
 \textbf{Type} & \textbf{Class} & \textbf{Constraint} \\
 \midrule
 Energy & hard & Limit auxiliary electrical energy for the cooling function. \\
 Water & hard & No unnecessary water waste. \\
-Townscape & hard & The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbor rights can restrict visible changes~\cite[p.~128]{stadtzuerich2020}. \\
+Townscape & hard & The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbor rights can restrict visible changes \cite{stadtzuerich_web}, \cite[p.~128]{stadtzuerich2020}. \\
 Glare & hard & No specular glare towards streets, neighboring flats or traffic, which can impede day to day life. \\
-Climate & hard & Must survive the Swiss annual cycle: frost to about \qty{-10}{\celsius}, freeze--thaw cycles, driving rain, UV-Light, and periods of several dry weeks in summer (team design assumptions). \\
-Winter & hard & Must not increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off has to be quantified. \\
+Climate & hard & Must survive the Swiss annual cycle: frost to about $-10$\,°C, freeze--thaw cycles, driving rain, UV-light, and periods of several dry weeks in summer. \\
+Winter & hard & Must not increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off must be quantified, not ignored. \\
 Existing building & soft & Preferable, but not necessary. Concepts can also be developed for only new buildings. \\
 Installation & soft & Must be installable by ordinary trades on an occupied building, ideally without full scaffolding. \\
 Maintenance & soft & Must remain functional with little maintenance. \\
@@ -75,112 +76,118 @@ Economic & soft & Cost per square meter should be in the range of a normal refur
 \end{tabularx}
 \end{table}
 
+\clearpage
+
 \subsection{System View and Project Boundary}
 \label{sec:systemview}
 
 \subsubsection{Super-system}
-
 The chosen super system is the city and its existing infrastructure.
 
 \subsubsection{System of interest}
-
-The core interest of this project focuses on heat-regulation of the outer layer of
-a building including the façade and the roof.
+The core interest of this project focuses on heat-regulation of the outer layer of a
+building including the façade and the roof.
 
 \subsubsection{Parallel systems}
-
+There are several parallel systems which might need to be involved or considered when
+finding solutions for the system of interest:
 \begin{itemize}
-\item Stormwater and sewer network
-\item Street and pavement network
-\item Power grid and building energy system
-\item Residents
-\item Cars, Bicycles, Public transport and other forms of transportation
+  \item Stormwater and sewer network
+  \item Street and pavement network
+  \item Power grid and building energy system
+  \item Residents
+  \item Cars, bicycles, public transport and other forms of transportation
 \end{itemize}
 
 \subsubsection{Subsystems}
-
+There are several subsystems involved in the system of interest. These subsystems are to
+be considered when developing a concept.
 \begin{itemize}
-\item Outer surface
-\item Storage and insulation layer
-\item Water paths
-\item Attachment to the substrate
+  \item Outer surface of a façade
+  \item Insulation layer
+  \item Water paths
+  \item Attachment to the substrate
 \end{itemize}
 
-Table~\ref{tab:inout} states which aspects are scoped in or out.
+Table~\ref{tab:inout} states which aspects are scoped in or out to further narrow down
+the project boundaries.
 
-\begin{table}[!htb]
-\centering
+\begin{table}[H]
+\centering\small
 \caption{Project boundary: what is deliberately in and out of the project.}
 \label{tab:inout}
-\renewcommand{\arraystretch}{1.15}
-\small
-\begin{tabularx}{\textwidth}{X X}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{Y Y}
 \toprule
 \textbf{IN the project} & \textbf{OUT of the project} \\
 \midrule
-Prevent heat buildup and remove heat from the building façade. & Redesign of the building itself. Reuse of the stored energy. Internal cooling. \\
+Prevent heat buildup and remove heat from the building façade. &
+Redesign of the building itself. Reuse of the stored energy. No internal cooling. \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\clearpage
 
 \subsection{Design Question}
 \label{sec:designquestion}
 
 \subsubsection{Candidate questions considered}
 
-Table~\ref{tab:questions} shows the rejected candidates.
+To define the project several design questions were formulated and evaluated.
+Table~\ref{tab:candidates} shows the rejected candidates.
 
-\begin{table}[!htb]
-\centering
+\begin{table}[H]
+\centering\small
 \caption{Design questions considered, and why they were rejected.}
-\label{tab:questions}
-\renewcommand{\arraystretch}{1.15}
-\small
-\begin{tabularx}{\textwidth}{L{0.5cm} L{5.4cm} X}
+\label{tab:candidates}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L{0.5cm} Y Y}
 \toprule
 \textbf{\#} & \textbf{Candidate} & \textbf{Assessment} \\
 \midrule
-1 & How do we prevent heat build-up in urban areas? & Too broad. No place, no time, no intervention point. The equivalent of \enquote{How might we end world hunger?} \\
-2 & How could we use the energy or heat build-up positively while lowering temperature? & Right idea, but unanchored: no location, and \enquote{positively} does not say for what. \\
-3 & How might we get the heat that Zurich's existing buildings store during the day back out of the city before the next morning, without using energy? & Well-formed and highly testable, but it prescribes when and how the heat has to leave and leaves little room for variation. Its intervention point, the existing buildings, is taken over into the selected question. \\
-4 & How can we prevent heat waves causing heat islands? & Factually wrong. Heat waves do not cause heat islands. The urban heat island is a permanent consequence of urban infrastructure and exists on ordinary summer days. A heat wave makes it dangerous, but it does not create it. \\
+1 & How do we prevent heat build-up in urban areas? &
+Too broad. No place, no time, no intervention point. The equivalent of ``How might we end world hunger?'' \\
+2 & How could we use the energy or heat build-up positively while lowering temperature? &
+Right idea, but unanchored: no location, and ``positively'' does not say for what. \\
+3 & How might we get the heat that Zurich's existing buildings store during the day back out of the city before the next morning, without using energy? &
+Well-formed and highly testable. Needs only small adjustment. But also a bit too narrow and does not leave a lot of variation. \\
+4 & How can we prevent heat waves causing heat islands? &
+Factually wrong. Heat waves do not cause heat islands. The urban heat island is a permanent consequence of urban infrastructure and exists on ordinary summer days. A heat wave makes it dangerous, but it does not create it. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsubsection{Selected design question}
+\label{sec:selectedquestion}
 
-\emph{\textbf{How might we reduce the urban heat island effect in cities like
-Zurich by changing the façade and roof of existing buildings?}}
+\textbf{\emph{How might we reduce the urban heat island effect, in cities like Zurich?}}
 
-The added clause fixes the intervention point at the system of interest of
-Section~\ref{sec:systemview}. It allows some freedom in how to reduce the urban heat
-island effect, and it takes over the mechanism of candidate 3 without prescribing when
-and how the heat has to leave.
+This question is formulated neither too narrowly nor too widely. It allows some freedom in
+how to reduce the urban heat island effect, but it also refrains from a too open
+interpretation by narrowing the scope of the project to cities similar to Zurich.
 
-\needspace{16\baselineskip}
 \subsection{Functions and Functional Diagram}
 \label{sec:functions}
 
 \subsubsection{Functions}
 
-Table~\ref{tab:functions} displays the chosen functions and their respective
-taxonomy link.
+Table~\ref{tab:functions} displays the chosen functions and their respective taxonomy
+link.
 
-\begin{table}[!htb]
-\centering
+\begin{table}[H]
+\centering\small
 \caption{Functions list.}
 \label{tab:functions}
-\renewcommand{\arraystretch}{1.15}
-\small
-\begin{tabularx}{\textwidth}{L{0.8cm} L{4.2cm} X}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L{0.8cm} L{4.2cm} Y}
 \toprule
 \textbf{ID} & \textbf{Function (verb)} & \textbf{Taxonomy link -- Explanation} \\
 \midrule
-F1 & Reflect short-wave radiation & Prevent solar radiation -- Avoid absorbing solar energy (Visible \& near infrared light). \\
+F1 & Reflect short-wave radiation & Prevent solar radiation -- Avoid absorbing solar energy (visible \& near infrared light). \\
 F2 & Shade a surface & Prevent excess temperature -- Reduce direct light exposure on structural surfaces. \\
-F3 & Dissipate / Transfer heat & Modify thermal conditions -- Transfer thermal energy via transmission or thermal radiation. \\
-F4 & Evaporate liquid & Regulate physical processes -- Heat extraction using moisture or water \\
+F3 & Dissipate / transfer heat & Modify thermal conditions -- Transfer thermal energy via transmission or thermal radiation. \\
+F4 & Evaporate liquid & Regulate physical processes -- Heat extraction using moisture or water. \\
 F5 & Resist degradation & Prevent structural breakdown -- Maintain long-term durability against UV, rain, and frost. \\
 \bottomrule
 \end{tabularx}
@@ -189,25 +196,49 @@ F5 & Resist degradation & Prevent structural breakdown -- Maintain long-term dur
 \subsubsection{Functional Diagram}
 \label{sec:funcdiagram}
 
-Figure~\ref{fig:funcdiagram} draws the functions of Table~\ref{tab:functions} as a
-flow picture. Incoming shortwave radiation is either reflected (F1) or the surface is
-shaded (F2); what is absorbed raises the surface temperature and leaves again by F3,
-to the sky and to the street-canyon air, or by F4, where liquid water enters the
-layer and leaves as vapour. Whatever neither path removes flows into the building.
-The surface temperature is the signal that sets how strongly F3 and F4 act.
+Using the functions listed in Table~\ref{tab:functions} a couple of flows can be
+constructed (Figure~\ref{fig:funcdiagram}).
 
-\input{sections/fig_funcdiagram}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=7mm and 7mm,
+  every node/.style={font=\small},
+  input/.style={draw=zhawblue,line width=1pt,fill=zhawblue!12,rounded corners=2pt,
+                align=center,inner sep=4pt,minimum height=10mm,text width=31mm},
+  func/.style={draw=black!70,fill=white,rounded corners=2pt,align=center,
+               inner sep=4pt,minimum height=10mm,text width=31mm},
+  arr/.style={-{Latex[length=2.2mm]},thick,draw=black!70}
+]
+\node[input] (in) {Incoming shortwave\\radiation};
+\node[func, right=of in, yshift=11mm] (reflect) {Reflect shortwave\\radiation \scriptsize (F1)};
+\node[func, right=of in, yshift=-11mm] (shade) {Shade surface\\\scriptsize (F2)};
+\node[func, right=of shade] (transfer) {Transfer\\excess heat \scriptsize (F3)};
+\node[func, right=of transfer, yshift=8mm] (dissipate) {Dissipate heat\\\scriptsize (F3)};
+\node[func, right=of transfer, yshift=-8mm] (evaporate) {Evaporate liquid\\\scriptsize (F4)};
+\draw[arr] (in.east) -- (reflect.west);
+\draw[arr] (in.east) -- (shade.west);
+\draw[arr] (shade) -- (transfer);
+\draw[arr] (transfer.east) -- (dissipate.west);
+\draw[arr] (transfer.east) -- (evaporate.west);
+\end{tikzpicture}
+\caption{Functional diagram: the two flows built from the functions of Table~\ref{tab:functions}. Flow 1 reflects the incoming radiation; flow 2 shades the surface and transfers the excess heat, which is then dissipated or removed by evaporation.}
+\label{fig:funcdiagram}
+\end{figure}
 
 \subsection{Biologized Questions}
-\label{sec:bioq}
+\label{sec:biologized}
+
+To ease the search for solutions developed by nature a few biologized questions were
+formulated:
 
 \begin{enumerate}
-\item How does nature reflect incoming shortwave radiation?
-\item How does nature shade a surface even in the desert?
-\item How does nature dissipate excess heat?
-\item How does nature transfer excess heat?
-\item How does nature dissipate excess heat using moisture?
-\item How does nature keep a functional surface clean without cleaning it?
+  \item How does nature reflect incoming shortwave radiation?
+  \item How does nature shade a surface even in the desert?
+  \item How does nature dissipate excess heat?
+  \item How does nature transfer excess heat?
+  \item How does nature dissipate excess heat using moisture?
+  \item How does nature keep a functional surface clean without cleaning it?
 \end{enumerate}
 
 \subsection{Performance Criteria and KPIs}
@@ -215,35 +246,36 @@ The surface temperature is the signal that sets how strongly F3 and F4 act.
 
 \subsubsection{KPIs}
 
-The Albedo index defines a value between 0 -- 1 where 0 is total absorption of all
-incoming radiation and 1 is the total reflection of all incoming
-radiation~\cite{nasa_albedo}. Shading provides an alternative way to keep a surface
-cool~\cite{dussadee2018}. Water evaporation is an effective solution to remove heat
-using moisture as means of heat transfer; the aim is to reduce the needed amount of
-water evaporation to conserve water.
+Table~\ref{tab:kpi} shows the measurable KPIs used as benchmarks for the project.
 
-Table~\ref{tab:kpi} defines one KPI per function, with the unit in which we compare
-concepts, the baseline of the untreated reference block, the target, and the
-measurement we would use to check it. The baseline class and the target of KPI1 come
-from the albedo classification of the Fachplanung, which rates 0.30 and below as low
-and 0.80 and above as high~\cite[p.~128]{stadtzuerich2020}. The target of KPI5
-follows from the Water constraint in Table~\ref{tab:constraints}. The targets of
-KPI2, KPI4 and KPI6 are team working targets: we set them to have a number to test
-against, and they are not city values. KPI3 and KPI4 both belong to F3 but measure
-different things: KPI3 counts the heat that actually leaves the façade through a
-removal path, which is the quantity the engineering checks in
-Section~\ref{sec:check1} and Section~\ref{sec:check2} estimate; KPI4 is the effect on
-the surface that a pedestrian is exposed to.
+\begin{table}[H]
+\centering\small
+\caption{KPIs.}
+\label{tab:kpi}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L{0.5cm} L{1.8cm} Y L{4.0cm}}
+\toprule
+\textbf{\#} & \textbf{Function} & \textbf{KPI} & \textbf{Unit} \\
+\midrule
+1 & F1 & Reflection index using the albedo index \cite{nasa_albedo} & 0 -- 1 \\
+2 & F2 & Time a surface is in the shade \cite{dussadee2018} & m\textsuperscript{2}/h spent in the shade \\
+3 & F3 & Heat dissipated & kW \\
+4 & F3 & Heat transferred & kW \\
+5 & F4 & Water evaporated & L \\
+6 & F5 & Efficiency factor after a set amount of time & \% of initial \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\input{sections/tab_kpi}
+\subsubsection{Life's Principles}
+\label{sec:lifeprinciples}
 
-\subsubsection{Life Principles}
-\label{sec:lp}
-
-The life principles which should reflect the end solution include:
+The Life's Principles which should reflect the end solution include:
 
 \begin{itemize}
-\item Be resource efficient: minimize the use of external resources
-\item Adapt to changing conditions: adapt to day/night time as well as season cycles
-\item Use life-friendly chemistry: refrain the use of toxic chemicals or materials
+  \item Be resource efficient: minimize the use of external resources
+  \item Adapt to changing conditions: adapt to day/night time as well as season cycles
+  \item Use life-friendly chemistry: refrain from the use of toxic chemicals or materials
 \end{itemize}
+
+\clearpage

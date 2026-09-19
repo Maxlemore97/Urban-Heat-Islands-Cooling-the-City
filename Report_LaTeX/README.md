@@ -3,10 +3,10 @@
 Biomimicry challenge report (Challenge 1) — ZHAW Blockweek Bionics 2026,
 Institute for Sustainable Development.
 
-LaTeX version of `Report_template_26_V3_final.docx`. Section 2
-(*Challenge & Scoping*) is pre-filled with the Day-1 afternoon task from
-`2 Scoping V6.pptx`; all other sections are scaffolds that carry the
-template's own instructions as LaTeX comments.
+LaTeX version of the team's Word draft
+`Urban Heat Island - Cooling the City - Report (1).docx`. The content follows
+the Word draft one to one; only design and formal matters (numbering of figures
+and tables, IEEE citations, headings, language slips) differ.
 
 ## Repository layout
 
