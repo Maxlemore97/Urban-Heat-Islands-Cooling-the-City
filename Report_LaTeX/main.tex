@@ -1,18 +1,9 @@
 %=======================================================================
 %  Biomimicry Challenge Report  --  ZHAW Blockweek Bionics 2026
-%  LaTeX template built from "Report_template_26_V3_final.docx"
+%  Challenge 1: Urban Heat Islands -- Cooling the City
 %
-%  HOW TO USE ON OVERLEAF
-%    1. Upload the ZIP  ->  New Project  ->  Upload Project
-%    2. Compiler: pdfLaTeX (Menu -> Settings). Biber runs automatically.
-%    3. Edit the files in sections/. Do not rename the section headings:
-%       the assignment says "Use the headings from this template."
-%
-%  STATUS
-%    Section 2 (Challenge & Scoping) is pre-filled with the Day-1
-%    afternoon task for Challenge 1 "Urban Heat Islands".
-%    All other sections are scaffolds containing the template's own
-%    instructions as LaTeX comments (they do not appear in the PDF).
+%  Build:  latexmk -pdf main.tex   (pdfLaTeX + biber)
+%  Section headings follow "Report_template_26_V3_final.docx" verbatim.
 %=======================================================================
 \documentclass[11pt,a4paper]{article}
 
@@ -41,7 +32,7 @@
 
 %------------------------------------------------------------ references
 \usepackage{csquotes}
-\usepackage[style=authoryear,backend=biber,maxcitenames=2,uniquelist=false]{biblatex}
+\usepackage[style=ieee,backend=biber,maxbibnames=6,minbibnames=3,urldate=long]{biblatex}
 \addbibresource{references.bib}
 
 %--------------------------------------------------------------- styling
@@ -55,6 +46,9 @@
 \titleformat{\section}{\normalfont\Large\bfseries\color{zhawblue}}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\newcommand{\sectionbreak}{\clearpage}   % every main chapter starts on a new page
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -63,9 +57,35 @@
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\setlist{itemsep=2pt,parsep=0pt,topsep=4pt}
+\setlist{itemsep=2pt,parsep=0pt,topsep=4pt,beginpenalty=10000,midpenalty=10000}
+% Page-break hygiene: no single lines stranded at the top or bottom of a page,
+% no page break directly after a heading, \needspace for manual nudges.
+\usepackage{needspace}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\raggedbottom
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\sisetup{per-mode=symbol,detect-weight=true}
+\sisetup{per-mode=symbol,detect-weight=true,range-phrase={--},range-units=single}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+
+% Float placement: tables never on float pages, generous room at page top,
+% and more air around floats placed in the text.
+\usepackage{float}
+\usepackage[section]{placeins}   % floats never drift past the next \section
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+\setlength{\intextsep}{18pt plus 4pt minus 2pt}
+\setlength{\textfloatsep}{22pt plus 4pt minus 4pt}
+\setlength{\abovecaptionskip}{6pt}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+
+% Tables and figures are numbered per section (Table 2.1, Figure 3.4 ...)
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+\counterwithin{equation}{section}
 
 % TikZ styles shared by the system view and the functional diagram
 \tikzset{
@@ -79,14 +99,12 @@
                      inner sep=4pt,minimum height=8mm,font=\scriptsize},
   flowarr/.style  = {-{Latex[length=2mm]},thick,draw=black!65},
   wateharr/.style = {-{Latex[length=2mm]},thick,draw=zhawblue,dashed},
+  infoarr/.style  = {-{Latex[length=2mm]},thick,draw=orange!85!black,dash pattern=on 4pt off 2pt},
 }
 
 %--------------------------------------------------- placeholder command
-% Use \todo{...} for anything still open. Remove all of them before hand-in.
+% \todo{...} marks an item the team must supply. None may remain at hand-in.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
-% Open items inside references.bib: visible to the team in the .bib file,
-% invisible in the printed bibliography.
-\newcommand{\bibtodo}[1]{}
 
 \begin{document}
 
@@ -100,42 +118,6 @@
 \input{sections/03_bioinspired_design}
 \input{sections/04_sustainability}
 \input{sections/05_discussion}
-
-\section{Glossary}
-\label{sec:glossary}
-
-\begin{description}\setlength{\itemsep}{2pt}
-  \item[Short-wave radiation] The radiation the sun delivers, roughly
-    \qtyrange{300}{2500}{\nano\metre} (ultraviolet, visible and near-infrared).
-    It is what a surface can \emph{reflect}; the fraction reflected is the solar
-    reflectance $\alpha_\mathrm{sol}$ of criterion~2. Function F2 acts on it.
-  \item[Long-wave radiation] The thermal radiation a surface at ordinary
-    temperatures emits by itself, roughly \qtyrange{4}{50}{\micro\metre}. It is
-    what a surface can \emph{give away}, including at night and to a clear sky,
-    and it is governed by the emittance $\varepsilon$ rather than by
-    $\alpha_\mathrm{sol}$. Function F4 acts on it. The two are separate
-    properties: a surface can be bright in the short wave and still a poor
-    emitter in the long wave, which is why criterion~2 and criterion~5 are
-    reported apart.
-  \item[Atmospheric window] The band near \qtyrange{8}{13}{\micro\metre} in
-    which a clear sky is largely transparent, so long-wave radiation emitted
-    there escapes to space rather than being returned. It is what makes
-    night-time radiative cooling below air temperature possible.
-  \item[Albedo] The share of incoming short-wave radiation a surface reflects.
-    The city classes $\leq 0.30$ as low and $\geq 0.80$ as high
-    \parencite[128]{stadtzuerich2020}.
-  \item[PET] Physiologically equivalent temperature: the temperature a person
-    would experience given air temperature, radiation, humidity and wind. It is
-    the metric the client uses to judge a measure at street level, and it is a
-    different quantity from surface temperature.
-  \item[UHI] Urban heat island: the persistent temperature difference between a
-    city and its rural surroundings, caused by urban surface properties and
-    geometry \parencite{oke1982}. In Zurich it reaches about \qty{7}{\kelvin} at
-    night \parencite{stadtzuerich_merkblatt}.
-  \item[Solution-neutral] A statement of \emph{what} must happen that names no
-    means of achieving it. Design questions and functions in this report are
-    written this way so the biology can propose the means.
-\end{description}
 
 \section{References}
 \printbibliography[heading=none]

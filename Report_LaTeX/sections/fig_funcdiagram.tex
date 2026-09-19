@@ -1,0 +1,89 @@
+% Functional diagram: orthogonal (straight-line) layout on a 4-column grid.
+% Columns: inputs (x=0), functions F1/F2 + state (x=3.4), functions F3/F4 (x=6.8), sinks (x=10.4).
+\begin{figure}[htbp]
+\centering
+\scalebox{0.9}{%
+\begin{tikzpicture}[x=1cm,y=1cm,
+  lbl/.style={font=\scriptsize,fill=white,inner sep=1.5pt},
+  dot/.style={circle,fill=black!65,inner sep=1.3pt}]
+
+% ---------------------------------------------------------------- nodes
+\node[funcbox,fill=yellow!25,text width=1.9cm,minimum height=9mm] (sun) at (0,2.6)
+  {Solar\\ irradiance};
+\node[funcbox,text width=2.4cm,minimum height=11mm] (f12) at (3.4,3.7)
+  {\textbf{F1} Reflect short-wave radiation\\[1pt] \textbf{F2} Shade a surface};
+\node[funcbox,fill=red!8,text width=2.4cm,minimum height=11mm] (ts) at (3.4,1.4)
+  {Absorbed heat\\[1pt] \itshape state: surface temperature $T_s$};
+\node[funcbox,text width=2.4cm,minimum height=9mm] (f3) at (6.8,3.7)
+  {\textbf{F3} Dissipate / transfer heat};
+\node[funcbox,text width=2.4cm,minimum height=9mm] (f4) at (6.8,0.5)
+  {\textbf{F4} Evaporate liquid};
+\node[funcbox,fill=zhawblue!10,text width=1.9cm,minimum height=9mm] (wat) at (6.8,-1.1)
+  {Water in};
+\node[funcbox,fill=gray!12,text width=2.0cm,minimum height=9mm] (sky) at (10.4,3.7) {Sky};
+\node[funcbox,fill=gray!12,text width=2.0cm,minimum height=9mm] (air) at (10.4,2.3) {Street-canyon air};
+\node[funcbox,fill=gray!12,text width=2.0cm,minimum height=9mm] (vap) at (10.4,0.5) {Vapour to air};
+\node[funcbox,fill=gray!12,text width=2.0cm,minimum height=9mm] (bld) at (10.4,-2.1) {Building interior};
+
+% ---------------------------------------------------------- energy flows
+% sun -> F1/F2 and -> absorbed heat (branch b1)
+\coordinate (b1) at (1.7,2.6);
+\draw[flowarr] (sun.east) -- (b1) |- (f12.west);
+\draw[flowarr] (b1) |- (ts.west);
+\node[dot] at (b1) {};
+\node[lbl,anchor=east] at (1.58,2.0) {absorbed};
+
+% reflected: over the top, straight down into the sky
+\draw[flowarr] (f12.north) -- ++(0,1.1) -| (sky.north);
+\node[lbl] at (6.9,5.35) {reflected};
+
+% absorbed heat -> F3 and F4 (branch b2)
+\coordinate (b2) at (5.0,1.4);
+\draw[flowarr] (ts.east) -- (b2) |- (f3.west);
+\draw[flowarr] (b2) |- (f4.west);
+\node[dot] at (b2) {};
+
+% F3 -> sky (radiation) and -> canyon air (convection), branch b3
+\coordinate (b3) at (8.6,3.7);
+\draw[flowarr] (f3.east) -- (b3) -- (sky.west);
+\draw[flowarr] (b3) |- (air.west);
+\node[dot] at (b3) {};
+\node[lbl] at (8.7,4.0) {radiation};
+\node[lbl,rotate=90] at (8.6,3.0) {convection};
+
+% residual: absorbed heat -> building interior (to be minimised)
+\draw[flowarr,draw=red!70] (ts.south) |- (bld.west);
+\node[lbl,text=red!70] at (6.8,-1.82) {residual heat into the building};
+
+% -------------------------------------------------------- material flows
+\draw[wateharr] (wat.north) -- (f4.south);
+\draw[wateharr] (f4.east) -- (vap.west);
+
+% ------------------------------------------------------ information flow
+% T_s drives F3 and F4: orange dashed lines run parallel to the energy paths
+\draw[infoarr,transform canvas={xshift=3.5pt,yshift=-3.5pt}] (ts.east) -- (b2) |- (f3.west);
+\draw[infoarr,transform canvas={xshift=3.5pt,yshift=-3.5pt}] (b2) |- (f4.west);
+\node[lbl,text=orange!85!black,font=\scriptsize\bfseries] at (5.85,2.55) {$T_s$ signal};
+
+% ------------------------------------------------------- system boundary
+\begin{scope}[on background layer]
+  \node[draw=zhawblue,dashed,rounded corners=4pt,fit=(f12)(ts)(f3)(f4),
+        inner sep=9pt] (fb) {};
+\end{scope}
+\node[font=\scriptsize\bfseries,color=zhawblue,anchor=east]
+  at ($(fb.north east)+(-0.1,0.28)$) {SYSTEM BOUNDARY};
+
+% ---------------------------------------------------------------- legend
+\node[font=\scriptsize,anchor=west,align=left] at (-1.1,-3.1)
+  {\textcolor{black!65}{\textbf{---}} energy flow \quad
+   \textcolor{zhawblue}{\textbf{--\,--}} material flow (water, vapour) \quad
+   \textcolor{orange!85!black}{\textbf{--\,--}} information flow \quad
+   \textcolor{red!70}{\textbf{---}} flow to be minimised};
+\end{tikzpicture}}
+\caption{Solution-neutral functional diagram; the system boundary is the outer layer of the building. Solid arrows are energy flows, blue
+dashed arrows the material flow of F4 (water in, vapour out), the orange dashed
+arrows the information flow: the surface temperature drives the strength of F3 and
+F4. F5 (resist degradation) acts on everything inside the boundary and is not
+drawn.}
+\label{fig:funcdiagram}
+\end{figure}
