@@ -1,0 +1,934 @@
+     1	**Report biomimicry challenge**
+     2	
+     3	**Urban Heat Island -- Cooling the City**
+     4	
+     5	# Introduction
+     6	
+     7	## Background & Relevance
+     8	
+     9	The Urban Heat Island (UHI) effect represents a growing environmental and public health challenge, characterized by significantly elevated temperatures in urban environments relative to surrounding rural areas \[1\]. This effect is worsened by climate change and a high concentration of heat absorbing infrastructure, like cement and asphalt. Conventional mitigation strategies rely heavily on air conditioning, which creates a counterproductive cycle. It increases external temperatures through heat rejection and increases energy consumption, often causing higher greenhouse gas emissions.
+    10	
+    11	To address this problem, the report investigates nature inspired passive cooling mechanisms, also known as biomimicry.
+    12	
+    13	## Design Challenge & Project Contribution
+    14	
+    15	The design challenge lies in developing an efficient, scalable cooling system capable of mitigating the urban heat island effect without relying on high energy consumption.
+    16	
+    17	This project aims to find a solution which bridges the gap between thermal regulation and sustainable urban infrastructure. The goal is to analyze the different heat dissipation methods found in nature, specifically in animals, to find a solution which conforms with the given challenges.
+    18	
+    19	# Challenge & Scoping
+    20	
+    21	## Problem Definition
+    22	
+    23	Conventional cooling methods such as air condition worsen the Urban Heat Island effect by displacing the warm air from inside the building to the surrounding area. This local heat exchange causes the city to warm up more, increasing the need for air condition which ultimately results in a negative feedback loop.
+    24	
+    25	To break this cycle a new alternative and sustainable solution needs to be found.
+    26	
+    27	## Context and Constraints
+    28	
+    29	All context values, benchmarks and engineering checks in this report refer to the City of Zurich. Fixing one reference city is what makes the constraints and the KPI targets checkable. Zürich was chosen for four reasons:
+    30	
+    31	1.  The city has an adopted a heat-mitigation strategy, the Fachplanung Hitzeminderung [(Stadt Zürich, 2020)]{.mark}, with an implementation agenda, a guidance leaflet for building owners and thematics maps. The project therefore has a documented baseline and published target values instead of invented ones.
+    32	
+    33	2.  The city publishes an open climate analysis and including geodata, so the reference site can be selected from measured data instead of intuition.
+    34	
+    35	3.  MeteoSwiss operates long term measurement stations in and around the city.
+    36	
+    37	4.  Its building style and infrastructure are representative of the Swiss Mittelland, so results transfer to comparable Swiss cities.
+    38	
+    39	### Reference Building
+    40	
+    41	For comparison and reference purposes a building inside of Zurich was chosen. The chosen building is the Modellierungsgebiet 03 - Geschlossene Randbebauung (closed perimeter block). It consists of two outward-closed blocks of five stories including a roof structure and an enclosed private courtyard. It is located in a dense district close to the city center. The city's assessment is that the reduced air exchange and lack of cold air supply makes this building overheat comparatively quickly. Using this building as context for the report allows for a more accurate and realistic project grounded in a realistic setting.
+    42	
+    43	### Constraints
+    44	
+    45	The table below separates hard constraints where a violation disqualifies a concept, from soft constraints which weight the evaluation but do not necessarily disqualify a concept. These constraints where chosen to keep the project realistic and useful.
+    46	
+    47	  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    48	  **Type**             **Class**   **Constraint**
+    49	  -------------------- ----------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    50	  Energy               hard        Limit auxiliary electrical energy for the cooling function.
+    51	
+    52	  Water                hard        No unnecessary water waste.
+    53	
+    54	  Townscape            hard        The result must be acceptable in the Zurich townscape. Buildings may be listed; heritage protection, building law and neighbor rights can restrict visible changes [(Stadt Zürich, 2020, p. 128)]{.mark}.
+    55	
+    56	  Glare                hard        No specular glare towards streets, neighboring flats or traffic, which can impede day to day life.
+    57	
+    58	  Climate              hard        Must survive the Swiss annual cycle: frost to about −10 °C, freeze--thaw cycles, driving rain, UV-Light, and periods of several dry weeks in summer.
+    59	
+    60	  Winter               hard        Must not increase heating demand. A high solar reflectance also reduces useful winter solar gains; this trade-off must be quantified, not ignored.
+    61	
+    62	  Existing building    soft        Preferable, but not necessary. Concepts can also be developed for only new buildings.
+    63	
+    64	  Installation         soft        Must be installable by ordinary trades on an occupied building, ideally without full scaffolding.
+    65	
+    66	  Maintenance          soft        Must remain functional with little maintenance.
+    67	
+    68	  Solar energy         soft        Should not unnecessarily compromise roof- or façade-integrated photovoltaics.
+    69	
+    70	  Structural           soft        Limited additional dead load and build-up thickness on an existing envelope.
+    71	
+    72	  Embodied emissions   soft        The greenhouse gas embodied in the added infrastructure must be repaid by the avoided cooling demand within the service life, measured in kg CO₂-eq per m².
+    73	
+    74	  Economic             soft        Cost per square meter should be in the range of a normal refurbishment.
+    75	  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    76	
+    77	Table 2.1 - Context conditions and constraints.
+    78	
+    79	## System View and Project Boundary
+    80	
+    81	### Super-system
+    82	
+    83	The chosen super system is the city and its existing infrastructure. This is given by the challenge and the defined reference city of Zurich.
+    84	
+    85	### System of interest
+    86	
+    87	The core interest of this project focuses on heat-regulation of the outer layer of a building including the façade and the roof.
+    88	
+    89	### Parallel systems
+    90	
+    91	There are several parallel systems which might need to be involved or considered when finding solutions for the system of interest:
+    92	
+    93	- Stormwater and sewer network
+    94	
+    95	- Street and pavement network
+    96	
+    97	- Power grid and building energy system
+    98	
+    99	- Residents
+   100	
+   101	- Cars, Bicycles, Public transport and other forms of transportation
+   102	
+   103	### Subsystems
+   104	
+   105	There are several subsystems involved in the system of interest. These subsystems are to be considered when developing a concept.
+   106	
+   107	- Outer surface
+   108	
+   109	- Storage and insulation layer
+   110	
+   111	- Water paths
+   112	
+   113	- Attachment to the substrate
+   114	
+   115	To further scope the project these aspects are scoped in or out:
+   116	
+   117	  ----------------------------------------------------------------------------------------------------------------------------------------------------
+   118	  **IN the project**                                               **OUT of the project**
+   119	  ---------------------------------------------------------------- -----------------------------------------------------------------------------------
+   120	  Prevent heat buildup and remove heat from the building façade.   Redesign of the building itself. Reuse of the stored energy. No internal cooling.
+   121	
+   122	  ----------------------------------------------------------------------------------------------------------------------------------------------------
+   123	
+   124	Table 2.2 - Project boundary: what is deliberately in and out of the project.
+   125	
+   126	## Design Question
+   127	
+   128	### Candidate questions considered
+   129	
+   130	To define the project several design questions were formulated and evaluated. The table below shows the rejected candidates.
+   131	
+   132	  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   133	  **\#**   **Candidate**                                                                                                                                          **Assessment**
+   134	  -------- ------------------------------------------------------------------------------------------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   135	  1        How do we prevent heat build-up in urban areas?                                                                                                        Too broad. No place, no time, no intervention point. the equivalent of "How might we end world hunger?"
+   136	
+   137	  2        How could we use the energy or heat build-up positively while lowering temperature?                                                                    Right idea, but unanchored: no location, and "positively" does not say for what.
+   138	
+   139	  3        How might we get the heat that Zurich\'s existing buildings store during the day back out of the city before the next morning, without using energy?   Well-formed and highly testable. Needs only small adjustment. But also a bit too narrow and does not leave a lot of variation.
+   140	
+   141	  4        How can we prevent heat waves causing heat islands?                                                                                                    Factually wrong. Heat waves do not cause heat islands. The urban heat island is a permanent consequence of urban infrastructure and exists on ordinary summer days. A heat wave makes it dangerous, but it does not create.
+   142	  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   143	
+   144	Table 2.3 - Design questions considered, and why they were rejected.
+   145	
+   146	### Selected design question
+   147	
+   148	***How might we reduce the urban heat island effect, in cities like Zurich?***
+   149	
+   150	This question is not formulated too narrow but also not to wide. It allows some freedom in how to reduce the urban heat island effect but it also refrains from an too open interpretation by narrowing the scope of the project to cities similar to Zurich.
+   151	
+   152	## Functions and Functional Diagram
+   153	
+   154	### Functions
+   155	
+   156	Table 2.4 displays the chosen functions and their respective taxonomy link.
+   157	
+   158	  ------------------------------------------------------------------------------------------------------------------------------------
+   159	  **ID**   **Function (verb)**            **Taxonomy link -- Explanation**
+   160	  -------- ------------------------------ --------------------------------------------------------------------------------------------
+   161	  F1       Reflect short-wave radiation   Prevent solar radiation - Avoid absorbing solar energy (Visible & near infrared light).
+   162	
+   163	  F2       Shade a surface                Prevent excess temperature - Reduce direct light exposure on structural surfaces.
+   164	
+   165	  F3       Dissipate / Transfer heat      Modify thermal conditions - Transfer thermal energy via transmission or thermal radiation.
+   166	
+   167	  F4       Evaporate liquid               Regulate physical processes - Heat extraction using moisture or water
+   168	
+   169	  F5       Resist degradation             Prevent structural breakdown - Maintain long-term durability against UV, rain, and frost.
+   170	  ------------------------------------------------------------------------------------------------------------------------------------
+   171	
+   172	Table 2.4 - Functions list
+   173	
+   174	### Functional Diagram
+   175	
+   176	Using the functions listed in the table 2.4 a couple of flows can be constructed.
+   177	
+   178	1.  Incoming shortwave radiation → reflect shortwave radiation
+   179	
+   180	2.  Incoming shortwave radiation → shade surface → transfer excess heat
+   181	
+   182	    a.  → dissipate heat
+   183	
+   184	    b.  → evaporate liquid
+   185	
+   186	## Biologized Questions
+   187	
+   188	To ease the search for solutions developed by nature a few biologized questions were formulated:
+   189	
+   190	1.  How does nature reflect incoming shortwave radiation?
+   191	
+   192	2.  How does nature shade a surface even in the desert?
+   193	
+   194	3.  How does nature dissipate excess heat?
+   195	
+   196	4.  How does nature transfer excess heat?
+   197	
+   198	5.  How does nature dissipate excess heat using moisture?
+   199	
+   200	6.  How does nature keep a functional surface clean without cleaning it?
+   201	
+   202	## Performance Criteria and KPIs
+   203	
+   204	### KPIs
+   205	
+   206	**#1 Albedo Index**
+   207	
+   208	The Albedo index defines a value between 0 -- 1 where 0 is total absorption of all incoming radiation and 1 is the total reflection of all incoming radiation. \[2\]
+   209	
+   210	Therefore we can use the Albedo index as measurement unit to compare the reflective properties of our materials.
+   211	
+   212	**#2 Time spent in the shade**
+   213	
+   214	Shading provides an alternative way to keep a surface cool. \[3\] Therefore the aim of this KPI is to keep a surface under shade for as long as possible. The units of measurement for this KPI will therefore be minutes spent in the shade.
+   215	
+   216	**#3 Heat dissipated**
+   217	
+   218	This KPI aims at measuring how well heat is dissipated from a surface. This can be measured by heat dissipated (°C) in a set amount of time.
+   219	
+   220	**#4 Heat transferred**
+   221	
+   222	This KPI aims at measuring how well heat is transferred from one surface to another using any medium as transfer. This can be measured by heat transferred (°C) in a set amount of time.
+   223	
+   224	**#5 Water evaporated**
+   225	
+   226	Water evaporation is an effective solution to remove heat using moisture as means of heat transfer. This KPI uses the amount of water (liter) necessary to remove a set amount of temperature. The aim is to reduce the needed amount of water evaporation to conserve water.
+   227	
+   228	**#6 Efficiency factor**
+   229	
+   230	This KPI measures the longevity of the solution by using a efficiency factor in percentage. The goal is to keep the factor as high as possible for as long as possible.
+   231	
+   232	  ---------------------------------------------------------------------------------------
+   233	  **\#**    **Function**   **KPI**                                        **Unit**
+   234	  --------- -------------- ---------------------------------------------- ---------------
+   235	  1         F1             Reflection Index using the Albedo Index        0 - 1
+   236	
+   237	  2         F2             Time a surface is in the shade                 Minutes
+   238	
+   239	  3         F3             Heat dissipated                                °C
+   240	
+   241	  4         F3             Heat transferred                               °C
+   242	
+   243	  5         F4             Water evaporated                               L
+   244	
+   245	  6         F5             Efficiency factor after a set amount of time   \% of initial
+   246	  ---------------------------------------------------------------------------------------
+   247	
+   248	  : Table 2.5 -- KPIs
+   249	
+   250	### Life Principles
+   251	
+   252	The life principles which should reflect the end solution include:
+   253	
+   254	- Be resource efficient: minimize the use of external resources
+   255	
+   256	- Adapt to changing conditions: adapt to day/night time as well as season cycles
+   257	
+   258	- Use life-friendly chemistry: refrain the use of toxic chemicals or materials
+   259	
+   260	These life principles aim to ensure that the project keeps the solution tuned with the environment and does not introduce new hazards to the environment.
+   261	
+   262	# Bio-Inspired Design Process
+   263	
+   264	## Discovering & Abstracting
+   265	
+   266	### Research path
+   267	
+   268	To find suitable solutions both the AskNature website as well as the AskNature chat were used. The following keywords were used to find solutions produced in the nature:
+   269	
+   270	Cooling, thermal transfer, shading, heat reduction, reflect, evaporation
+   271	
+   272	Additionally the biologized questions were used to search for solutions using search engines such as google.
+   273	
+   274	The models that were selected had to fulfill at least one function mentioned in section 2. Additionally they had to fit into at least one of the defined life principles. Therefore some models were abandoned and not investigated further into.
+   275	
+   276	### Natural Models
+   277	
+   278	#### African Elephant: Ears
+   279	
+   280	**Biological mechanism**
+   281	
+   282	As seen in Figure 1 African elephants have large and highly vascularized ears which they use as heat exchange surfaces. Warm blood is transported from the body core into the ear, where heat is transferred to the surrounding air. By flapping their ears additional airflow is created which further increases the heat transfer. \[4\] This same approach is also used by the jackrabbit. \[5\]
+   283	
+   284	![Figure 3.1 African Elephant ears](media/image1.png){width="4.169811898512686in" height="2.3456714785651793in"}
+   285	
+   286	**Functional abstraction.** Transfer thermal energy from a heat generating region to a large, exchange surface and increase airflow across this surface.
+   287	
+   288	**Design principle for urban cooling.** Use dedicated heat rejection surfaces in locations with favorable airflow to transfer and dissipate heat from urban structures.
+   289	
+   290	**Life's Principle:** Be resource efficient / Adapt to changing conditions
+   291	
+   292	#### Elephant Skin: Sparse Hairs
+   293	
+   294	**Biological mechanism**
+   295	
+   296	African elephants have additionally to their ears a second cooling mechanism. They have very sparsely spread hair all over their body. Due to the low density of the body hair it does not act as an insulation layer but rather as additional surface are to transfer heat. As seen in Figure 3.2 it also serves to break the stationary air surrounding the skin. This allows for a better heat transfer. \[6\]
+   297	
+   298	![Figure 3.2 African elephant hair](media/image2.png){width="4.834332895888014in" height="2.782609361329834in"}
+   299	
+   300	**Functional abstraction.** Increase heat-transfer area by distributing sparse bulges across a warm surface.
+   301	
+   302	**Design principle for urban cooling.** Use small surface structures on façades or other heated urban surfaces to enhance passive heat transfer without substantially increasing material use.
+   303	
+   304	**Life's Principle:** Be resource efficient
+   305	
+   306	#### Cactus Ribs
+   307	
+   308	**Biological mechanism**
+   309	
+   310	Many cacti have ribbed surfaces consisting of repeated peaks and troughs. The peaks shade parts of the troughs and therefore reduce direct solar exposure. Air within the shaded troughs remains cooler and absorbs heat from the cactus which rises as it warms. The ribbed geometry also increases surface area and disrupts airflow around the plant, similar to the elephant hair. \[7\]
+   311	
+   312	**Functional abstraction**
+   313	
+   314	Use folded surface geometry to combine self-shading, increased heat-transfer area and controlled interaction with airflow.
+   315	
+   316	**Design principle for urban cooling**
+   317	
+   318	Integrate ribbed or folded geometries into urban surfaces to reduce direct solar exposure while simultaneously promoting passive heat dissipation.
+   319	
+   320	**Life's Principle:** Be resource efficient
+   321	
+   322	#### Saharan Silver Ant: Reflective Hairs
+   323	
+   324	**Biological Mechanism**
+   325	
+   326	The Saharan silver ant is covered with densely packed hairs that have a triangular cross-section and grooved surfaces. These hairs reduce heat gain in two ways: they strongly reflect visible and near-infrared solar radiation through total internal reflection and they increase emissivity in the mid-infrared range, allowing the ant to radiate excess body heat more efficiently. AskNature reports that the hairs alone keep the ant about 2°C cooler, while the combined mechanisms provide an additional cooling effect of approximately 5--10°C. \[8\]
+   327	
+   328	**Functional abstraction**
+   329	
+   330	Use micro structured surfaces to reflect incoming solar radiation while simultaneously enhancing thermal radiation away from the surface.
+   331	
+   332	**Design principle for urban cooling**
+   333	
+   334	Develop façade or roof surfaces with micro structured geometries that minimize absorption in the visible and near-infrared solar spectrum while maximizing heat emission in the mid-infrared. This could reduce solar heat gain and improve passive radiative cooling without requiring active energy input.
+   335	
+   336	**Life's Principle:** Adapt to changing conditions / Use life-friendly chemistry
+   337	
+   338	#### Desert Snail Shell
+   339	
+   340	**Biological mechanism**
+   341	
+   342	The desert snail Sphincterochila boissieri limits heat gain through a highly reflective shell and internal insulating air spaces as seen in Figure 3.3. AskNature reports approximately 90 % reflectance in the visible spectrum and about 95 % in the near-infrared range. The snail also withdraws into the upper parts of its shell, while air-filled spaces and limited contact with the hot substrate reduce conductive heat transfer. \[9\]
+   343	
+   344	![Figure 3.3 Desert Snail \[9\]](media/image3.jpeg){width="3.993740157480315in" height="3.4469695975503063in"}
+   345	
+   346	**Functional abstraction**
+   347	
+   348	Reduce incoming radiant energy and interrupt conductive heat transfer using reflective surfaces and stationary air layers.
+   349	
+   350	**Design principle for urban cooling**
+   351	
+   352	Combine highly reflective external surfaces with insulating or ventilated air cavities to limit solar heat storage in roofs and façades.
+   353	
+   354	**Life's Principle:** Be resource efficient / Adapt to changing conditions
+   355	
+   356	#### Morpho Butterfly Wing
+   357	
+   358	**Biological mechanism**
+   359	
+   360	Morpho butterflies generate their characteristic color using transparent chitin-and-air structures at micro- and nanoscale. As seen in Figure 3.4, ridges and cross-ribs interact with incoming light through diffraction and interference, causing selected wavelengths to be strongly reflected. The color therefore results primarily from physical structure rather than pigmentation. \[10\]
+   361	
+   362	![Figure 3.4 Reflection with nano structures \[11\]](media/image4.png){width="4.9810203412073495in" height="2.8030293088363956in"}
+   363	
+   364	**Functional abstraction**
+   365	
+   366	Control the spectral interaction between a surface and incoming radiation through micro- and nanoscale geometry.
+   367	
+   368	**Design principle for urban cooling**
+   369	
+   370	Engineer structured surfaces that selectively manipulate incident solar radiation while maintaining desired optical properties. I needs to be mentioned that the Morpho demonstrates structural color rather than near-infrared heat rejection and that cooling application requires separate verification.
+   371	
+   372	**Life's Principle:** Be resource efficient
+   373	
+   374	#### Camel Fur and Sweat
+   375	
+   376	**Biological mechanism**
+   377	
+   378	Dromedary camels combine insulation with evaporative cooling. Figure 3.4 displays how exactly this mechanism works. The sweat glands release water which removes the body heat while evaporation and the thick fur blocks the hot air from reaching the skin. Furthermore the camel reflects light with their pale color. \[12\]
+   379	
+   380	![Figure 3.4 Insulation with evaporative cooling \[12\]](media/image5.jpeg){alt="A diagram showing a section of camel fur and how it slows heat gain from light, air, and the environment." width="5.160377296587926in" height="3.372127077865267in"}
+   381	
+   382	**Functional abstraction**
+   383	
+   384	Block heat using insolation in combination with evaporation as a means of heat dissipation.
+   385	
+   386	**Design principle for urban cooling**
+   387	
+   388	Combine shading or thermal insulation with controlled evaporative cooling so that less water is required to achieve the desired cooling effect.
+   389	
+   390	**Life's Principle:** Be resource efficient / Adapt to changing conditions / Use life-friendly chemistry
+   391	
+   392	#### Pine Cone Scales
+   393	
+   394	**Biological mechanism**
+   395	
+   396	Pine cone scales respond to humidity despite containing no muscles or active control system. Their layered structure contains materials with different swelling behavior. When moisture is absorbed, one layer expands more than the other, causing the scale to bend and close. As the scale dries, it returns towards its open state. The movement is reversible. \[13\]
+   397	
+   398	**Functional abstraction**
+   399	
+   400	Convert an environmental change directly into mechanical movement through differential material expansion.
+   401	
+   402	**Design principle for urban cooling**
+   403	
+   404	Use environmentally responsive material layers to create self-actuating shading or ventilation elements that operate without motors or electronic control.
+   405	
+   406	**Life's Principle:** Adapt to changing conditions / Use life-friendly chemistry
+   407	
+   408	#### Honeybee Fanning Thresholds
+   409	
+   410	**Biological mechanism**
+   411	
+   412	Western honeybee colonies regulate nest temperature through the combined behavior of many workers. Individual bees have different temperature-response thresholds. As nest temperature increases, progressively more bees begin ventilating the hive. This distributed response prevents excessive system-wide reactions to small temperature fluctuations and stabilizes the nest with no central control. \[14\]
+   413	
+   414	**Functional abstraction**
+   415	
+   416	Distribute different activation thresholds across multiple independent elements to create a gradual system-level response.
+   417	
+   418	**Design principle for urban cooling**
+   419	
+   420	Use multiple passive cooling elements with different trigger conditions so that cooling capacity increases progressively with thermal load instead of operating through a single on/off threshold.
+   421	
+   422	**Life's Principle:** Be resource efficient / Adapt to changing conditions
+   423	
+   424	## Creating: Engineering Concept Development
+   425	
+   426	### Structured Ideation: Crazy 8s
+   427	
+   428	Table 3.4 translates the biological mechanisms in Section 3.1 into eight technical building blocks. The next step combines them into concepts.
+   429	
+   430	  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   431	  **Idea**                   **Function**   **Biological starting point**                  **Technical building block**
+   432	  -------------------------- -------------- ---------------------------------------------- ----------------------------------------------------------------------------
+   433	  1 Fixed shade              F2             Cactus ribs change exposure.                   Projecting ribs shade the façade.
+   434	
+   435	  2 Conductive fins          F3             Elephant hairs act as small fins.              Separated projections conduct heat to air.
+   436	
+   437	  3 Surface texture          F3             Sparse hairs suggest distributed structures.   Small roughness elements alter near-wall airflow; benefit is a hypothesis.
+   438	
+   439	  4 Solar reflector          F1             Silver-ant hairs reflect sunlight.             A reflective coating reduces solar absorption on a façade or roof.
+   440	
+   441	  5 Infrared emitter         F3             Silver-ant hairs enhance thermal emission.     A sky-facing surface releases infrared heat.
+   442	
+   443	  6 Fluid transport          F3             Blood carries heat to jackrabbit ears.         A fluid carries heat to a separate exchange surface.
+   444	
+   445	  7 Variable exchange area   F3             Ear blood flow regulates heat release.         Connect more exchange area when cooling demand rises.
+   446	
+   447	  8 Responsive shade         F2             Unequal swelling bends pine-cone scales.       A humidity-responsive layer changes shade position.
+   448	  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   449	
+   450	  : Table 3.4 --- Crazy 8s building blocks, before concept combinations.
+   451	
+   452	**3.2.2 Combining Ideas with a Morphological Matrix**
+   453	
+   454	Table 3.5 groups alternatives by function. Bracketed numbers refer to Table 3.2; Option 3 draws on further models from Section 3.1. Choose compatible options for the functions a concept addresses. B covers fewer functions than A, as the KPI comparison shows.
+   455	
+   456	  -------------------------------------------------------------------------------------------------------------------------
+   457	  **Design choice**      **Option 1**          **Option 2**                           **Option 3**
+   458	  ---------------------- --------------------- -------------------------------------- -------------------------------------
+   459	  S - Heat shielding     Fixed ribs (1)        Responsive louvers (8)                 Insulating outer layer (camel fur)
+   460	
+   461	  O - Solar reflection   Reflective roof (4)   Reflective façade (4)                  Multilayer reflector (Morpho wings)
+   462	
+   463	  T - Heat transport     Fluid loop (6)        Conduction through texture (2/3)       Fan-driven air cavity (bee fanning)
+   464	
+   465	  E - Heat release       Roof emitter (5)      Wall exchange with local air and sky   Evaporating wet layer (camel sweat)
+   466	  -------------------------------------------------------------------------------------------------------------------------
+   467	
+   468	  : Table 3.5 --- Alternatives for heat shielding, reflection, heat transport and heat release.
+   469	
+   470	**A = S1--O1--T1--E1** combines fixed fins, a reflective roof and a water loop. **B = T2--E2** uses a textured coating for local heat exchange. **C = S2--O2--E2** combines responsive louvers with a reflective façade. Variable connected area (7) remains an unselected regulation option for **A**.
+   471	
+   472	Camel fur limits heat gain and sweating removes heat by evaporation, suggesting an insulating outer layer and a wet cooling surface (Schmidt-Nielsen et al., 1956). Morpho wing structures suggest a multilayer reflector, although solar cooling requires separate verification\[11\]. Bee fanning suggests temperature-switched fans moving air through a cavity \[14\]. These options were not developed further because of water or power demand, uncertain optical performance, or insulation restricting outward heat transfer. Fans and cladding are conventional technical implementations.
+   473	
+   474	**C** was set aside because humidity does not directly indicate cooling demand. Reflective façades also increased pedestrian heat stress in simulations of a Stuttgart street canyon \[15\]. **A** therefore places its reflective surface on the roof. **A** and **B** were retained for the engineering comparison below.
+   475	
+   476	### Concept A V1 --- Water Façade
+   477	
+   478	![](media/image6.png){width="6.95in" height="4.633333333333334in"}**A** V1 was conceived for a new building, with water pipes embedded in the façade and timber fins providing shade (Figure 3.2). The water loop carries residual heat to a separate roof surface for release.
+   479	
+   480	**Figure 3.2 --- Concept A V1. Timber ribs shade the façade; water carries residual heat to the roof and returns after cooling.**
+   481	
+   482	Cactus ribs inspire shading; blood flow to jackrabbit ears inspires heat transport to a separate exchange surface \[16\]. The pipes and thermosiphon are conventional engineering choices: warmer water can rise and cooler water return if buoyancy overcomes pipe resistance \[17\].
+   483	
+   484	**3.2.4 Concept B V1 --- Roughness Spray Retrofit**
+   485	
+   486	**B** V1 is a retrofit coating for an existing wall. Elephant hairs suggest small heat-transfer structures, but work as conductive fins \[6\]. The spray instead aims to disturb warm near-wall air (Figure 3.3). Its benefit depends on texture size, spacing, conductivity and local wind.
+   487	
+   488	![](media/image7.png){width="6.538524715660542in" height="1.9150940507436571in"}**Wall + rough coating Warm near-wall air Cooler surrounding air**
+   489	
+   490	**Figure 3.3 --- Proposed roughness mechanism. Orange: warm near-wall air (thermal boundary layer); blue: cooler surrounding air, with a gradual temperature transition. Straight arrows: heat from the wall. Curved arrows: proposed air exchange; its cooling benefit requires testing.**
+   491	
+   492	**3.2.5 Engineering Canvas**
+   493	
+   494	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   495	  **Canvas item**          **A V1 --- water façade**                                                                          **B V1 --- roughness spray**
+   496	  ------------------------ -------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------
+   497	  Function                 Prevent heat gain; transport and release residual heat.                                            Increase local heat exchange with a thin retrofit.
+   498	
+   499	  Biological principle     Cactus shading; blood-borne heat transport; silver-ant optical properties.                         Sparse elephant hairs provide distributed heat-transfer structures.
+   500	
+   501	  Technical transfer       Shade, conduct heat into water, circulate by buoyancy, release it at a reflective roof emitter.    Conduct heat into a texture and test its effect on airflow.
+   502	
+   503	  Components / materials   Timber ribs, collector, pipes, roof plate/coating, insulated return, expansion vessel and vents.   Existing wall, coating binder and textured particles; chemistry remains open.
+   504	
+   505	  Inputs / outputs         Sunlight and temperature difference → reflected light and roof heat release. Water recirculates.   Sunlight and airflow → heat exchange with local air and sky.
+   506	
+   507	  Requirements / KPIs      Section 2 KPIs; little auxiliary energy; winter operation, glare and townscape constraints.        Same KPIs; thin application, adhesion and safe weathering.
+   508	
+   509	  Critical assumptions     Enough heat reaches the water; roof capacity and buoyancy are sufficient.                          Texture improves heat transfer without trapping still air.
+   510	
+   511	  Uncertainties            Pipe resistance, roof output, leakage, frost and panel-to-pipe contact.                            Cooling benefit, soiling, adhesion and weathering.
+   512	
+   513	  Next check               Estimate circulation and roof capacity.                                                            Compare smooth and textured samples under the same wind and temperatures.
+   514	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   515	
+   516	  : Table 3.6 --- Engineering Canvas for the two V1 concepts.
+   517	
+   518	**3.2.6 Critical Engineering Questions**
+   519	
+   520	Q1: Can buoyancy circulate enough water? Q2: Can the roof release the collected heat? Q3: Does the spray improve heat transfer under weak airflow? These questions test the assumptions most likely to change concept selection.
+   521	
+   522	**3.2.7 Engineering Check 1 --- Circulation and Pipe Size**
+   523	
+   524	The first estimate applies **A** V1 to a hypothetical new building with the dimensions of the Modellierungsgebiet 03 reference block. Table 3.7 lists the model inputs and engineering assumptions (Project team, 2026).
+   525	
+   526	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   527	  **Input**             **Value and basis**
+   528	  --------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------
+   529	  Building and façade   64 × 58 m outer plan; 42 × 36 m courtyard; eaves at 15.4 m and roof rise 4 m. Two faces, assumed 65% opaque: Area = (64 + 58) × 15.4 × 0.65 ≈ 1,220 m².
+   530	
+   531	  Collected heat        Assume qʺ = 100 W/m² enters the water after shading; test 50--150 W/m². Collection depends on panel-to-pipe contact.
+   532	
+   533	  Height H              Assume 10 m between centres of heat collection and release.
+   534	
+   535	  Water near 30 °C      Density ρ ≈ 996 kg/m³; heat capacity cₚ ≈ 4,180 J/(kg·K); expansion coefficient β ≈ 3.0 × 10⁻⁴ K⁻¹ (Harvey, 1998, Table 3). Assume viscosity μ = 0.8 mPa·s.
+   536	
+   537	  Common pipe route     Assume smooth pipe, L = 160 m, fitting-loss factor ΣK = 20. Extra branch and radiator losses are excluded.
+   538	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   539	
+   540	  : Table 3.7 --- Assumptions for the circulation estimate.
+   541	
+   542	The chosen water-temperature differences, 10 °C and 3 °C, test stronger and weaker driving conditions; they are not measured site values or comfort targets. A smaller difference weakens buoyancy while requiring more flow to carry the same heat load.
+   543	
+   544	Heat rate Q̇ is energy carried per second; ṁ is water mass flow. Assume steady liquid flow and approximate the hot/cold leg difference by the water temperature change ΔT. Equations use kelvin (K): a difference of 10 K equals a change of 10 °C.
+   545	
+   546	**Q̇ = A~f~ qʺ ≈ 1,220 m² × 100 W/m² = 122 kW**
+   547	
+   548	**ṁ = Q̇ / (cₚ ΔT) ; Δp~b~ ≈ ρ g H β ΔT**
+   549	
+   550	**Δp~loss~ = (f L/D + ΣK) ρv²/2 ; v = 4ṁ/(ρπD²)**
+   551	
+   552	Here D is internal diameter, v water speed and g = 9.81 m/s². Use Darcy friction factor f = 0.3164/Re^0.25^, with Re = ρvD/μ, and solve where friction equals buoyancy \[17\]. Re ≈ 26,000--39,000 supports the smooth-pipe turbulent-flow approximation.
+   553	
+   554	  ---------------------------------------------------------------------------------------
+   555	  **Water difference**   **Buoyancy pressure**   **Water flow**   **Internal diameter**
+   556	  ---------------------- ----------------------- ---------------- -----------------------
+   557	  10 °C (= 10 K)         ≈300 Pa                 2.9 kg/s         ≈180 mm
+   558	
+   559	  3 °C (= 3 K)           ≈90 Pa                  9.7 kg/s         ≈400 mm
+   560	  ---------------------------------------------------------------------------------------
+   561	
+   562	  : Table 3.8 --- Circulation estimates for the 122 kW load.
+   563	
+   564	Reducing the temperature difference more than doubles the required main-pipe diameter. These estimates use most of the available buoyancy pressure before radiator losses are included. **A** therefore needs less connected façade area, larger mains or shorter parallel circuits. Varying the assumed heat input from 50 to 150 W/m² gives a load of 61--183 kW.
+   565	
+   566	**3.2.8 Engineering Check 2 --- Roof Heat Release**
+   567	
+   568	In steady operation, the roof must release the heat collected by the façade. Raman et al. (2014) measured 40.1 W/m² net cooling at air temperature under sunlight above 850 W/m² \[18\]. This specialised emitter provides a benchmark, not an assigned property of our coating.
+   569	
+   570	**A~release~ = Q̇ / qʺ~net~**
+   571	
+   572	For the engineering estimate, assume a 35 °C roof, 30 °C air, effective sky temperature 20 °C, solar reflectance r = 0.95, thermal emittance ε = 0.90, sunlight G = 800 W/m² and convection coefficient h = 3--8 W/(m²·K). Effective sky temperature represents incoming infrared radiation, not air temperature. Neglect back-surface exchange and assume an unobstructed sky:
+   573	
+   574	**qʺ~net~ = h(T~roof~ − T~air~) + εσ(T~roof~⁴ − T~sky~⁴) − (1 − r)G**
+   575	
+   576	The terms represent heat to air, infrared heat exchange and absorbed sunlight. Fourth powers require absolute temperature: T \[K\] = T \[°C\] + 273.15; thus 35 °C = 308.15 K. With σ = 5.67 × 10⁻⁸ W/(m²·K⁴), net release is 15--40 + 83 − 40 ≈ 58--83 W/m². Roof tilt and nearby buildings would change this estimate.
+   577	
+   578	  ---------------------------------------------------------------------------------
+   579	  **Case**                        **Net heat release**   **Roof area for 122 kW**
+   580	  ------------------------------- ---------------------- --------------------------
+   581	  Published emitter benchmark     40.1 W/m²              ≈3,050 m²
+   582	
+   583	  Assumed 35 °C roof, 20 °C sky   58--83 W/m²            ≈1,470--2,100 m²
+   584	
+   585	  Same roof, warmer 30 °C sky     4--29 W/m²             ≈4,200--29,500 m²
+   586	  ---------------------------------------------------------------------------------
+   587	
+   588	  : Table 3.9 --- Roof cooling area required to release the assumed 122 kW load.
+   589	
+   590	The model allocates about 740 m² to cooling: 168 m total strip width × 4.39 m combined slope depth. Solar panels, rooflights and gaps limit this area (Figure 3.4). The first two cases give about 30--62 kW, supporting roughly 300--620 m² of façade at 100 W/m². A warmer sky reduces radiative heat loss; near-zero net output makes the required area highly sensitive. The connected façade area must therefore be reduced. Heat released to air remains local heat redistribution.
+   591	
+   592	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   593	  ![1 Reference building --- Google Maps](media/image8.png){width="2.892361111111111in" height="3.061955380577428in"}**1 Reference building --- Google Maps**   ![2 Proposed roof layout](media/image9.png){width="3.176388888888889in" height="3.077777777777778in"}**2 Proposed roof layout**
+   594	  ------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------
+   595	
+   596	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   597	
+   598	**Figure 3.4 --- Reference Block in Modellierungsgebiet 03 (Stadt Zürich, 2020, pp. 148--151) and our model. Cooling strips share the roof with solar panels and rooflights.**
+   599	
+   600	## Concept Evaluation & Iteration
+   601	
+   602	**3.3.1 Comparison against the KPIs**
+   603	
+   604	Table 3.10 compares the concepts using the estimates from Sections 3.2.7--3.2.8. Heat flow is reported in kW rather than the temperature-based labels in Section 2; no surface-temperature reduction has been calculated. Assumptions and untested quantities remain explicit.
+   605	
+   606	  -------------------------------------------------------------------------------------------------------------------------------------------------------------
+   607	  **Criterion / unit**            **A V1 --- water façade**                                                               **B V1 --- roughness spray**
+   608	  ------------------------------- --------------------------------------------------------------------------------------- -------------------------------------
+   609	  Solar reflectance / 0--1        Roof: 0.95 assumed                                                                      Not specified
+   610	
+   611	  Added shade / min               Fins added; duration not calculated                                                     0 min added by the coating
+   612	
+   613	  Heat release / kW               740 m² roof: ≈30--62 kW across benchmark / cooler-sky cases; ≈3--22 kW for warmer sky   Not quantified
+   614	
+   615	  Heat transport / kW; kg/s       122 kW assumed load requires 2.9 kg/s at 10 °C difference or 9.7 kg/s at 3 °C           Local exchange; rate not quantified
+   616	
+   617	  Intentional evaporation / L/h   0 in normal operation; filling and leakage are separate                                 0 for a dry coating
+   618	
+   619	  Performance retained / %        No ageing data                                                                          No ageing data
+   620	  -------------------------------------------------------------------------------------------------------------------------------------------------------------
+   621	
+   622	  : Table 3.10 --- KPI comparison using preliminary engineering estimates.
+   623	
+   624	The flow rates are requirements, not demonstrated circulation. Even the highest roof estimate is below the assumed 122 kW load. Missing targets and test data prevent a defensible weighted score; the comparison instead identifies the changes needed for **A** and the evidence still needed for **B**.
+   625	
+   626	**3.3.2 Engineering Review and Selection**
+   627	
+   628	  ---------------------------------------------------------------------------------------------------------------------------------------------
+   629	  **Review issue**                          **Response**   **Resulting decision**
+   630	  ----------------------------------------- -------------- ------------------------------------------------------------------------------------
+   631	  Embedded pipes risk hidden damage         Accept         Move pipes into a separate external layer; enable access and retrofit.
+   632	
+   633	  Roof area and resistance limit **A**      Accept         Limit connected area; use larger mains and short parallel circuits.
+   634	
+   635	  Weak ventilation rules out **B**          Qualify        Airflow is uncertain, but texture does not automatically fail. Test its mechanism.
+   636	
+   637	  Existing KPI definitions are incomplete   Accept         Use heat-flow units; define targets and test conditions before measurement.
+   638	  ---------------------------------------------------------------------------------------------------------------------------------------------
+   639	
+   640	  : Table 3.11 --- Team review and critical assessment of AI feedback.
+   641	
+   642	Reduced air exchange in Modellierungsgebiet 03 makes B's airflow-dependent benefit uncertain \[19, S. 148--151\], \[20\]. Elephant hairs can aid heat transfer at low wind, whereas transverse wooden ribs reduced natural convection in another study \[6\], \[21\]. These contrasting results support testing the coating rather than assigning it a cooling value.
+   643	
+   644	A was selected because it combines shading with heat transport to a separate release surface. Its greater material and installation needs remain a trade-off. The review in Table 3.11 guides the V2 construction changes and the revised engineering assessment below.
+   645	
+   646	**3.3.3 Final Concept V2 --- Construction and Heat Paths**
+   647	
+   648	V2 moves the pipes outside the original wall, allowing both new construction and retrofit. The wall is retained apart from mounting connections. A small gap behind the added layer is intended to let escaped water fall away externally, reducing hidden wall-damage risk without guaranteeing leak-proof protection (Figure 3.5).
+   649	
+   650	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   651	  ![](media/image10.png){width="2.365748031496063in" height="2.576388888888889in"}   ![](media/image11.png){width="3.0067038495188103in" height="2.5972222222222223in"}
+   652	  ---------------------------------------------------------------------------------- ------------------------------------------------------------------------------------
+   653	
+   654	  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   655	
+   656	**Figure 3.5 --- Our assembled sections. Façade, outside inward: timber ribs, supports/air space, collector panel, pipes, interface, existing wall. Roof: coating, carrier plate, pipes, supports, existing roof.**
+   657	
+   658	Heat passes from the façade panel into water, then from the roof pipes into the carrier plate and coated surface. Good pipe-to-panel contact is essential. The Saharan silver ant inspires solar reflection and infrared emission \[22\]; the assumed 95% reflectance still needs material verification. No increase in convection is assumed; convective heat release requires a surface warmer than the air.
+   659	
+   660	![](media/image12.png){width="6.104166666666667in" height="3.7306627296587926in"}
+   661	
+   662	**Figure 3.6 --- Intended heat-transfer loop: façade collection → warm riser → roof heat release → cool return.**
+   663	
+   664	**3.3.4 Pedestrian Space and Maintenance Access**
+   665	
+   666	Compared with V1, we cut back the timber fins to start at the first floor, about 3.4 m above ground (Figure 3.7). A new building could set its wall back to accommodate the fins; this retrofit must retain the wall beside the pavement. Reducing the modelled ground-floor projection from 0.66 m to 0.20 m leaves 0.46 m more space. Door operation and remaining pavement width still need checking.
+   667	
+   668	+-------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+   669	| **1 Fins start at the first floor**                                                                               | **2 Thinner base beside the pavement**                                                                               |
+   670	|                                                                                                                   |                                                                                                                      |
+   671	| ![1 Fins start at the first floor](media/image13.png){width="2.8059700349956254in" height="1.7537314085739282in"} | ![2 Thinner base beside the pavement](media/image14.png){width="2.8055555555555554in" height="1.7534722222222223in"} |
+   672	+===================================================================================================================+======================================================================================================================+
+   673	
+   674	**Figure 3.7 --- Revised timber fins and pedestrian space in our model. Dimensions are design estimates.**
+   675	
+   676	Removing individual panels exposes the pipes for inspection and repair without opening the original wall (Figure 3.8). This improves access compared with V1's embedded pipes. Panel fixings and working clearance still need detailing.
+   677	
+   678	![Façade pipe detail with covering removed, showing the external pipes accessible behind separate panels.](media/image15.png){width="6.081870078740158in" height="2.3304352580927383in"}
+   679	
+   680	**Figure 3.8 --- Pipe-access detail from our model (view 17). Parts of the covering are removed to reveal the pipes behind the proposed separable façade panels.**
+   681	
+   682	Heritage protection remains a constraint \[19, S. 148--151\]. Retaining the wall and demonstrating a cooling benefit could support the proposal, but its appearance and attachments still require assessment.
+   683	
+   684	Removable components support repair and material separation. Rib spacing should balance summer shade with winter sunlight. Timber treatment, coating durability, chemical safety and glare remain material checks. Reflective roofs may increase winter heating demand \[23\]. No life-cycle assessment has been performed.
+   685	
+   686	**3.3.5 Updated Engineering Assessment**
+   687	
+   688	For an illustrative roof output of 60 W/m², the 740 m² cooling area releases about 44 kW, supporting roughly 440 m² of façade at 100 W/m². Repeating the circulation check with the same height and common route gives Table 3.12.
+   689	
+   690	  ------------------------------------------------------------------------------------------------
+   691	  **Water difference**   **Buoyancy pressure**   **Water flow at 44 kW**   **Internal diameter**
+   692	  ---------------------- ----------------------- ------------------------- -----------------------
+   693	  10 °C (= 10 K)         ≈300 Pa                 ≈1.1 kg/s                 ≈120 mm
+   694	
+   695	  3 °C (= 3 K)           ≈90 Pa                  ≈3.5 kg/s                 ≈255 mm
+   696	  ------------------------------------------------------------------------------------------------
+   697	
+   698	  : Table 3.12 --- Pipe-size estimates after reducing the connected heat load.
+   699	
+   700	The drawn roof uses four long coils. Area divided by 0.16 m pipe spacing gives about 740/0.16 ≈ 4,620 m of pipe, or 1,150 m per coil. Assuming 40 mm internal diameter, equal flow and a 10 °C water difference, the Darcy equation gives about 20 kPa loss per coil at 44 kW total load, excluding bends. This exceeds the 0.30 kPa buoyancy pressure by roughly a factor of 67: the long-coil arrangement must change.
+   701	
+   702	The roof and water-flow estimates prescribe temperatures separately. Water temperature, flow and pipe-to-surface heat transfer must be solved together before assigning an operating output. The rendered long coils therefore remain a layout to revise, with short parallel circuits and larger connecting pipes.
+   703	
+   704	Roof-pipe water volume is approximately 4,620 m × π × (0.04 m)²/4 ≈ 5.8 m³, excluding façade pipes and headers. This makes roof loading and winter water storage important checks.
+   705	
+   706	**Winter operation**
+   707	
+   708	Before frost, the proposed circuit is emptied into storage and refilled when needed. Drainback requires sloping pipes and air entry; Baechler et al. (2007, Chapter 3) give about 2.1% slope. Trapped water and pump-assisted refill remain checks \[24\].
+   709	
+   710	**3.3.6 Priorities for Further Development**
+   711	
+   712	  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   713	  **Priority**               **Check and design decision**
+   714	  -------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
+   715	  1 Circulation              Size the parallel network including all losses; test start-up at small temperature differences. Decide whether buoyancy is sufficient.
+   716	
+   717	  2 Roof output              Measure heat release under varied sun, wind and sky conditions. Set the connected façade area from the result.
+   718	
+   719	  3 Winter operation         Test emptying and refill of one representative branch; measure retained water before freeze--thaw testing.
+   720	
+   721	  4 Panel assembly           Check pipe contact, leak behavior, removable connections and mounting loads.
+   722	
+   723	  5 Building and materials   Check pedestrian clearance, heritage compatibility, glare, winter gains, weathering, chemical safety and repair.
+   724	  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   725	
+   726	  : Table 3.13 --- Ranked checks needed to develop Concept V2.
+   727	
+   728	# Sustainability & Life's Principles
+   729	
+   730	## Life's Principles applied to Concept V2
+   731	
+   732	### Be resource efficient --- minimize the use of external resources
+   733	
+   734	**How Concept V2 applies it.** Cooling needs no auxiliary electricity: circulation is driven by buoyancy alone (Section 3.2.7), and the loop is closed, so no water is consumed in operation (Table 3.10).
+   735	
+   736	**Where it falls short.** Pumpless operation is not demonstrated. The mains alone use most of the ≈300 Pa buoyancy pressure, the drawn roof coils exceed it by a factor of about 67, and refilling after drainback may need a pump (Section 3.3.5).
+   737	
+   738	### Adapt to changing conditions --- day/night and seasonal cycles
+   739	
+   740	**How Concept V2 applies it.** The daily cycle is used rather than fought: a hotter façade produces a larger density difference and more flow, so cooling rises and falls with the load without a controller (Section 3.2.7), and the roof releases most of its heat to the night sky (Section 3.2.8). The seasonal cycle is met by draining the loop before frost and refilling it in spring (Section 3.3.5).
+   741	
+   742	**Where it falls short.** The seasonal adaptions rather functions as a withdrawal and not adaptation. Even after draining the pipes there is a remain risk of freezing leftover water. Furthermore the Ribs and reflective roof act the same even in the winter.
+   743	
+   744	### Use life-friendly chemistry --- no toxic chemicals or materials
+   745	
+   746	**How Concept V2 applies it.** The heat-transfer fluid is plain water. Frost protection is solved by draining the pipes instead of anti freeze such as glycol. Reflection and emission are sought through the surface optics of the silver ant \[22\], not through a functional additive.
+   747	
+   748	**Where it falls short.** The principle is met by exclusion, not by verification. Two points remain open and unchecked: the timber treatment of the ribs and the binder and preservatives of the roof coating.
+   749	
+   750	## Environmental benefits, limitations and trade-offs
+   751	
+   752	### Environmental benefits
+   753	
+   754	**Displaced cooling load.** The climate benefit is not what V2 uses but what it replaces: every hour of air conditioning it makes unnecessary is avoided emissions and avoided waste heat in the street (Section 2.1).
+   755	
+   756	**Heat exported, not moved.** Radiation to the night sky carries the collected heat out of the urban air; the other release options of Table 3.5, exchange with the air beside the wall or evaporation, leave it in the street (Section 3.2.8).
+   757	
+   758	**A cooler street.** The shaded façade radiates less onto the pavement, there is no condenser at pedestrian height, and reflection happens on the roof, where it cannot raise heat stress in the canyon \[15\].
+   759	
+   760	**A reversible intervention.** Nothing is demolished; the panels can be removed and the building returned to its previous state, so the retrofit creates no demolition waste and consumes no land.
+   761	
+   762	**Nothing emitted in operation.** No water, no refrigerant, no additive and no noise leave the system while it runs.
+   763	
+   764	### Limitations
+   765	
+   766	**A fair-weather benefit.** The export of heat depends on a clear, dry night sky. In the humid, hazy nights of a heat wave most of the heat only warms the roof air, so the concept helps least in the conditions it is meant for (Section 3.2.8).
+   767	
+   768	**Idle for most of the year.** Outside the summer the drained loop does nothing, and no other environmental function fills the gap.
+   769	
+   770	**A benefit without a number.** No cooling figure exists, so the avoided emissions cannot be counted, and the whole benefit rests on circulation without a pump, the first open check of Table 3.13.
+   771	
+   772	**A balance with one side.** The added materials carry embodied emissions that no life cycle assessment has set against the avoided cooling load (Table 2.1).
+   773	
+   774	### Trade-offs
+   775	
+   776	**Townscape.** Ribs and panels change how the building looks; on a listed façade this collides with heritage protection \[19, S. 148--151\].
+   777	
+   778	**Winter heating.** What shades and reflects in summer also rejects winter sun and can raise heating demand and its emissions \[23\]; the net annual effect is unknown.
+   779	
+   780	**Roof area.** Every square metre that releases heat is a square metre without photovoltaic yield (Figure 3.4).
+   781	
+   782	**Additive or downtime.** Avoiding antifreeze costs the shoulder seasons and admits air that may bring back a corrosion inhibitor (Section 3.3.5).
+   783	
+   784	**Access or invisibility.** Repairable external pipes are the same visible layer that alters the façade.
+   785	
+   786	Under a clear summer sky V2 exports heat from the city at no running cost; the rest of the year it is a visible layer on a listed façade that yields nothing.
+   787	
+   788	## Materials, durability, repair and circularity
+   789	
+   790	**Timber ribs.** Worn by UV, driving rain and freeze--thaw, so they belong to the biological cycle. What weathers off lands on the pavement, and the timber must be untreated, naturally durable, or protected by detailing rather than by chemistry.
+   791	
+   792	**Collector panels and finish.** Slow surface wear, otherwise used as structure: technical cycle, if the panel is one recoverable material with a benign finish. The panels are designed to be removable (Figure 3.8).
+   793	
+   794	**Roof coating.** Worn by UV, rain, soiling and cleaning, and abraded into run-off that reaches the stormwater network of Section 2.3, so it must break down harmlessly.
+   795	
+   796	**Pipework, carrier plate, supports and fixings.** Used, not consumed: technical cycle, recoverable if specified as separable single materials.
+   797	
+   798	**Water in the loop.** Used, but mobile, and in neither cycle cleanly: about 5.8 m³ is drained to storage each winter and eventually disposed of, and with an inhibitor it is the one component that can leave the system by accident.
+   799	
+   800	Measured against the eight cycle design principles, V2 answers three in principle. Modular construction (3) and reparability (5) follow from moving the pipes out of the wall: a panel can be removed and the façade pipes inspected without opening the wall (Sections 3.3.2 to 3.3.4). Ecotoxic chemicals (1) and recyclable materials (2) are answered above.
+   801	
+   802	**Material checked so far.** White cool-roof coatings owe their reflectance to titanium dioxide, so it was checked in the REACH database of the European Chemicals Agency \[27\]. The powder form was classified in 2020 as a suspected carcinogen by inhalation (Regulation (EU) 2020/217, H351). The General Court annulled the classification in 2022 and the Court of Justice confirmed the annulment on 1 August 2025 \[28\], so the pigment currently carries no harmonized hazard classification. The result is not clear. The concern was dust inhalation, not the applied film, and the ruling turned on the reliability of one study, not on a finding of safety. The pigment is also not the used coating. The binder and the film preservatives are what reach the run-off instead. One substance of at least four has been checked. The other three belong to item 5 of Table 3.13.
+   803	
+   804	## Did sustainability considerations change the design?
+   805	
+   806	The design was adjusted in four instances which were documented in sections 3.2 and 3.3.
+   807	
+   808	**1. The reflective surface moved from the façade to the roof.** Concept C reflected on the façade and was set aside because reflective walls raised pedestrian heat stress in simulations of a Stuttgart street canyon \[15\]; Concept A reflects on the roof instead (Section 3.2.2). The change was made for the people at street level, not for cooling performance.
+   809	
+   810	**2. Water and power demand removed two options before any concept was drawn.** The evaporating wet layer and the fan-driven cavity of Table 3.5 were not developed further because of their water and power demand (Section 3.2.2). The Energy and Water constraints of Table 2.1, which are be resource efficient written as constraints, decided this.
+   811	
+   812	**3. The pipes moved out of the wall.** V1 embedded them in the façade. The engineering review found that in case of damage the lack of access was unacceptable. (Table 3.11), and Therefore V2 placed them in a separable external panels with a drainage gap behind them (Section 3.3.3).
+   813	
+   814	**4. Water instead of glycol.** Frost protection was decided by drainback rather than by an additive (Section 3.3.5).
+   815	
+   816	## Limits of this assessment
+   817	
+   818	No life cycle assessment was performed, so nothing in this section is a quantified environmental balance. The assessment is made against Concept V2 as described in Section 3.3, whose central claim of buoyancy-only circulation is the first-ranked open check of Table 3.13; if a pump is needed, the Energy constraint and the first row of Table 4.1 fall with it. Durability is defined by KPI 6 but has no data, cascade use and return logistics lie outside the project boundary, and of the substances the concept would put into the street one has been checked and three have not.
+   819	
+   820	# Discussion & Conclusion
+   821	
+   822	## Contribution of the biomimicry process
+   823	
+   824	Biomimicry helped us explore cooling functions before committing to familiar building solutions. Studying how organisms manage heat encouraged us to abstract and combine strategies, leading to the proposed link between façade shading, fluid transport and a roof emitter (Sections 3.1--3.2). Without this process, we would probably have focused on improving existing solutions individually. Conventional engineering could produce a similar concept, but the biological models broadened our search and helped us connect these functions.
+   825	
+   826	## Strengths and weaknesses of the final concept
+   827	
+   828	V2 offers a unconventional approach for new buildings and especially retrofits: shading is intended to limit façade heating, while the water loop transfers collected heat to the roof. This aims to reduce heat release at street level without relying on reflective façades that could increase exposure for pedestrians and neighboring buildings. Modular panels could be installed where cooling is most needed. Heat-driven circulation and a closed loop offer the prospect of operation without continuous pumping or intentional evaporative water use. However, circulation and the available roof area are the main limitations. The calculated pipe resistance exceeds the available driving pressure, requiring a revised network with shorter parallel circuits (Section 3.3.5). Pump-free circulation remains unverified, and refilling may require a pump. Testing must establish whether the revised system delivers the intended cooling.
+   829	
+   830	## Assessment of the challenge and the KPIs
+   831	
+   832	The concept addresses the façade's contribution to urban heat; it does not address all causes of the wider challenge. The KPIs guided design decisions: heat-flow estimates limited the connected façade area, and the water constraint favored a loop without intentional evaporation (Section 3.3). They have therefore supported concept development, but target achievement has not been demonstrated. Reflectance, shading duration, durability and actual cooling performance still need verification. Winter operation, glare and heritage compatibility also remain open. These gaps define the next evaluation steps.
+   833	
+   834	## Innovative character and limits of the evidence
+   835	
+   836	The innovative aspect is the combination of biological principles in a maintainable façade system intended for new buildings and retrofits. We do not claim that its components are new. Our main lesson from the course is that biological ideas become more useful when calculations and practical constraints shape their technical transfer. The estimates support further development, but do not establish measured cooling performance. No life-cycle assessment was performed. Circulation and roof-output tests are the priorities for assessing the concept's potential.
+   837	
+   838	# References
+   839	
+   840	\[1\] L. Yang, F. Qian, D.-X. Song, und K.-J. Zheng, «Research on Urban Heat-Island Effect», *Procedia Eng.*, Bd. 169, S. 11--18, 2016, doi: 10.1016/j.proeng.2016.10.002.
+   841	
+   842	\[2\] N. Earth Science Data Systems, «Albedo \| NASA Earthdata». Zugegriffen: 8. September 2026. \[Online\]. Verfügbar unter: https://www.earthdata.nasa.gov/topics/land-surface/albedo
+   843	
+   844	\[3\] N. Dussadee, R. Ramaraj, und N. Sutassanamarlee, «Effect of Plant Shading and Water Consumption on Heat Reduction of Ambient Air», *Chiang Mai J. Sci.*, Bd. 45, Nr. 1, S. 188--197.
+   845	
+   846	\[4\] «Large Ears Aid Cooling --- Biological Strategy --- AskNature». Zugegriffen: 10. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/large-ears-aid-cooling/
+   847	
+   848	\[5\] «How Blood Flow Keeps Jackrabbits Cool --- Biological Strategy --- AskNature». Zugegriffen: 10. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/how-blood-flow-keeps-jackrabbits-cool/
+   849	
+   850	\[6\] C. L. Myhrvold, H. A. Stone, und E. Bou-Zeid, «What Is the Use of Elephant Hair?», *PLoS ONE*, Bd. 7, Nr. 10, S. e47018, Okt. 2012, doi: 10.1371/journal.pone.0047018.
+   851	
+   852	\[7\] «Cactus Ribs Keep Them Cool --- Biological Strategy --- AskNature». Zugegriffen: 11. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/shape-shades-and-enhances-heat-radiation/
+   853	
+   854	\[8\] «Hair Helps Cool the Body --- Biological Strategy --- AskNature». Zugegriffen: 11. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/hair-helps-cool-the-body/
+   855	
+   856	\[9\] «Shell Protects From Heat --- Biological Strategy --- AskNature». Zugegriffen: 14. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/shell-protects-from-heat/
+   857	
+   858	\[10\] «Butterflies Hack Light Waves to Produce Brilliant Color --- Biological Strategy --- AskNature». Zugegriffen: 14. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/wing-scales-cause-light-to-diffract-and-interfere/
+   859	
+   860	\[11\] M. A. Giraldo und D. G. Stavenga, «Brilliant iridescence of Morpho butterfly wing scales is due to both a thin film lower lamina and a multilayered upper lamina», *J. Comp. Physiol. A*, Bd. 202, Nr. 5, S. 381--388, Mai 2016, doi: 10.1007/s00359-016-1084-1.
+   861	
+   862	\[12\] «How a Camel's Fur Coat Keeps It Cool --- Biological Strategy --- AskNature». Zugegriffen: 14. September 2026. \[Online\]. Verfügbar unter: https://asknature.org/strategy/how-a-camels-fur-coat-keeps-it-cool/
+   863	
+   864	\[13\] C. Dawson, J. F. V. Vincent, und A.-M. Rocca, «How pine cones open», *Nature*, Bd. 390, Nr. 6661, S. 668--668, Dez. 1997, doi: 10.1038/37745.
+   865	
+   866	\[14\] J. M. Peters, O. Peleg, und L. Mahadevan, «Collective ventilation in honeybee nests», *J. R. Soc. Interface*, Bd. 16, Nr. 150, S. 20180561, Jan. 2019, doi: 10.1098/rsif.2018.0561.
+   867	
+   868	\[15\] H. Lee und H. Mayer, «Thermal comfort of pedestrians in an urban street canyon is affected by increasing albedo of building walls», *Int. J. Biometeorol.*, Bd. 62, Nr. 7, S. 1199--1209, Juli 2018, doi: 10.1007/s00484-018-1523-5.
+   869	
+   870	\[16\] D. A. Lewis und P. S. Nobel, «Thermal Energy Exchange Model and Water Loss of a Barrel Cactus, *Ferocactus acanthodes*», *Plant Physiol.*, Bd. 60, Nr. 4, S. 609--616, Okt. 1977, doi: 10.1104/pp.60.4.609.
+   871	
+   872	\[17\] J. Akhter *u. a.*, «Experimental Investigation of a Medium Temperature Single-Phase Thermosyphon in an Evacuated Tube Receiver Coupled With Compound Parabolic Concentrator», *Front. Energy Res.*, Bd. 9, Nov. 2021, doi: 10.3389/fenrg.2021.754546.
+   873	
+   874	\[18\] A. P. Raman, M. A. Anoma, L. Zhu, E. Rephaeli, und S. Fan, «Passive radiative cooling below ambient air temperature under direct sunlight», *Nature*, Bd. 515, Nr. 7528, S. 540--544, Nov. 2014, doi: 10.1038/nature13883.
+   875	
+   876	\[19\] «Programm Klimaanpassung: Fachplanung Hitzeminderung».
+   877	
+   878	\[20\] B. Blocken, T. Defraeye, D. Derome, und J. Carmeliet, «High-resolution CFD simulations for forced convective heat transfer coefficients at the facade of a low-rise building», *Build. Environ.*, Bd. 44, Nr. 12, S. 2396--2412, Dez. 2009, doi: 10.1016/j.buildenv.2009.04.004.
+   879	
+   880	\[21\] E. N. Ahmed und G. Tanda, «An experimental and numerical study of laminar natural convection along vertical rib-roughened surfaces», *Int. J. Heat Mass Transf.*, Bd. 223, S. 125227, Mai 2024, doi: 10.1016/j.ijheatmasstransfer.2024.125227.
+   881	
+   882	\[22\] «Keeping cool: Enhanced optical reflection and radiative heat dissipation in Saharan silver ants», *Science*, Zugegriffen: 10. September 2026. \[Online\]. Verfügbar unter: https://www.science.org/doi/10.1126/science.aab3564
+   883	
+   884	\[23\] O. US EPA, «Using Cool Roofs to Reduce Heat Islands». Zugegriffen: 10. September 2026. \[Online\]. Verfügbar unter: https://www.epa.gov/heatislands/using-cool-roofs-reduce-heat-islands
+   885	
+   886	\[24\] M. Baechler und P. Love, «High-Performance Home Technologies: Solar Thermal & Photovoltaic Systems; Volume 6 Building America Best Practices Series», 2007.
+   887	
+   888	# Glossary
+   889	
+   890	**A**
+   891	
+   892	- **Albedo** -- Refers to an index from 0 -- 1 on how much light is reflected.
+   893	
+   894	**P**
+   895	
+   896	- **PV** -- Photovoltaic
+   897	
+   898	**R**
+   899	
+   900	- **Radiation** -- shortwave radiation is the type of radiation emitted by the sun. Longwave radiation is thermal radiation which is emitted from a surface into the surrounding atmosphere.
+   901	
+   902	**U**
+   903	
+   904	- **UHI --** Urban Heat Island
+   905	
+   906	- **UHII --** Urban Heat Island Index
+   907	
+   908	- **UV-Light** -- Ultraviolet Light
+   909	
+   910	# Appendix A -- AI Use Statement
+   911	
+   912	Relevant AI-supported activities are documented below. Not every prompt is listed; the focus is on how AI contributed to the work and how important outputs were verified. AI output is not used as evidence for factual claims.
+   913	
+   914	  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   915	  **AI tool**                             **Used for**                                                                                                    **How the output influenced the project**                                                            **How important output was verified**
+   916	  --------------------------------------- --------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   917	  AskNature (search and strategy pages)   Discovering biological strategies for functions F1--F12, navigated by taxonomy branch rather than by organism   Produced the candidate list in Table 3.2, including four models that were subsequently de-selected   Every mechanism claim carried into the report is referenced. The pages could not be opened programmatically, so titles and URLs were taken from search results; the open item in Section 3.1 records that each must be confirmed and, where a primary paper exists, replaced by it
+   918	
+   919	                                                                                                                                                                                                                                                               
+   920	
+   921	                                                                                                                                                                                                                                                               
+   922	
+   923	                                                                                                                                                                                                                                                               
+   924	  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   925	
+   926	Table A.1 --- AI use statement.
+   927	
+   928	**On the limits of this statement.** Nothing in this report is cited to an AI tool. Where an AI-assisted search surfaced a candidate, the candidate was carried forward only with a source of its own, and the two remaining places where that chain is incomplete are marked as open items rather than left implicit: the AskNature pages listed above, and the 23 % figure for elephant hair, which traces to a university news article rather than to a study [(University of Notre Dame, 2021)]{.mark}.
+   929	
+   930	# Appendix B -- Decision Log
+   931	
+   932	# Appendix C -- Optional Supporting Material
+   933	
+   934	Additional calculations, extended concept drawings, the transient wall model and its figures, and prompt excerpts belong here.
